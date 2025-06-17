@@ -889,24 +889,22 @@ footer span a:hover{
 .projects {
     padding: 100px 0;
     background: var(--bg-color);
-    position: relative;
 }
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    margin-top: 30px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
 }
 
 .project-card {
     background: var(--card-bg);
-    border-radius: 10px;
-    padding: 15px;
-    position: relative;
-    perspective: 1000px;
-    height: 280px;
+    border-radius: 15px;
+    overflow: hidden;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    height: 400px;
+    perspective: 1000px;
 }
 
 .project-card-inner {
@@ -927,8 +925,7 @@ footer span a:hover{
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    border-radius: 10px;
-    padding: 15px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
 }
@@ -936,8 +933,8 @@ footer span a:hover{
 .project-card-front {
     background: var(--card-bg);
     align-items: center;
-    justify-content: flex-start;
-    gap: 10px;
+    justify-content: center;
+    text-align: center;
 }
 
 .project-card-back {
@@ -945,96 +942,116 @@ footer span a:hover{
     color: var(--white-color);
     transform: rotateY(180deg);
     justify-content: flex-start;
-    gap: 10px;
 }
 
 .project-img {
-    width: 50px;
-    height: 50px;
+    width: 80px;
+    height: 80px;
     background: rgba(0, 0, 0, 0.05);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 8px;
+    margin-bottom: 20px;
 }
 
 .project-img i {
-    font-size: 24px;
+    font-size: 32px;
     color: var(--primary-color);
 }
 
 .project-content {
     text-align: center;
-    width: 100%;
 }
 
 .project-content h3 {
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
     color: var(--text-color);
 }
 
 .project-content p {
     color: var(--text-secondary);
-    line-height: 1.4;
-    margin-bottom: 12px;
-    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
 .project-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 6px;
+    gap: 8px;
     justify-content: center;
 }
 
 .project-tags span {
     background: rgba(0, 0, 0, 0.05);
-    padding: 3px 10px;
-    border-radius: 12px;
-    font-size: 12px;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 14px;
     color: var(--text-color);
 }
 
 .project-card-back h3 {
     color: var(--white-color);
-    font-size: 18px;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 15px;
 }
 
 .project-card-back p {
     color: rgba(255, 255, 255, 0.9);
-    line-height: 1.4;
-    margin-bottom: 12px;
-    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.6;
 }
 
-.project-card-back .project-details {
+.project-details {
     margin-top: auto;
 }
 
-.project-card-back .project-details ul {
+.project-details ul {
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.project-card-back .project-details li {
+.project-details li {
     color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     display: flex;
     align-items: flex-start;
-    font-size: 12px;
-    line-height: 1.3;
+    font-size: 14px;
+    line-height: 1.4;
 }
 
-.project-card-back .project-details li i {
-    margin-right: 6px;
+.project-details li i {
+    margin-right: 10px;
     color: var(--white-color);
-    margin-top: 2px;
+    margin-top: 3px;
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+    
+    .project-card {
+        height: 350px;
+    }
+    
+    .project-content h3 {
+        font-size: 20px;
+    }
+    
+    .project-img {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .project-img i {
+        font-size: 24px;
+    }
 }
 
 /* Updated Skill Bars */
