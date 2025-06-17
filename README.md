@@ -23,11 +23,11 @@ Visit my portfolio at: [https://namraa310806.github.io/Portfolio/](https://namra
 *Home section with responsive design*
 
 ### Mobile View
-![Mobile View](screenshots/mobile.png)
+![Mobile View](screenshots/mobile.jpeg)
 *Mobile-optimized layout*
 
 ### Projects Section
-![Projects](screenshots/projects.jpeg)
+![Projects](screenshots/projects.png)
 *Interactive project cards with flip animation*
 
 ### Skills Section
