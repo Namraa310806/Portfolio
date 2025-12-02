@@ -11,7 +11,7 @@
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Custom CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_new.css">
 </head>
 <body>
     <!-- Preloader -->
@@ -40,10 +40,19 @@
                         <a class="nav-link" href="#about">About</a>
                     </li>
                     <li class="nav-item">
+                        <a class="nav-link" href="#education">Education</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#experience">Experience</a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#achievements">Achievements</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
@@ -60,12 +69,43 @@
                 <div class="text-1">Hello, I'm</div>
                 <div class="text-2">Namraa Patel</div>
                 <div class="text-3">And I'm a <span class="typing"></span></div>
+                <p class="hero-description">
+                    Passionate CSBS student with hands-on experience in AI, ML, and Django backend development. 
+                    Built 5+ real-world projects, completed 2 internships, and achieved 95% model accuracy in classification tasks.
+                </p>
+                <div class="hero-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">Projects</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">2</div>
+                        <div class="stat-label">Internships</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">17</div>
+                        <div class="stat-label">Pull Requests</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">4</div>
+                        <div class="stat-label">Oracle Certs</div>
+                    </div>
+                </div>
                 <div class="social-links mt-4">
                     <a href="https://github.com/Namraa310806" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/namraa-patel-974b61279/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#contact"><i class="fas fa-envelope"></i></a>
+                    <a href="https://www.linkedin.com/in/namraa-patel/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:patelnamraa310806@gmail.com"><i class="fas fa-envelope"></i></a>
+                    <a href="tel:+918780388389"><i class="fas fa-phone"></i></a>
                 </div>
-                <a href="#contact" class="btn btn-primary mt-4">Get in Touch</a>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Get in Touch</a>
+                    <a href="#projects" class="btn btn-outline">View Projects</a>
+                </div>
+            </div>
+            <div class="floating-elements">
+                <div class="float-icon" data-aos="fade-left" data-aos-delay="200"><i class="fas fa-code"></i></div>
+                <div class="float-icon" data-aos="fade-left" data-aos-delay="400"><i class="fas fa-brain"></i></div>
+                <div class="float-icon" data-aos="fade-left" data-aos-delay="600"><i class="fas fa-database"></i></div>
             </div>
         </div>
     </section>
@@ -73,31 +113,204 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <div class="title">
+            <div class="title" data-aos="fade-up">
                 <h2>About Me</h2>
+                <p class="subtitle">Passionate about creating innovative solutions</p>
             </div>
-            <div class="about-content">
-                <div class="about-text">
-                    <h3>Full Stack Developer & AI/ML Enthusiast</h3>
-                    <p>I am a <span class="highlight">passionate Full Stack Developer</span> with expertise in creating responsive and user-friendly web applications. My journey in development started with a strong foundation in both front-end and back-end technologies.</p>
-                    <p>With a <span class="bold">strong background in React, Node.js, and Python</span>, I specialize in building scalable applications and implementing AI/ML solutions. My approach combines <span class="italic">technical expertise with analytical problem-solving</span> to create efficient and innovative solutions.</p>
-                    <p>Currently working as an <span class="highlight">ML Intern at Unified Mentor</span>, I am constantly expanding my knowledge in AI/ML development while maintaining excellence in full-stack development. My goal is to create applications that not only meet but exceed client expectations.</p>
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <h4>1+</h4>
-                            <p>Years Experience</p>
+            <div class="row align-items-center">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <div class="about-img">
+                        <div class="img-placeholder">
+                            <i class="fas fa-user-circle"></i>
                         </div>
-                        <div class="stat-item">
-                            <h4>10+</h4>
-                            <p>Projects Completed</p>
+                        <div class="about-badges">
+                            <div class="badge-item">
+                                <i class="fas fa-award"></i>
+                                <span>Top 2500 Amazon ML Challenge</span>
+                            </div>
+                            <div class="badge-item">
+                                <i class="fas fa-trophy"></i>
+                                <span>Hackathon Winner</span>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>5+</h4>
-                            <p>Happy Clients</p>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="about-text">
+                        <h3>Full Stack Developer & AI/ML Enthusiast</h3>
+                        <p>Passionate CSBS student at <strong>Pandit Deendayal Energy University (PDEU)</strong> with hands-on experience in AI, ML, and Django backend development. I've successfully built 5+ real-world projects, completed 2 internships, and achieved 95% model accuracy in classification tasks.</p>
+                        
+                        <p>My journey includes contributing to <strong>open source projects</strong> with 17 pull requests, adding 9 features, and solving over 15 bugs during hackathons. I'm also proud to be <strong>Oracle Certified</strong> in multiple domains including Generative AI and Data Science.</p>
+
+                        <p>Currently seeking opportunities to contribute to impactful AI or full-stack projects where I can leverage my technical skills and problem-solving abilities.</p>
+
+                        <div class="about-highlights">
+                            <div class="highlight-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Ahmedabad, Gujarat</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-graduation-cap"></i>
+                                <span>CSBS Student @ PDEU</span>
+                            </div>
+                            <div class="highlight-item">
+                                <i class="fas fa-code-branch"></i>
+                                <span>300+ Coding Problems Solved</span>
+                            </div>
                         </div>
-                        <div class="stat-item">
-                            <h4>8+</h4>
-                            <p>Technologies</p>
+
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <h4>95%</h4>
+                                <p>Model Accuracy</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>5+</h4>
+                                <p>Projects Built</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>2</h4>
+                                <p>Internships</p>
+                            </div>
+                            <div class="stat-item">
+                                <h4>17</h4>
+                                <p>Pull Requests</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <h2>Education</h2>
+                <p class="subtitle">Academic journey and achievements</p>
+            </div>
+            <div class="education-timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2025 - 2028</div>
+                        <h3>B.Tech - Computer Science & Business Systems (CSBS)</h3>
+                        <h4>Pandit Deendayal Energy University (PDEU)</h4>
+                        <p>Currently pursuing bachelor's degree with focus on AI/ML and full-stack development. Expected graduation: 2028</p>
+                        <div class="education-tags">
+                            <span>AI & ML</span>
+                            <span>Data Science</span>
+                            <span>Full Stack Development</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">Aug 2022 - Apr 2025</div>
+                        <h3>Diploma Engineering, Computer</h3>
+                        <h4>Government Polytechnic Ahmedabad, Gujarat</h4>
+                        <div class="grade-highlight">
+                            <i class="fas fa-star"></i>
+                            <span>9.84 CGPA</span>
+                        </div>
+                        <p>Completed diploma with exceptional academic performance, building strong foundation in computer science fundamentals.</p>
+                        <div class="education-tags">
+                            <span>Programming</span>
+                            <span>Data Structures</span>
+                            <span>Algorithms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <h2>Experience</h2>
+                <p class="subtitle">Professional journey and internships</p>
+            </div>
+            <div class="experience-cards">
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="experience-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Machine Learning Intern</h3>
+                            <div class="company-info">
+                                <span class="company">Unified Mentor</span>
+                                <span class="duration">Jun 2025 - Sept 2025</span>
+                            </div>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Developed classification and clustering models achieving up to <strong>93% accuracy</strong> using scikit-learn</li>
+                            <li>Automated data preprocessing and model evaluation with cross-validation pipelines</li>
+                            <li>Visualized results with Matplotlib to present insights for internal reports</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span>Python</span>
+                            <span>scikit-learn</span>
+                            <span>Matplotlib</span>
+                            <span>Machine Learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="experience-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Django Intern</h3>
+                            <div class="company-info">
+                                <span class="company">Techaronic IT Solutions Pvt Ltd</span>
+                                <span class="duration">Jun 2024 - Aug 2024</span>
+                            </div>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Built and optimized backend APIs in Django for <strong>3 live client modules</strong></li>
+                            <li>Improved SQL query performance by <strong>25%</strong> through ORM tuning and caching</li>
+                            <li>Collaborated with frontend team to deploy full-stack features on AWS</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span>Django</span>
+                            <span>Python</span>
+                            <span>AWS</span>
+                            <span>SQL</span>
+                            <span>REST APIs</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="experience-card open-source" data-aos="fade-up" data-aos-delay="300">
+                    <div class="experience-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <div class="experience-content">
+                        <div class="experience-header">
+                            <h3>Open Source Contributor</h3>
+                            <div class="company-info">
+                                <span class="company">Hackathon Winner</span>
+                                <span class="duration">2024 - Present</span>
+                            </div>
+                        </div>
+                        <ul class="experience-points">
+                            <li>Made <strong>17 pull requests</strong> and added <strong>9 features</strong> to open source projects</li>
+                            <li>Solved over <strong>15 bugs</strong> during hackathons, improving project stability</li>
+                            <li><strong>Won hackathon</strong> for outstanding contributions to open source development</li>
+                            <li>Active contributor to community projects and collaborative development</li>
+                        </ul>
+                        <div class="experience-tech">
+                            <span>Git</span>
+                            <span>GitHub</span>
+                            <span>Open Source</span>
+                            <span>Collaboration</span>
                         </div>
                     </div>
                 </div>
@@ -108,61 +321,283 @@
     <!-- Skills Section -->
     <section class="skills" id="skills">
         <div class="container">
-            <h2 class="title" data-aos="fade-up">My Skills</h2>
-            <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="skills-content">
-                        <div class="text">My creative skills & experiences.</div>
-                        <p>Currently working as an ML Intern at Unified Mentor, focusing on machine learning and AI projects. Previously worked as a Django Intern at Techaronic IT Solutions Pvt Ltd, developing scalable web applications.</p>
-                        <a href="https://www.linkedin.com/in/namraa-patel-974b61279/" class="btn btn-primary">View LinkedIn</a>
+            <div class="title" data-aos="fade-up">
+                <h2>Skills & Technologies</h2>
+                <p class="subtitle">Technical expertise across multiple domains</p>
+            </div>
+            
+            <div class="skills-categories">
+                <!-- Programming Languages -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Programming Languages</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="95"></div>
+                                </div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-js"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">JavaScript</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Java</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="80"></div>
+                                </div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">C++</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="75"></div>
+                                </div>
+                                <span class="skill-percent">75%</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <div class="skills-bars">
+
+                <!-- Frameworks & Libraries -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Frameworks & Libraries</h3>
+                    </div>
+                    <div class="skills-grid">
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Python</span>
-                                <span>95%</span>
+                            <div class="skill-icon">
+                                <i class="fab fa-python"></i>
                             </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 95%"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Django</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="90"></div>
+                                </div>
+                                <span class="skill-percent">90%</span>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span>Django</span>
-                                <span>90%</span>
+                            <div class="skill-icon">
+                                <i class="fab fa-react"></i>
                             </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 90%"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">React</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span>JavaScript</span>
-                                <span>80%</span>
+                            <div class="skill-icon">
+                                <i class="fab fa-bootstrap"></i>
                             </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Bootstrap</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="88"></div>
+                                </div>
+                                <span class="skill-percent">88%</span>
                             </div>
                         </div>
                         <div class="skill-item">
-                            <div class="skill-info">
-                                <span>React</span>
-                                <span>80%</span>
+                            <div class="skill-icon">
+                                <i class="fas fa-stream"></i>
                             </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 80%"></div>
+                            <div class="skill-info">
+                                <span class="skill-name">Streamlit</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="82"></div>
+                                </div>
+                                <span class="skill-percent">82%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI & Data Science -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Data Science</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">scikit-learn</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="92"></div>
+                                </div>
+                                <span class="skill-percent">92%</span>
                             </div>
                         </div>
                         <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
                             <div class="skill-info">
-                                <span>Machine Learning</span>
-                                <span>85%</span>
+                                <span class="skill-name">OpenCV</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="88"></div>
+                                </div>
+                                <span class="skill-percent">88%</span>
                             </div>
-                            <div class="progress">
-                                <div class="progress-bar" role="progressbar" style="width: 85%"></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-network-wired"></i>
                             </div>
+                            <div class="skill-info">
+                                <span class="skill-name">TensorFlow</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-link"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Langchain</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="80"></div>
+                                </div>
+                                <span class="skill-percent">80%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Databases & Tools -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Databases & Tools</h3>
+                    </div>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">MySQL</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="85"></div>
+                                </div>
+                                <span class="skill-percent">85%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Git</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="90"></div>
+                                </div>
+                                <span class="skill-percent">90%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">VS Code</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="95"></div>
+                                </div>
+                                <span class="skill-percent">95%</span>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-icon">
+                                <i class="fas fa-book"></i>
+                            </div>
+                            <div class="skill-info">
+                                <span class="skill-name">Jupyter</span>
+                                <div class="skill-level">
+                                    <div class="skill-progress" data-percent="88"></div>
+                                </div>
+                                <span class="skill-percent">88%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Coding Stats -->
+            <div class="coding-stats" data-aos="fade-up" data-aos-delay="500">
+                <h3>Coding Statistics</h3>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>1799</h4>
+                            <p>LeetCode Rating</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>3⭐</h4>
+                            <p>CodeChef Rating</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>300+</h4>
+                            <p>Problems Solved</p>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="stat-info">
+                            <h4>4</h4>
+                            <p>Oracle Certifications</p>
                         </div>
                     </div>
                 </div>
@@ -173,99 +608,438 @@
     <!-- Projects Section -->
     <section class="projects" id="projects">
         <div class="container">
-            <h2 class="title" data-aos="fade-up">My Projects</h2>
+            <div class="title" data-aos="fade-up">
+                <h2>Featured Projects</h2>
+                <p class="subtitle">Showcasing innovation and technical expertise</p>
+            </div>
+            
             <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-card-inner">
-                        <div class="project-card-front">
-                            <div class="project-img">
-                                <i class="fas fa-dog"></i>
+                <!-- Animal Image Classifier -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-paw"></i>
+                        </div>
+                        <div class="project-type">AI / Deep Learning</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Animal Image Classifier</h3>
+                        <p>Developed a transfer learning model using MobileNetV2 for multi-class image recognition with high accuracy through preprocessing and fine-tuning.</p>
+                        
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Transfer Learning with MobileNetV2</span>
                             </div>
-                            <div class="project-content">
-                                <h3>Animal Image Classifier</h3>
-                                <p>Deep learning model for animal image classification using MobileNetV2 and transfer learning.</p>
-                                <div class="project-tags">
-                                    <span>Python</span>
-                                    <span>TensorFlow</span>
-                                    <span>Keras</span>
-                                    <span>NumPy</span>
-                                    <span>Streamlit</span>
-                                </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>High Accuracy Classification</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Streamlit Web Interface</span>
                             </div>
                         </div>
-                        <div class="project-card-back">
-                            <h3>Animal Image Classifier Details</h3>
-                            <p>Built an image classification model using MobileNetV2 and transfer learning to identify animals from images with high accuracy. Applied image preprocessing and fine-tuned pre-trained weights for improved generalization and performance.</p>
-                            <div class="project-details">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> MobileNetV2-based deep learning model</li>
-                                    <li><i class="fas fa-check"></i> Transfer learning and fine-tuning</li>
-                                    <li><i class="fas fa-check"></i> Streamlit web interface for predictions</li>
-                                </ul>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">95%</span>
+                                <span class="stat-label">Accuracy</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">10+</span>
+                                <span class="stat-label">Classes</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>TensorFlow</span>
+                            <span>Keras</span>
+                            <span>NumPy</span>
+                            <span>Streamlit</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Namraa310806/AnimalClassification" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+                            </a>
+                            <a href="https://github.com/Namraa310806/AnimalClassification" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ProfiLens -->
+                <div class="project-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="project-type">Full-Stack Django Platform</div>
+                        <div class="featured-badge">Featured</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>ProfiLens</h3>
+                        <p>Created an AI-based learning dashboard with auto-graded ML quizzes, gamified coin system, and dynamic resume builder with PDF generation and user authentication.</p>
+                        
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>AI-based Learning Dashboard</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Auto-graded ML Quizzes</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Gamified Coin System</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Dynamic Resume Builder</span>
+                            </div>
+                        </div>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">100+</span>
+                                <span class="stat-label">Users</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">50+</span>
+                                <span class="stat-label">Quizzes</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Django</span>
+                            <span>Bootstrap</span>
+                            <span>SQLite</span>
+                            <span>reportlab</span>
+                            <span>AI/ML</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Namraa310806/ProfiLens" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+                            </a>
+                            <a href="https://github.com/Namraa310806/ProfiLens" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Gesture Media Controller -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-hand-paper"></i>
+                        </div>
+                        <div class="project-type">Computer Vision</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Gesture Media Controller</h3>
+                        <p>Created a real-time gesture-controlled media player using OpenCV and Mediapipe with finger detection and landmark tracking for intuitive control.</p>
+                        
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-time Gesture Recognition</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Finger Detection & Tracking</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Intuitive Media Control</span>
+                            </div>
+                        </div>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">30fps</span>
+                                <span class="stat-label">Real-time</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">10+</span>
+                                <span class="stat-label">Gestures</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>Mediapipe</span>
+                            <span>NumPy</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Namraa310806/GestureMediaPlayer" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+                            </a>
+                            <a href="https://github.com/Namraa310806/GestureMediaPlayer" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather App -->
+                <div class="project-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-header">
+                        <div class="project-icon">
+                            <i class="fas fa-cloud-sun"></i>
+                        </div>
+                        <div class="project-type">Frontend Project</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Weather App</h3>
+                        <p>Designed a responsive weather app using React and OpenWeather API with dynamic UI, Lottie animations, transitions, and card-based layout.</p>
+                        
+                        <div class="project-features">
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Responsive Design</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Lottie Animations</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="fas fa-check-circle"></i>
+                                <span>Real-time Weather Data</span>
+                            </div>
+                        </div>
+
+                        <div class="project-stats">
+                            <div class="stat">
+                                <span class="stat-value">100%</span>
+                                <span class="stat-label">Responsive</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">24/7</span>
+                                <span class="stat-label">Live Data</span>
+                            </div>
+                        </div>
+
+                        <div class="project-tags">
+                            <span>React</span>
+                            <span>JavaScript</span>
+                            <span>Bootstrap</span>
+                            <span>OpenWeather API</span>
+                            <span>Animate.css</span>
+                        </div>
+
+                        <div class="project-links">
+                            <a href="https://github.com/Namraa310806/WeatherAppReactJS" class="btn-link" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+                            </a>
+                            <a href="https://github.com/Namraa310806/WeatherAppReactJS" class="btn-link" target="_blank">
+                                <i class="fab fa-github"></i>
+                                Source Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-cta" data-aos="fade-up" data-aos-delay="500">
+                <h3>Want to see more?</h3>
+                <p>Check out my GitHub profile for more projects and contributions</p>
+                <a href="https://github.com/Namraa310806" class="btn btn-primary">
+                    <i class="fab fa-github"></i>
+                    View All Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="achievements" id="achievements">
+        <div class="container">
+            <div class="title" data-aos="fade-up">
+                <h2>Achievements & Certifications</h2>
+                <p class="subtitle">Recognition for excellence and dedication</p>
+            </div>
+
+            <div class="achievements-grid">
+                <!-- Oracle Certifications -->
+                <div class="achievement-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="category-header">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Oracle Certifications</h3>
+                    </div>
+                    <div class="achievements-list">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>OCI Generative AI Professional</h4>
+                                <p>Advanced certification in Oracle Cloud Infrastructure Generative AI services</p>
+                                <div class="achievement-badge oracle">Oracle Certified</div>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>OCI Data Science Professional</h4>
+                                <p>Professional certification in Oracle Cloud Infrastructure Data Science</p>
+                                <div class="achievement-badge oracle">Oracle Certified</div>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>OCI AI Foundations Associate</h4>
+                                <p>Foundational knowledge in Oracle Cloud Infrastructure AI services</p>
+                                <div class="achievement-badge oracle">Oracle Certified</div>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-cloud"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>OCI Foundation Associate</h4>
+                                <p>Core certification in Oracle Cloud Infrastructure fundamentals</p>
+                                <div class="achievement-badge oracle">Oracle Certified</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-card-inner">
-                        <div class="project-card-front">
-                            <div class="project-img">
-                                <i class="fas fa-graduation-cap"></i>
+
+                <!-- Competition Awards -->
+                <div class="achievement-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="category-header">
+                        <i class="fas fa-trophy"></i>
+                        <h3>Competition Awards</h3>
+                    </div>
+                    <div class="achievements-list">
+                        <div class="achievement-item featured">
+                            <div class="achievement-icon">
+                                <i class="fab fa-amazon"></i>
                             </div>
-                            <div class="project-content">
-                                <h3>SkillLens</h3>
-                                <p>Full-stack Django learning and certification platform with gamification and auto-graded exams.</p>
-                                <div class="project-tags">
-                                    <span>Python</span>
-                                    <span>Django</span>
-                                    <span>Bootstrap</span>
-                                    <span>SQLite</span>
-                                    <span>reportlab</span>
-                                </div>
+                            <div class="achievement-content">
+                                <h4>Amazon ML Challenge 2025</h4>
+                                <p>Ranked Top 2500 among 30,000+ participants in machine learning competition</p>
+                                <div class="achievement-badge top-performer">Top 2500</div>
                             </div>
                         </div>
-                        <div class="project-card-back">
-                            <h3>SkillLens Details</h3>
-                            <p>Designed and developed a complete learning and certification platform with interactive roadmaps, auto-graded MCQ exams, and gamification features. Integrated modules like PDF certificate generation, resume builder, and a coin-based rewards system into a seamless Django application.</p>
-                            <div class="project-details">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Interactive learning roadmaps</li>
-                                    <li><i class="fas fa-check"></i> Auto-graded MCQ exams</li>
-                                    <li><i class="fas fa-check"></i> PDF certificate generation</li>
-                                    <li><i class="fas fa-check"></i> Gamification and rewards</li>
-                                </ul>
+                        <div class="achievement-item featured">
+                            <div class="achievement-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Hackathon Winner - Open Source</h4>
+                                <p>Won hackathon for outstanding open source contributions and development</p>
+                                <div class="achievement-badge winner">Winner</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
-                    <div class="project-card-inner">
-                        <div class="project-card-front">
-                            <div class="project-img">
-                                <i class="fas fa-hand-paper"></i>
+
+                <!-- Coding Achievements -->
+                <div class="achievement-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="category-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Coding Achievements</h3>
+                    </div>
+                    <div class="achievements-list">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-code"></i>
                             </div>
-                            <div class="project-content">
-                                <h3>Gesture Media Controller</h3>
-                                <p>Real-time gesture recognition system for controlling media playback using hand tracking.</p>
-                                <div class="project-tags">
-                                    <span>Python</span>
-                                    <span>OpenCV</span>
-                                    <span>Mediapipe</span>
-                                    <span>NumPy</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="project-card-back">
-                            <h3>Gesture Media Controller Details</h3>
-                            <p>Built a real-time gesture recognition system to control media playback using hand tracking and finger detection. Utilized OpenCV and Mediapipe to capture and process hand landmarks for triggering play, pause, and volume gestures.</p>
-                            <div class="project-details">
-                                <ul>
-                                    <li><i class="fas fa-check"></i> Real-time hand tracking and gesture recognition</li>
-                                    <li><i class="fas fa-check"></i> Media control via gestures</li>
-                                    <li><i class="fas fa-check"></i> OpenCV and Mediapipe integration</li>
-                                </ul>
+                            <div class="achievement-content">
+                                <h4>LeetCode Rating: 1799</h4>
+                                <p>Solved 300+ coding problems with strong algorithmic skills</p>
+                                <div class="achievement-badge leetcode">1799 Rating</div>
                             </div>
                         </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-star"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>CodeChef 3⭐ Rating</h4>
+                                <p>Achieved 3-star rating on CodeChef competitive programming platform</p>
+                                <div class="achievement-badge codechef">3⭐ Rating</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hackathon Participation -->
+                <div class="achievement-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="category-header">
+                        <i class="fas fa-users"></i>
+                        <h3>Hackathon Participation</h3>
+                    </div>
+                    <div class="achievements-list">
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-flag-usa"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Smart India Hackathon 2024 & 2025</h4>
+                                <p>Participated in India's biggest hackathon for innovative solutions</p>
+                                <div class="achievement-badge participant">Participant</div>
+                            </div>
+                        </div>
+                        <div class="achievement-item">
+                            <div class="achievement-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="achievement-content">
+                                <h4>Hack with Gujarat 2025</h4>
+                                <p>Contributed to Gujarat state-level hackathon initiatives</p>
+                                <div class="achievement-badge participant">Participant</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Open Source Contributions -->
+                <div class="achievement-category" data-aos="fade-up" data-aos-delay="500">
+                    <div class="category-header">
+                        <i class="fab fa-github"></i>
+                        <h3>Open Source Impact</h3>
+                    </div>
+                    <div class="open-source-stats">
+                        <div class="os-stat-card">
+                            <div class="os-stat-number">17</div>
+                            <div class="os-stat-label">Pull Requests</div>
+                            <div class="os-stat-desc">Merged contributions</div>
+                        </div>
+                        <div class="os-stat-card">
+                            <div class="os-stat-number">9</div>
+                            <div class="os-stat-label">Features Added</div>
+                            <div class="os-stat-desc">New functionalities</div>
+                        </div>
+                        <div class="os-stat-card">
+                            <div class="os-stat-number">15+</div>
+                            <div class="os-stat-label">Bugs Fixed</div>
+                            <div class="os-stat-desc">Issues resolved</div>
+                        </div>
+                    </div>
+                    <div class="os-description">
+                        <p>Active contributor to open source projects with significant impact on project stability and feature enhancement. Won hackathon for outstanding open source development work.</p>
                     </div>
                 </div>
             </div>
@@ -275,72 +1049,249 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="title" data-aos="fade-up">Contact Me</h2>
-            <div class="row">
-                <div class="col-lg-6" data-aos="fade-right">
-                    <div class="contact-info">
-                        <div class="info-items">
-                            <div class="info-item">
-                                <i class="fas fa-user"></i>
-                                <div class="info">
-                                    <div class="head">Name</div>
-                                    <div class="sub-title">Namraa Patel</div>
+            <div class="title" data-aos="fade-up">
+                <h2>Let's Connect</h2>
+                <p class="subtitle">Ready to collaborate on innovative projects</p>
+            </div>
+            
+            <div class="contact-wrapper">
+                <div class="row align-items-center">
+                    <div class="col-lg-6" data-aos="fade-right">
+                        <div class="contact-info">
+                            <div class="contact-intro">
+                                <h3>Get in Touch</h3>
+                                <p>I'm always excited to work on innovative AI/ML projects and full-stack applications. Let's discuss how we can create something amazing together!</p>
+                            </div>
+                            
+                            <div class="info-items">
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <h4>Location</h4>
+                                        <p>Ahmedabad, Gujarat, India</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-envelope"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <h4>Email</h4>
+                                        <p>patelnamraa310806@gmail.com</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="info-item">
+                                    <div class="info-icon">
+                                        <i class="fas fa-phone"></i>
+                                    </div>
+                                    <div class="info-content">
+                                        <h4>Phone</h4>
+                                        <p>+91 8780388389</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="info-item">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div class="info">
-                                    <div class="head">Address</div>
-                                    <div class="sub-title">Jivraj Park, Ahmedabad</div>
+
+                            <div class="contact-social">
+                                <h4>Follow Me</h4>
+                                <div class="social-links">
+                                    <a href="https://github.com/Namraa310806" target="_blank" class="social-link github">
+                                        <i class="fab fa-github"></i>
+                                        <span>GitHub</span>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/namraa-patel/" target="_blank" class="social-link linkedin">
+                                        <i class="fab fa-linkedin"></i>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                    <a href="mailto:patelnamraa310806@gmail.com" class="social-link email">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>Email</span>
+                                    </a>
                                 </div>
                             </div>
-                            <div class="info-item">
-                                <i class="fas fa-envelope"></i>
-                                <div class="info">
-                                    <div class="head">Email</div>
-                                    <div class="sub-title">patelnamraa310806@gmail.com</div>
+
+                            <div class="availability-status">
+                                <div class="status-indicator">
+                                    <div class="status-dot available"></div>
+                                    <span>Available for freelance projects</span>
+                                </div>
+                                <div class="status-indicator">
+                                    <div class="status-dot available"></div>
+                                    <span>Open to internship opportunities</span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
+                    <div class="col-lg-6" data-aos="fade-left">
+                        <div class="contact-form-wrapper">
+                            <form class="contact-form">
+                                <div class="form-header">
+                                    <h3>Send Message</h3>
+                                    <p>Let's discuss your project ideas</p>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="name">Name</label>
+                                        <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                                        <div class="form-icon">
+                                            <i class="fas fa-user"></i>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="email">Email</label>
+                                        <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                                        <div class="form-icon">
+                                            <i class="fas fa-envelope"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="subject">Subject</label>
+                                    <input type="text" id="subject" class="form-control" placeholder="Project Subject" required>
+                                    <div class="form-icon">
+                                        <i class="fas fa-tag"></i>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="message">Message</label>
+                                    <textarea id="message" class="form-control" rows="5" placeholder="Tell me about your project..." required></textarea>
+                                    <div class="form-icon">
+                                        <i class="fas fa-comment"></i>
+                                    </div>
+                                </div>
+                                
+                                <button type="submit" class="btn btn-primary btn-send">
+                                    <span class="btn-text">Send Message</span>
+                                    <span class="btn-icon">
+                                        <i class="fas fa-paper-plane"></i>
+                                    </span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
-                <div class="col-lg-6" data-aos="fade-left">
-                    <form class="contact-form">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name" required>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <input type="email" class="form-control" placeholder="Email" required>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea class="form-control" rows="5" placeholder="Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+            </div>
+
+            <!-- Quick Stats -->
+            <div class="contact-stats" data-aos="fade-up" data-aos-delay="200">
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>24h</h4>
+                        <p>Response Time</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>100%</h4>
+                        <p>Client Satisfaction</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>5+</h4>
+                        <p>Projects Completed</p>
+                    </div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>4</h4>
+                        <p>Certifications</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="social-links">
-                    <a href="https://github.com/Namraa310806" target="_blank"><i class="fab fa-github"></i></a>
-                    <a href="https://www.linkedin.com/in/namraa-patel-974b61279/" target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="#contact"><i class="fas fa-envelope"></i></a>
+                <div class="footer-main">
+                    <div class="footer-brand">
+                        <h3>Namraa Patel</h3>
+                        <p>Passionate CSBS student building the future with AI, ML, and Full-Stack Development</p>
+                    </div>
+                    
+                    <div class="footer-links">
+                        <div class="footer-section">
+                            <h4>Quick Links</h4>
+                            <ul>
+                                <li><a href="#home">Home</a></li>
+                                <li><a href="#about">About</a></li>
+                                <li><a href="#projects">Projects</a></li>
+                                <li><a href="#contact">Contact</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4>Services</h4>
+                            <ul>
+                                <li><a href="#skills">AI/ML Development</a></li>
+                                <li><a href="#skills">Full-Stack Development</a></li>
+                                <li><a href="#skills">Data Science</a></li>
+                                <li><a href="#skills">Computer Vision</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="footer-section">
+                            <h4>Achievements</h4>
+                            <ul>
+                                <li><a href="#achievements">Oracle Certified (4x)</a></li>
+                                <li><a href="#achievements">Top 2500 Amazon ML</a></li>
+                                <li><a href="#achievements">Hackathon Winner</a></li>
+                                <li><a href="#achievements">300+ Problems Solved</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-                <p>&copy; 2024 Namraa Patel. All rights reserved.</p>
+                
+                <div class="footer-social">
+                    <div class="social-links">
+                        <a href="https://github.com/Namraa310806" target="_blank" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/namraa-patel/" target="_blank" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="mailto:patelnamraa310806@gmail.com" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+918780388389" class="social-link">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-bottom">
+                    <div class="footer-copyright">
+                        <p>&copy; 2025 Namraa Patel. All rights reserved.</p>
+                    </div>
+                    <div class="footer-status">
+                        <div class="status-indicator">
+                            <div class="status-dot available"></div>
+                            <span>Available for opportunities</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
@@ -366,18 +1317,190 @@
 
         // Typing Animation
         var typed = new Typed(".typing", {
-            strings: ["Software Developer", "Full Stack Developer", "AI/ML Enthusiast"],
-            typeSpeed: 100,
-            backSpeed: 60,
+            strings: ["AI/ML Engineer", "Full Stack Developer", "Data Scientist", "Django Developer", "Open Source Contributor"],
+            typeSpeed: 80,
+            backSpeed: 50,
+            backDelay: 1500,
             loop: true
         });
 
-        var typed2 = new Typed(".typing-2", {
-            strings: ["Software Developer", "Full Stack Developer", "AI/ML Enthusiast"],
-            typeSpeed: 100,
-            backSpeed: 60,
-            loop: true
+        // Skill Progress Animation
+        function animateSkillBars() {
+            const skillBars = document.querySelectorAll('.skill-progress');
+            skillBars.forEach(bar => {
+                const percent = bar.getAttribute('data-percent');
+                bar.style.width = percent + '%';
+            });
+        }
+
+        // Trigger skill animation when skills section is in view
+        const skillsSection = document.querySelector('.skills');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateSkillBars();
+                }
+            });
         });
+        observer.observe(skillsSection);
+
+        // Counter Animation for Stats
+        function animateCounters() {
+            const counters = document.querySelectorAll('.stat-number, .os-stat-number');
+            counters.forEach(counter => {
+                const target = parseInt(counter.textContent);
+                let current = 0;
+                const increment = target / 50;
+                const timer = setInterval(() => {
+                    current += increment;
+                    if (current >= target) {
+                        counter.textContent = target;
+                        clearInterval(timer);
+                    } else {
+                        counter.textContent = Math.floor(current);
+                    }
+                }, 30);
+            });
+        }
+
+        // Trigger counter animation when achievements section is in view
+        const achievementsSection = document.querySelector('.achievements');
+        if (achievementsSection) {
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        animateCounters();
+                    }
+                });
+            });
+            counterObserver.observe(achievementsSection);
+        }
+
+        // Smooth scroll for navigation links
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                if (this.getAttribute('href').startsWith('#')) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    const targetSection = document.querySelector(targetId);
+                    if (targetSection) {
+                        const offsetTop = targetSection.offsetTop - 80;
+                        window.scrollTo({
+                            top: offsetTop,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+
+        // Add active class to navigation based on scroll position
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section[id]');
+            const navLinks = document.querySelectorAll('.nav-link');
+            
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop - 100;
+                const sectionHeight = section.offsetHeight;
+                if (window.scrollY >= sectionTop && window.scrollY < sectionTop + sectionHeight) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === '#' + current) {
+                    link.classList.add('active');
+                }
+            });
+        });
+
+        // Add parallax effect to floating elements
+        window.addEventListener('scroll', function() {
+            const scrolled = window.pageYOffset;
+            const parallaxElements = document.querySelectorAll('.float-icon');
+            
+            parallaxElements.forEach((element, index) => {
+                const speed = 0.5 + (index * 0.1);
+                element.style.transform = `translateY(${scrolled * speed}px)`;
+            });
+        });
+
+        // Add hover effects for project cards
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-15px) scale(1.02)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Add loading animation for contact form
+        const contactForm = document.querySelector('.contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                const submitBtn = this.querySelector('.btn-send');
+                const originalText = submitBtn.innerHTML;
+                
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Simulate form submission (replace with actual form handling)
+                setTimeout(() => {
+                    submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent!';
+                    setTimeout(() => {
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.disabled = false;
+                    }, 2000);
+                }, 2000);
+            });
+        }
+
+        // Add sparkle cursor effect
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() > 0.9) {
+                createSparkle(e.clientX, e.clientY);
+            }
+        });
+
+        function createSparkle(x, y) {
+            const sparkle = document.createElement('div');
+            sparkle.style.position = 'fixed';
+            sparkle.style.left = x + 'px';
+            sparkle.style.top = y + 'px';
+            sparkle.style.width = '4px';
+            sparkle.style.height = '4px';
+            sparkle.style.background = '#6366f1';
+            sparkle.style.borderRadius = '50%';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '9999';
+            sparkle.style.animation = 'sparkleAnimation 1s ease-out forwards';
+            
+            document.body.appendChild(sparkle);
+            
+            setTimeout(() => {
+                sparkle.remove();
+            }, 1000);
+        }
+
+        // Add CSS animation for sparkles
+        const sparkleStyle = document.createElement('style');
+        sparkleStyle.textContent = `
+            @keyframes sparkleAnimation {
+                0% {
+                    opacity: 1;
+                    transform: scale(1) translateY(0);
+                }
+                100% {
+                    opacity: 0;
+                    transform: scale(0) translateY(-20px);
+                }
+            }
+        `;
+        document.head.appendChild(sparkleStyle);
 
         // Scroll to Top
         const scrollToTop = document.getElementById('scrollToTop');
@@ -405,35 +1528,74 @@
             }
         });
 
+        // Initialize EmailJS with your public key
         (function(){
-            emailjs.init('3pFfbWKzCYp_NmBh7'); // Public key
+            emailjs.init('3pFfbWKzCYp_NmBh7'); // Your EmailJS public key
         })();
 
         document.addEventListener('DOMContentLoaded', function() {
             const form = document.querySelector('.contact-form');
             form.addEventListener('submit', function(e) {
                 e.preventDefault();
-                // Collect form data
-                const name = form.querySelector('input[placeholder="Name"]').value;
-                const email = form.querySelector('input[placeholder="Email"]').value;
-                const subject = form.querySelector('input[placeholder="Subject"]').value;
-                const message = form.querySelector('textarea[placeholder="Message"]').value;
+                
+                const submitBtn = form.querySelector('.btn-send');
+                const originalText = submitBtn.innerHTML;
+                
+                // Show loading state
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+                submitBtn.disabled = true;
+                
+                // Collect form data using the correct field IDs
+                const name = form.querySelector('#name').value;
+                const email = form.querySelector('#email').value;
+                const subject = form.querySelector('#subject').value;
+                const message = form.querySelector('#message').value;
 
-                // Prepare template params
+                // Validate form data
+                if (!name || !email || !subject || !message) {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    alert('Please fill in all fields.');
+                    return;
+                }
+
+                // Prepare template params to send to your email
                 const templateParams = {
                     from_name: name,
                     from_email: email,
+                    to_email: 'patelnamraa310806@gmail.com', // Your email address
                     subject: subject,
-                    message: message
+                    message: message,
+                    reply_to: email
                 };
 
                 // Send email via EmailJS
-                emailjs.send('service_yq23qoe', 'template_z6u5ccc', templateParams)
+                emailjs.send('service_yq23qoe', 'template_yezlcl9', templateParams)
                     .then(function(response) {
-                        alert('Message sent successfully!');
+                        console.log('SUCCESS!', response.status, response.text);
+                        submitBtn.innerHTML = '<i class="fas fa-check"></i> Message Sent Successfully!';
+                        submitBtn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
                         form.reset();
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.style.background = '';
+                            submitBtn.disabled = false;
+                        }, 3000);
                     }, function(error) {
-                        alert('Failed to send message. Please try again later.');
+                        console.log('FAILED...', error);
+                        submitBtn.innerHTML = '<i class="fas fa-times"></i> Failed to Send';
+                        submitBtn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+                        
+                        // Reset button after 3 seconds
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.style.background = '';
+                            submitBtn.disabled = false;
+                        }, 3000);
+                        
+                        alert('Failed to send message. Please try again later or contact me directly at patelnamraa310806@gmail.com');
                     });
             });
         });
