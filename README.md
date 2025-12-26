@@ -158,6 +158,10 @@ Visit my portfolio at: [https://namraa310806.github.io/Portfolio/](https://namra
    - Web-based student information management platform
    - Developed using PHP, MySQL, and JavaScript
 
+4. **Personal Cloud Assistant**
+   - A full-stack serverless web app for secure note and file management, built with React and AWS.
+   - Live Demo: https://main.d1xrjjt0e3swym.amplifyapp.com
+
 ## 🔧 Setup and Installation
 
 1. Clone the repository:
