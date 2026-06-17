@@ -1,0 +1,36 @@
+{
+  "totalPRs": 100,
+  "totalRepositories": 5,
+  "productionRepos": [
+    {
+      "name": "LegalEase",
+      "displayName": "LegalEase",
+      "repositoryUrl": "https://github.com/AnuranjanJain/LegalEase",
+      "prCount": 36
+    },
+    {
+      "name": "pdf-qa-bot",
+      "displayName": "pdf-qa-bot",
+      "repositoryUrl": "https://github.com/FireFistisDead/pdf-qa-bot",
+      "prCount": 23
+    },
+    {
+      "name": "AegisGraph-Sentinel-2.0",
+      "displayName": "AegisGraph",
+      "repositoryUrl": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0",
+      "prCount": 22
+    },
+    {
+      "name": "Eventra",
+      "displayName": "Eventra",
+      "repositoryUrl": "https://github.com/SandeepVashishtha/Eventra",
+      "prCount": 18
+    },
+    {
+      "name": "openfoodfacts-explorer",
+      "displayName": "Open Food Facts",
+      "repositoryUrl": "https://github.com/openfoodfacts/openfoodfacts-explorer",
+      "prCount": 1
+    }
+  ]
+}
