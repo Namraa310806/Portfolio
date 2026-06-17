@@ -1,7 +1,9 @@
 import type {
   AchievementStat,
+  Education,
   EngineeringPrinciple,
   JourneyMilestone,
+  Problem,
   SelectedContribution,
   SkillCategory,
   SystemFeature,
@@ -29,7 +31,7 @@ export const heroStats = [
   { value: TOTAL_PRS, suffix: "+", label: "Merged PRs" },
   { value: 500, suffix: "+", label: "Problems Solved" },
   { value: 2013, suffix: "", label: "LeetCode" },
-  { value: 9.84, suffix: "", label: "CGPA", decimals: 2 },
+  { value: 9.46, suffix: "", label: "CGPA", decimals: 2 },
 ];
 
 export const achievementStats: AchievementStat[] = [
@@ -37,7 +39,7 @@ export const achievementStats: AchievementStat[] = [
   { value: 47, suffix: "", label: "GSSoC Rank" },
   { value: 500, suffix: "+", label: "Problems Solved" },
   { value: 2013, suffix: "", label: "LeetCode" },
-  { value: 9.84, suffix: "", label: "CGPA", decimals: 2 },
+  { value: 9.46, suffix: "", label: "CGPA", decimals: 2 },
   { value: 4, suffix: "★", label: "CodeChef" },
 ];
 
@@ -131,6 +133,59 @@ export const engineeringPrinciples: EngineeringPrinciple[] = [
   {
     title: "Build For Operators",
     description: "Software is maintained longer than it is written.",
+  },
+];
+
+export const education: Education[] = [
+  {
+    institution: "Pandit Deendayal Energy University",
+    degree: "B.Tech Computer Science and Business System (CSBS)",
+    cgpa: 9.46,
+    period: "2025–2028",
+  },
+  {
+    institution: "Government Polytechnic Ahmedabad",
+    degree: "Diploma Computer Engineering",
+    cgpa: 9.78,
+    period: "2022–2025",
+  },
+];
+
+export const problemsSolved: Problem[] = [
+  {
+    title: "Authentication Bypass Prevention",
+    problem: "Rate limiting could be bypassed across multiple instances.",
+    solution: "Implemented Redis-backed distributed rate limiting.",
+    impact: "500+ concurrent requests supported securely.",
+    category: "Security",
+  },
+  {
+    title: "Concurrency Failures",
+    problem: "Shared runtime state caused race conditions.",
+    solution: "Synchronized state across asynchronous services.",
+    impact: "Consistent execution under concurrent workloads.",
+    category: "Concurrency",
+  },
+  {
+    title: "AI Inference Reliability",
+    problem: "Concurrent model execution caused instability.",
+    solution: "Thread-safe model initialization and inference.",
+    impact: "Reliable RAG processing under load.",
+    category: "AI",
+  },
+  {
+    title: "Authentication Architecture",
+    problem: "Fragmented identity handling across services.",
+    solution: "Centralized identity model.",
+    impact: "Consistent authorization boundaries.",
+    category: "Security",
+  },
+  {
+    title: "Security Hardening",
+    problem: "Trusting forwarded headers enabled spoofing.",
+    solution: "Strict validation of forwarded IP chains.",
+    impact: "Reduced attack surface.",
+    category: "Security",
   },
 ];
 

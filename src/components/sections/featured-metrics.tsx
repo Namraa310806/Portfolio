@@ -18,7 +18,7 @@ export function FeaturedMetrics() {
           <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 lg:grid-cols-6">
             {metrics.map((metric, index) => (
               <motion.div
-                key={metric.label}
+                key={index}
                 className="text-center"
                 initial={{ opacity: 0, scale: 0.9, y: 20 }}
                 animate={{ opacity: 1, scale: 1, y: 0 }}

@@ -26,6 +26,14 @@ export interface JourneyMilestone {
   description: string;
 }
 
+export interface Problem {
+  title: string;
+  problem: string;
+  solution: string;
+  impact: string;
+  category: ContributionCategory;
+}
+
 export interface SelectedContribution {
   title: string;
   repository: string;
@@ -61,6 +69,13 @@ export interface AchievementStat {
   suffix?: string;
   label: string;
   decimals?: number;
+}
+
+export interface Education {
+  institution: string;
+  degree: string;
+  cgpa: number;
+  period: string;
 }
 
 export interface ProductionRepository {
