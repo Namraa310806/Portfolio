@@ -5,46 +5,58 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { skillCategories } from "@/data/site";
 
+const categoryIcons: Record<string, string> = {
+  Backend: "🔧",
+  Cloud: "☁️",
+  Data: "🗄️",
+  AI: "🤖",
+  Frontend: "🎨",
+};
+
 export function TechStack() {
   return (
     <section id="skills" className="section-padding">
       <div className="section-container">
         <FadeIn>
           <SectionHeader
-            eyebrow="Tools & Technologies"
-            title="Tech Stack"
-            subtitle="Categorized by domain — not a wall of icons."
+            eyebrow="Technical Expertise"
+            title="Technologies"
+            subtitle="Core tools and technologies I work with."
           />
         </FadeIn>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2">
-          {skillCategories.map((category, index) => (
-            <FadeIn key={category.name} delay={index * 0.08}>
-              <motion.div
-                className="glass-card p-6 group"
-                whileHover={{ y: -4, scale: 1.01 }}
-                transition={{ type: "spring", stiffness: 300, damping: 20 }}
-              >
-                <h3 className="text-sm font-bold tracking-widest text-accent uppercase">
-                  {category.name}
-                </h3>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {category.skills.map((skill, skillIndex) => (
-                    <motion.span
-                      key={skill}
-                      className="rounded-lg border-2 border-border bg-background-muted/50 px-4 py-2 text-sm font-bold text-foreground group-hover:border-accent/30 group-hover:bg-accent/5 transition-all cursor-default"
-                      initial={{ opacity: 0, scale: 0.9 }}
-                      animate={{ opacity: 1, scale: 1 }}
-                      transition={{ delay: index * 0.05 + skillIndex * 0.02, type: "spring", stiffness: 400 }}
-                      whileHover={{ scale: 1.05, borderColor: "var(--accent)" }}
-                    >
-                      {skill}
-                    </motion.span>
-                  ))}
-                </div>
-              </motion.div>
-            </FadeIn>
-          ))}
+        <div className="mt-8 max-w-5xl">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {skillCategories.map((category, index) => (
+              <FadeIn key={category.name} delay={index * 0.05}>
+                <motion.div
+                  className="p-4 rounded-xl bg-background/50 border border-border/50 hover:border-accent/50 hover:bg-accent/5 transition-all duration-300"
+                  initial={{ opacity: 0, y: 10 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: index * 0.05, type: "spring", stiffness: 300 }}
+                  whileHover={{ scale: 1.02 }}
+                >
+                  <div className="flex items-center gap-2 mb-3">
+                    <span className="text-lg">{categoryIcons[category.name] || "⚡"}</span>
+                    <h3 className="text-xs font-bold tracking-widest text-accent uppercase">
+                      {category.name}
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap gap-1.5">
+                    {category.skills.map((skill) => (
+                      <span
+                        key={skill}
+                        className="rounded-md border border-border/50 bg-background/50 px-2 py-0.5 text-[10px] font-semibold text-foreground"
+                      >
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </motion.div>
+              </FadeIn>
+            ))}
+          </div>
         </div>
       </div>
     </section>

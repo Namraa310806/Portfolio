@@ -1,9 +1,7 @@
 import type {
   AchievementStat,
   Education,
-  EngineeringPrinciple,
   JourneyMilestone,
-  Problem,
   SelectedContribution,
   SkillCategory,
   SystemFeature,
@@ -112,30 +110,6 @@ export const selectedContributions: SelectedContribution[] = [
   },
 ];
 
-export const engineeringPrinciples: EngineeringPrinciple[] = [
-  {
-    title: "Reliability First",
-    description: "Systems should fail safely, not silently.",
-  },
-  {
-    title: "Scale Through Simplicity",
-    description: "The best distributed systems are often the simplest ones.",
-  },
-  {
-    title: "Security By Default",
-    description:
-      "Authentication, authorization, and rate limiting are not afterthoughts.",
-  },
-  {
-    title: "Measure Before Optimizing",
-    description: "Every optimization should have a measurable outcome.",
-  },
-  {
-    title: "Build For Operators",
-    description: "Software is maintained longer than it is written.",
-  },
-];
-
 export const education: Education[] = [
   {
     institution: "Pandit Deendayal Energy University",
@@ -148,44 +122,6 @@ export const education: Education[] = [
     degree: "Diploma Computer Engineering",
     cgpa: 9.78,
     period: "2022–2025",
-  },
-];
-
-export const problemsSolved: Problem[] = [
-  {
-    title: "Authentication Bypass Prevention",
-    problem: "Rate limiting could be bypassed across multiple instances.",
-    solution: "Implemented Redis-backed distributed rate limiting.",
-    impact: "500+ concurrent requests supported securely.",
-    category: "Security",
-  },
-  {
-    title: "Concurrency Failures",
-    problem: "Shared runtime state caused race conditions.",
-    solution: "Synchronized state across asynchronous services.",
-    impact: "Consistent execution under concurrent workloads.",
-    category: "Concurrency",
-  },
-  {
-    title: "AI Inference Reliability",
-    problem: "Concurrent model execution caused instability.",
-    solution: "Thread-safe model initialization and inference.",
-    impact: "Reliable RAG processing under load.",
-    category: "AI",
-  },
-  {
-    title: "Authentication Architecture",
-    problem: "Fragmented identity handling across services.",
-    solution: "Centralized identity model.",
-    impact: "Consistent authorization boundaries.",
-    category: "Security",
-  },
-  {
-    title: "Security Hardening",
-    problem: "Trusting forwarded headers enabled spoofing.",
-    solution: "Strict validation of forwarded IP chains.",
-    impact: "Reduced attack surface.",
-    category: "Security",
   },
 ];
 
@@ -265,6 +201,19 @@ export const projects = [
     ],
   },
   {
+    title: "Animal Classification",
+    description: "Deep learning project classifying images into 15 animal categories using MobileNetV2 transfer learning. Features data augmentation, early stopping, and a Streamlit web app for predictions.",
+    stack: ["TensorFlow", "MobileNetV2", "Python", "Streamlit", "scikit-learn"],
+    github: "https://github.com/Namraa310806/AnimalClassification",
+    liveDemo: null,
+    challenges: [
+      "Transfer learning with MobileNetV2",
+      "Data augmentation strategies",
+      "Early stopping implementation",
+      "Model deployment pipeline",
+    ],
+  },
+  {
     title: "Color Classifier",
     description: "ML web app that analyzes and visualizes dominant color distribution in images. Uses Random Forest classifier on custom-labeled color dataset with OpenCV for feature extraction and Streamlit for the UI.",
     stack: ["Python", "scikit-learn", "OpenCV", "NumPy", "Streamlit"],
@@ -278,16 +227,42 @@ export const projects = [
     ],
   },
   {
-    title: "Animal Classification",
-    description: "Deep learning project classifying images into 15 animal categories using MobileNetV2 transfer learning. Features data augmentation, early stopping, and a Streamlit web app for predictions.",
-    stack: ["TensorFlow", "MobileNetV2", "Python", "Streamlit", "scikit-learn"],
-    github: "https://github.com/Namraa310806/AnimalClassification",
+    title: "GestureMediaPlayer",
+    description: "Computer vision application that controls media playback using hand gestures. Uses MediaPipe for real-time hand tracking and gesture recognition with OpenCV for video processing.",
+    stack: ["Python", "MediaPipe", "OpenCV", "NumPy", "CV2"],
+    github: "https://github.com/Namraa310806/GestureMediaPlayer",
     liveDemo: null,
     challenges: [
-      "Transfer learning with MobileNetV2",
-      "Data augmentation strategies",
-      "Early stopping implementation",
-      "Model deployment pipeline",
+      "Real-time hand tracking",
+      "Gesture recognition accuracy",
+      "Low-latency video processing",
+      "Cross-platform compatibility",
+    ],
+  },
+  {
+    title: "n8n Workflow",
+    description: "Custom n8n workflow automation for data processing and integration. Features automated triggers, API integrations, and conditional logic for complex business processes.",
+    stack: ["n8n", "JavaScript", "Node.js", "REST APIs", "Webhooks"],
+    github: "https://github.com/Namraa310806/n8n-workflows",
+    liveDemo: null,
+    challenges: [
+      "Workflow orchestration",
+      "API integration patterns",
+      "Error handling and retry logic",
+      "Data transformation pipelines",
+    ],
+  },
+  {
+    title: "Automated Book Workflow",
+    description: "End-to-end automation system for book processing and management. Integrates multiple APIs for metadata extraction, content processing, and automated publishing workflows.",
+    stack: ["Python", "n8n", "REST APIs", "Docker", "PostgreSQL"],
+    github: "https://github.com/Namraa310806/AutomatedBookWorkflow",
+    liveDemo: null,
+    challenges: [
+      "Multi-service integration",
+      "Workflow state management",
+      "Error recovery mechanisms",
+      "Scalable architecture design",
     ],
   },
 ];
@@ -295,31 +270,34 @@ export const projects = [
 export const skillCategories: SkillCategory[] = [
   {
     name: "Backend",
-    skills: ["Django", "DRF", "FastAPI", "Node.js", "Celery"],
+    skills: ["Django", "DRF", "FastAPI", "Node.js", "Celery", "Flask", "REST APIs", "GraphQL"],
   },
   {
     name: "Cloud",
-    skills: ["AWS", "Lambda", "API Gateway", "Docker", "Linux"],
+    skills: ["AWS", "Lambda", "API Gateway", "Docker", "Linux", "EC2", "S3", "CloudWatch", "Cognito"],
   },
   {
     name: "Data",
-    skills: ["PostgreSQL", "Redis", "MongoDB", "DynamoDB", "S3"],
+    skills: ["PostgreSQL", "Redis", "MongoDB", "DynamoDB", "S3", "MySQL", "Elasticsearch"],
   },
   {
     name: "AI",
-    skills: ["TensorFlow", "scikit-learn", "OpenCV", "Transformers", "RAG"],
+    skills: ["TensorFlow", "scikit-learn", "OpenCV", "Transformers", "RAG", "PyTorch", "LangChain", "Hugging Face"],
   },
   {
     name: "Frontend",
-    skills: ["React", "Bootstrap", "Streamlit", "Amplify"],
+    skills: ["React", "Bootstrap", "Streamlit", "Amplify", "Next.js", "Tailwind CSS", "TypeScript"],
+  },
+  {
+    name: "DevOps",
+    skills: ["Git", "GitHub Actions", "CI/CD", "Docker Compose", "Nginx", "Jenkins"],
   },
 ];
 
 export const navLinks = [
   { href: "#hero", label: "Home" },
-  { href: "#contributions", label: "Contributions" },
   { href: "#opensource", label: "Open Source" },
   { href: "#projects", label: "Projects" },
-  { href: "#journey", label: "Journey" },
+  { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
 ];

@@ -26,14 +26,6 @@ export interface JourneyMilestone {
   description: string;
 }
 
-export interface Problem {
-  title: string;
-  problem: string;
-  solution: string;
-  impact: string;
-  category: ContributionCategory;
-}
-
 export interface SelectedContribution {
   title: string;
   repository: string;
