@@ -6,6 +6,10 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
 import { Badge } from "@/components/ui/badge";
+import { ArchitectureDiagram } from "@/components/architecture/architecture-diagram";
+import { profiLensNodes, profiLensEdges } from "@/components/architecture/profilens-architecture";
+import { cloudAssistantNodes, cloudAssistantEdges } from "@/components/architecture/cloud-assistant-architecture";
+import { teamSenseNodes, teamSenseEdges } from "@/components/architecture/teamsense-architecture";
 import Link from "next/link";
 
 const iconMap = {
@@ -32,6 +36,22 @@ interface ProjectDetailPageProps {
 
 export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
   const Icon = iconMap[project.title as keyof typeof iconMap] || Code2;
+
+  // Get architecture nodes and edges based on project title
+  const getArchitecture = () => {
+    switch (project.title) {
+      case "ProfiLens":
+        return { nodes: profiLensNodes, edges: profiLensEdges };
+      case "Personal Cloud Assistant":
+        return { nodes: cloudAssistantNodes, edges: cloudAssistantEdges };
+      case "TeamSense":
+        return { nodes: teamSenseNodes, edges: teamSenseEdges };
+      default:
+        return null;
+    }
+  };
+
+  const architecture = getArchitecture();
 
   return (
     <div className="min-h-screen">
@@ -62,12 +82,28 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
           <FadeIn delay={0.1}>
             <div className="mt-8 grid gap-6 lg:grid-cols-3">
               <div className="lg:col-span-2 space-y-6">
+                {architecture && (
+                  <motion.div
+                    className="rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-6"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.15 }}
+                  >
+                    <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
+                      <Layout className="h-5 w-5 text-accent" />
+                      System Architecture
+                    </h3>
+                    <ArchitectureDiagram nodes={architecture.nodes} edges={architecture.edges} />
+                  </motion.div>
+                )}
+
                 <motion.div
                   className="rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-6"
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.15 }}
+                  transition={{ duration: 0.5, delay: architecture ? 0.2 : 0.15 }}
                 >
                   <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
                     <Layout className="h-5 w-5 text-accent" />
@@ -81,7 +117,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
                         initial={{ opacity: 0, x: -10 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ delay: 0.2 + index * 0.05 }}
+                        transition={{ delay: (architecture ? 0.25 : 0.2) + index * 0.05 }}
                       >
                         <CheckCircle2 className="h-5 w-5 text-accent flex-shrink-0 mt-0.5" />
                         <span className="text-foreground-muted">{challenge}</span>
@@ -95,7 +131,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
+                  transition={{ duration: 0.5, delay: architecture ? 0.25 : 0.2 }}
                 >
                   <h3 className="text-lg font-bold text-foreground mb-4 flex items-center gap-2">
                     <Code2 className="h-5 w-5 text-accent" />

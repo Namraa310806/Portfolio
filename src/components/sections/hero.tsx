@@ -2,7 +2,8 @@
 
 import { ArrowDown, Download, Code2, Link, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
-import { NetworkBackground } from "@/components/animations/network-background";
+import { AuroraBackground } from "@/components/visuals/aurora-background";
+import { GradientMesh } from "@/components/visuals/gradient-mesh";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
@@ -25,105 +26,142 @@ export function Hero() {
   return (
     <section
       id="hero"
-      className="hero-gradient relative flex min-h-[88vh] items-center overflow-hidden pt-16"
+      className="relative flex min-h-[90vh] items-center overflow-hidden pt-20"
     >
-      <div
-        className="grid-pattern pointer-events-none absolute inset-0 opacity-50"
-        aria-hidden
-      />
-      <NetworkBackground />
-      <div className="section-container relative z-10 py-16 sm:py-20">
-        <div className="max-w-4xl space-y-8">
-          <FadeIn>
-            <motion.div
-              className="section-eyebrow mb-5 inline-flex items-center gap-2"
-              initial={{ opacity: 0, y: -10 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
-            >
-              <Sparkles className="h-4 w-4 text-accent" />
+      <AuroraBackground />
+      <GradientMesh />
+      <div className="section-container relative z-10 py-12 sm:py-16">
+        <div className="max-w-4xl space-y-6">
+          <motion.div
+            className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-2 backdrop-blur-sm"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <Sparkles className="h-4 w-4 text-accent" />
+            <span className="text-sm font-semibold text-foreground">
               Backend Engineer · Open Source Contributor
-            </motion.div>
-            <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
-              NAMRAA PATEL
-            </h1>
-          </FadeIn>
+            </span>
+          </motion.div>
+          
+          <motion.h1
+            className="text-5xl font-bold leading-[1.1] tracking-tight text-foreground sm:text-6xl lg:text-7xl"
+            initial={{ opacity: 0, y: 30, scale: 0.95 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 0.8, delay: 0.1, ease: "easeOut" }}
+          >
+            NAMRAA PATEL
+          </motion.h1>
 
-          <FadeIn delay={0.1}>
-            <p className="max-w-3xl text-xl leading-relaxed text-foreground-muted sm:text-2xl">
-              I engineer backend systems that remain{" "}
-              <motion.span
-                className="text-accent font-semibold"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                reliable
-              </motion.span>{" "}
-              under scale,{" "}
-              <motion.span
-                className="text-accent font-semibold"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                secure
-              </motion.span>{" "}
-              under attack, and{" "}
-              <motion.span
-                className="text-accent font-semibold"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 400 }}
-              >
-                resilient
-              </motion.span>{" "}
-              under failure.
-            </p>
-          </FadeIn>
-
-          <FadeIn delay={0.15}>
-            <motion.div
-              className="flex flex-wrap gap-3"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.5 }}
+          <motion.p
+            className="max-w-3xl text-lg leading-relaxed text-foreground-muted sm:text-xl"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+          >
+            I engineer backend systems that remain{" "}
+            <motion.span
+              className="text-accent font-semibold inline-block"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 500, damping: 15 }}
             >
-              <Button size="lg" onClick={scrollToContributions} className="group">
+              reliable
+            </motion.span>{" "}
+            under scale,{" "}
+            <motion.span
+              className="text-accent font-semibold inline-block"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 500, damping: 15 }}
+            >
+              secure
+            </motion.span>{" "}
+            under attack, and{" "}
+            <motion.span
+              className="text-accent font-semibold inline-block"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring", stiffness: 500, damping: 15 }}
+            >
+              resilient
+            </motion.span>{" "}
+            under failure.
+          </motion.p>
+
+          <motion.div
+            className="flex flex-wrap gap-3 pt-2"
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
+            <Button
+              size="lg"
+              onClick={scrollToContributions}
+              className="group relative overflow-hidden bg-foreground text-background hover:bg-foreground/90"
+            >
+              <span className="relative z-10 flex items-center">
                 View Contributions
                 <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-              </Button>
-              <Button size="lg" onClick={scrollToProjects} variant="secondary" className="group">
+              </span>
+            </Button>
+            <Button
+              size="lg"
+              onClick={scrollToProjects}
+              variant="secondary"
+              className="group backdrop-blur-sm"
+            >
+              <span className="relative z-10 flex items-center">
                 View Projects
                 <ArrowDown className="ml-2 h-4 w-4 transition-transform group-hover:translate-y-1" />
-              </Button>
-              <a
-                href={withBasePath(siteConfig.resumePath)}
-                download
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-              >
-                <Download className="h-4 w-4" />
-                Resume
-              </a>
-              <a
-                href={siteConfig.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-              >
-                <Code2 className="h-4 w-4" />
-                GitHub
-              </a>
-              <a
-                href={siteConfig.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={cn(buttonVariants({ variant: "outline", size: "lg" }))}
-              >
-                <Link className="h-4 w-4" />
-                LinkedIn
-              </a>
-            </motion.div>
-          </FadeIn>
+              </span>
+            </Button>
+            <a
+              href={withBasePath(siteConfig.resumePath)}
+              download
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "backdrop-blur-sm border-accent/30 hover:border-accent/50 hover:bg-accent/10"
+              )}
+            >
+              <Download className="h-4 w-4" />
+              Resume
+            </a>
+            <a
+              href={siteConfig.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "backdrop-blur-sm border-accent/30 hover:border-accent/50 hover:bg-accent/10"
+              )}
+            >
+              <Code2 className="h-4 w-4" />
+              GitHub
+            </a>
+            <a
+              href={siteConfig.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ variant: "outline", size: "lg" }),
+                "backdrop-blur-sm border-accent/30 hover:border-accent/50 hover:bg-accent/10"
+              )}
+            >
+              <Link className="h-4 w-4" />
+              LinkedIn
+            </a>
+          </motion.div>
+
+          <motion.div
+            className="pt-4"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
+          >
+            <p className="text-sm text-foreground-muted">
+              Focused on Security Engineering · Distributed Systems · Backend Architecture · Cloud Infrastructure · AI Systems
+            </p>
+          </motion.div>
         </div>
       </div>
     </section>

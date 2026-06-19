@@ -22,8 +22,9 @@ export function Header() {
     setMobileOpen(false);
     
     if (isHomePage) {
-      // On home page, scroll to section
+      // On home page, scroll to section and update URL
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState(null, "", href);
     } else {
       // On other pages, navigate to home page with hash
       router.push(`/${href}`);

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
+import { usePathname } from "next/navigation";
 
 export function ScrollProgress() {
   const { scrollYProgress } = useScroll();
@@ -18,8 +19,12 @@ export function ScrollProgress() {
 
 export function useScrollSpy(sectionIds: string[]) {
   const [active, setActive] = useState(sectionIds[0]);
+  const pathname = usePathname();
+  const isHomePage = pathname === "/";
 
   useEffect(() => {
+    if (!isHomePage) return;
+
     const observers: IntersectionObserver[] = [];
 
     sectionIds.forEach((id) => {
@@ -28,7 +33,11 @@ export function useScrollSpy(sectionIds: string[]) {
 
       const observer = new IntersectionObserver(
         ([entry]) => {
-          if (entry.isIntersecting) setActive(id);
+          if (entry.isIntersecting) {
+            setActive(id);
+            // Update URL hash without scrolling
+            window.history.replaceState(null, "", `#${id}`);
+          }
         },
         { rootMargin: "-40% 0px -50% 0px" },
       );
@@ -38,7 +47,7 @@ export function useScrollSpy(sectionIds: string[]) {
     });
 
     return () => observers.forEach((o) => o.disconnect());
-  }, [sectionIds]);
+  }, [sectionIds, isHomePage]);
 
   return active;
 }

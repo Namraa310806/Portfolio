@@ -20,70 +20,80 @@ export function Achievements() {
   return (
     <section id="achievements" className="section-alt section-padding">
       <div className="section-container">
-        <FadeIn>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
           <SectionHeader
             eyebrow="Recognition"
             title="Achievements"
             subtitle="Competitive programming, open source recognition, and certifications."
           />
-        </FadeIn>
+        </motion.div>
 
-        <FadeIn delay={0.1}>
-          <div className="mx-auto mt-8 max-w-5xl">
-            <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {achievements.map((achievement, index) => {
-                const Icon = achievement.icon;
-                return (
-                  <motion.div
-                    key={index}
-                    className="group relative rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-6 hover:border-accent/50 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.15)] transition-all duration-300"
-                    initial={{ opacity: 0, scale: 0.9, y: 20 }}
-                    whileInView={{ opacity: 1, scale: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.1, type: "spring", stiffness: 300 }}
-                    whileHover={{ scale: 1.05, y: -4 }}
-                  >
-                    <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
-                    <div className="relative z-10">
-                      <div className={`flex items-center gap-2 mb-3 p-2 rounded-xl bg-gradient-to-br ${achievement.color} ${achievement.borderColor} border`}>
-                        <Icon className="h-5 w-5 text-foreground" />
-                      </div>
-                      <div className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
+        <div className="mx-auto mt-10 max-w-6xl">
+          <div className="grid gap-6 md:grid-cols-2">
+            {achievements.map((achievement, index) => {
+              const Icon = achievement.icon;
+              
+              return (
+                <motion.div
+                  key={index}
+                  className="group relative rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-8 hover:border-accent/50 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.15)] transition-all duration-300"
+                  initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                  whileHover={{ scale: 1.02, y: -4 }}
+                >
+                  <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
+                  <div className="relative z-10 flex items-start gap-6">
+                    <motion.div 
+                      className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex-shrink-0"
+                      whileHover={{ rotate: 5, scale: 1.1 }}
+                      transition={{ type: "spring", stiffness: 300, damping: 15 }}
+                    >
+                      <Icon className="h-8 w-8 text-accent" />
+                    </motion.div>
+                    <div className="flex-1 min-w-0">
+                      <div className="text-5xl font-bold tracking-tight text-foreground mb-2">
                         <AnimatedCounter
                           value={achievement.value}
                           suffix={achievement.suffix}
                         />
                       </div>
-                      <p className="mt-2 text-xs font-bold text-foreground-muted sm:text-sm">
+                      <p className="text-base font-bold text-foreground-muted">
                         {achievement.label}
                       </p>
                     </div>
-                  </motion.div>
-                );
-              })}
-            </div>
-
-            <motion.div
-              className="mt-6 text-center"
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: 0.4 }}
-            >
-              <p className="text-sm font-medium text-foreground-muted">
-                <a
-                  href={siteConfig.leetcode}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-bold text-accent hover:underline transition-colors"
-                >
-                  LeetCode profile
-                </a>
-                {" "}· Codeforces 1364 · CodeChef 4★
-              </p>
-            </motion.div>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
-        </FadeIn>
+
+          <motion.div
+            className="mt-8 text-center"
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-100px" }}
+            transition={{ duration: 0.8, delay: 0.5, ease: "easeOut" }}
+          >
+            <p className="text-sm font-medium text-foreground-muted">
+              <a
+                href={siteConfig.leetcode}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-accent hover:underline transition-colors"
+              >
+                LeetCode profile
+              </a>
+              {" "}· Codeforces 1364 · CodeChef 4★
+            </p>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
