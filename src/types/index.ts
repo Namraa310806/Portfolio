@@ -20,12 +20,6 @@ export interface Contribution {
   category: ContributionCategory;
 }
 
-export interface JourneyMilestone {
-  year: string;
-  title: string;
-  description: string;
-}
-
 export interface SelectedContribution {
   title: string;
   repository: string;
@@ -34,26 +28,6 @@ export interface SelectedContribution {
   category: ContributionCategory;
   url: string;
   prNumber: number;
-}
-
-export interface EngineeringPrinciple {
-  title: string;
-  description: string;
-}
-
-export interface SystemFeature {
-  name: string;
-  slug: "matchhire" | "teamsense" | "cloud-assistant";
-  overview: string;
-  architecture: string[];
-  challenges: string[];
-  results: string[];
-  tech: string[];
-}
-
-export interface SkillCategory {
-  name: string;
-  skills: string[];
 }
 
 export interface AchievementStat {
@@ -68,11 +42,4 @@ export interface Education {
   degree: string;
   cgpa: number;
   period: string;
-}
-
-export interface ProductionRepository {
-  name: string;
-  displayName: string;
-  repositoryUrl: string;
-  prCount: number;
 }

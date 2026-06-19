@@ -1,10 +1,7 @@
 import type {
   AchievementStat,
   Education,
-  JourneyMilestone,
   SelectedContribution,
-  SkillCategory,
-  SystemFeature,
 } from "@/types";
 import contributionsMeta from "@/data/contributions-meta.json";
 
@@ -25,12 +22,6 @@ export const siteConfig = {
   leetcode: "https://leetcode.com/u/Namraa310806/",
 };
 
-export const heroStats = [
-  { value: TOTAL_PRS, suffix: "+", label: "Merged PRs" },
-  { value: 500, suffix: "+", label: "Problems Solved" },
-  { value: 2013, suffix: "", label: "LeetCode" },
-  { value: 9.46, suffix: "", label: "CGPA", decimals: 2 },
-];
 
 export const achievementStats: AchievementStat[] = [
   { value: TOTAL_PRS, suffix: "+", label: "Merged PRs" },
@@ -125,40 +116,7 @@ export const education: Education[] = [
   },
 ];
 
-export const journey: JourneyMilestone[] = [
-  {
-    year: "Backend Development",
-    title: "Production APIs & Database Design",
-    description:
-      "Built REST APIs using Django and PostgreSQL with proper indexing, ORM optimization, and production-grade error handling.",
-  },
-  {
-    year: "Cloud Infrastructure",
-    title: "Serverless Systems on AWS",
-    description:
-      "Designed scalable serverless architectures using Lambda, API Gateway, DynamoDB, and S3 with zero infrastructure maintenance.",
-  },
-  {
-    year: "AI Systems",
-    title: "RAG Pipelines & ML Applications",
-    description:
-      "Built RAG pipelines, ML classification systems, and cloud-native AI applications with thread-safe inference execution.",
-  },
-  {
-    year: "Open Source Engineering",
-    title: `${TOTAL_PRS}+ Merged Production PRs`,
-    description:
-      "Contributed to production codebases with real code reviews, fixing security, concurrency, and authentication issues.",
-  },
-  {
-    year: "Distributed Systems",
-    title: "Rate Limiting & Concurrency Control",
-    description:
-      "Implemented Redis-backed distributed rate limiting, synchronized runtime state across async services, and centralized auth architecture.",
-  },
-];
 
-export const featuredSystems: SystemFeature[] = [];
 
 export const projects = [
   {
@@ -267,32 +225,7 @@ export const projects = [
   },
 ];
 
-export const skillCategories: SkillCategory[] = [
-  {
-    name: "Backend",
-    skills: ["Django", "DRF", "FastAPI", "Node.js", "Celery", "Flask", "REST APIs", "GraphQL"],
-  },
-  {
-    name: "Cloud",
-    skills: ["AWS", "Lambda", "API Gateway", "Docker", "Linux", "EC2", "S3", "CloudWatch", "Cognito"],
-  },
-  {
-    name: "Data",
-    skills: ["PostgreSQL", "Redis", "MongoDB", "DynamoDB", "S3", "MySQL", "Elasticsearch"],
-  },
-  {
-    name: "AI",
-    skills: ["TensorFlow", "scikit-learn", "OpenCV", "Transformers", "RAG", "PyTorch", "LangChain", "Hugging Face"],
-  },
-  {
-    name: "Frontend",
-    skills: ["React", "Bootstrap", "Streamlit", "Amplify", "Next.js", "Tailwind CSS", "TypeScript"],
-  },
-  {
-    name: "DevOps",
-    skills: ["Git", "GitHub Actions", "CI/CD", "Docker Compose", "Nginx", "Jenkins"],
-  },
-];
+
 
 export const navLinks = [
   { href: "#hero", label: "Home" },
