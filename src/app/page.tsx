@@ -4,7 +4,6 @@ import { Projects } from "@/components/sections/projects";
 import { Achievements } from "@/components/sections/achievements";
 import { Education } from "@/components/sections/education";
 import { EngineeringEcosystem } from "@/components/sections/engineering-ecosystem";
-import { Contact } from "@/components/sections/contact";
 
 export default function Home() {
   return (
@@ -15,7 +14,6 @@ export default function Home() {
       <Achievements />
       <Education />
       <EngineeringEcosystem />
-      <Contact />
     </>
   );
 }

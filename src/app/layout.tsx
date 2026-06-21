@@ -48,6 +48,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${geistMono.variable} h-full`}
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
     >
       <body className="min-h-full bg-background text-foreground antialiased">
         <ThemeProvider

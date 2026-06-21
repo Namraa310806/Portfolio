@@ -34,7 +34,7 @@ export function Achievements() {
         </motion.div>
 
         <div className="mx-auto mt-10 max-w-6xl">
-          <div className="grid gap-6 md:grid-cols-2">
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {achievements.map((achievement, index) => {
               const Icon = achievement.icon;
               
@@ -42,16 +42,16 @@ export function Achievements() {
                 <motion.div
                   key={index}
                   className="group relative rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-8 hover:border-accent/50 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.15)] transition-all duration-300"
-                  initial={{ opacity: 0, x: index % 2 === 0 ? -40 : 40 }}
-                  whileInView={{ opacity: 1, x: 0 }}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-100px" }}
                   transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
                   whileHover={{ scale: 1.02, y: -4 }}
                 >
                   <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
-                  <div className="relative z-10 flex items-start gap-6">
+                  <div className="relative z-10 flex flex-col items-center text-center">
                     <motion.div 
-                      className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex-shrink-0"
+                      className="flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 flex-shrink-0 mb-4"
                       whileHover={{ rotate: 5, scale: 1.1 }}
                       transition={{ type: "spring", stiffness: 300, damping: 15 }}
                     >

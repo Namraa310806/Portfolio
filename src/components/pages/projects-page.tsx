@@ -6,6 +6,7 @@ import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
 import { projects } from "@/data/site";
+import { getTechColor } from "@/lib/tech-colors";
 import Link from "next/link";
 
 const iconMap = {
@@ -109,14 +110,17 @@ export function ProjectsPage() {
                       </div>
 
                       <div className="mt-5 flex flex-wrap gap-2">
-                        {project.stack.map((tech) => (
-                          <span
-                            key={tech}
-                            className="rounded-lg border border-border/50 bg-background/50 px-3 py-1.5 text-xs font-semibold text-foreground group-hover:border-accent/30 group-hover:bg-accent/10 transition-all duration-300"
-                          >
-                            {tech}
-                          </span>
-                        ))}
+                        {project.stack.map((tech) => {
+                          const colors = getTechColor(tech);
+                          return (
+                            <span
+                              key={tech}
+                              className={`rounded-lg border ${colors.border} ${colors.bg} ${colors.text} px-3 py-1.5 text-xs font-semibold transition-all duration-300 hover:opacity-80`}
+                            >
+                              {tech}
+                            </span>
+                          );
+                        })}
                       </div>
                     </div>
                   </motion.div>

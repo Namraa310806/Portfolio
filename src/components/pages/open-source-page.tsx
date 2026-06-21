@@ -3,7 +3,6 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Search, TrendingUp, Filter, ArrowRight } from "lucide-react";
-import { AnimatedCounter } from "@/components/animations/animated-counter";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -12,10 +11,9 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
 import contributions from "@/data/contributions.json";
 import contributionsMeta from "@/data/contributions-meta.json";
-import { openSourceSummary, siteConfig } from "@/data/site";
+import { siteConfig } from "@/data/site";
 import type { Contribution, ContributionCategory } from "@/types";
 import { cn } from "@/lib/utils";
-import { GitHubCalendar } from "react-github-calendar";
 import Link from "next/link";
 
 const filterCategories: ContributionCategory[] = [
@@ -70,134 +68,6 @@ export function OpenSourcePage() {
           </FadeIn>
 
           <FadeIn delay={0.05}>
-            <div className="mt-8 grid gap-6 lg:grid-cols-2">
-              <div className="grid gap-4 sm:grid-cols-2">
-                <motion.div
-                  className="stat-card p-8 text-center"
-                  whileHover={{ scale: 1.05, y: -4 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <div className="text-5xl font-bold text-foreground">
-                    <AnimatedCounter
-                      value={openSourceSummary.mergedPRs}
-                      suffix="+"
-                    />
-                  </div>
-                  <p className="mt-3 text-base font-semibold text-foreground-muted">
-                    Merged PRs
-                  </p>
-                </motion.div>
-                <motion.div
-                  className="stat-card p-8 text-center"
-                  whileHover={{ scale: 1.05, y: -4 }}
-                  transition={{ type: "spring", stiffness: 300, damping: 20 }}
-                >
-                  <div className="text-5xl font-bold text-foreground">
-                    <AnimatedCounter
-                      value={openSourceSummary.repositories}
-                    />
-                  </div>
-                  <p className="mt-3 text-base font-semibold text-foreground-muted">Production Repositories</p>
-                </motion.div>
-              </div>
-
-              <motion.div
-                className="rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-6"
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.1 }}
-              >
-                <h4 className="text-sm font-bold text-accent uppercase tracking-wider mb-4">
-                  Focus Areas
-                </h4>
-                <div className="flex flex-wrap gap-2">
-                  {openSourceSummary.categories.map((cat) => (
-                    <Badge key={cat} variant="accent" className="font-semibold text-sm px-4 py-2">
-                      {cat}
-                    </Badge>
-                  ))}
-                </div>
-              </motion.div>
-            </div>
-          </FadeIn>
-
-          <FadeIn delay={0.1}>
-            <motion.div
-              className="mt-8 rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-8"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-            >
-              <h4 className="text-sm font-bold text-accent uppercase tracking-wider mb-6">
-                GitHub Contribution Heatmap
-              </h4>
-              <div className="flex justify-center">
-                <GitHubCalendar
-                  username={siteConfig.github.replace("https://github.com/", "")}
-                  blockSize={14}
-                  blockMargin={4}
-                  colorScheme="dark"
-                  style={{ width: "100%", maxWidth: "900px" }}
-                  theme={{
-                    dark: [
-                      "#161b22",
-                      "#0e4429",
-                      "#006d32",
-                      "#26a641",
-                      "#39d353",
-                    ],
-                  }}
-                />
-              </div>
-            </motion.div>
-          </FadeIn>
-
-          <FadeIn delay={0.15}>
-            <motion.div
-              className="mt-8 rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-6"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-            >
-              <h4 className="text-sm font-bold text-accent uppercase tracking-wider mb-4">
-                Repository Distribution
-              </h4>
-              <div className="space-y-4">
-                {productionRepositories.map((repo, index) => {
-                  const maxPrs = Math.max(...productionRepositories.map((r) => r.prCount));
-                  const percentage = (repo.prCount / maxPrs) * 100;
-                  return (
-                    <motion.div
-                      key={repo.name}
-                      initial={{ opacity: 0, x: -10 }}
-                      whileInView={{ opacity: 1, x: 0 }}
-                      viewport={{ once: true }}
-                      transition={{ delay: 0.25 + index * 0.05 }}
-                    >
-                      <div className="flex items-center justify-between mb-2">
-                        <span className="text-sm font-semibold text-foreground">{repo.displayName}</span>
-                        <span className="text-sm font-bold text-accent">{repo.prCount} PRs</span>
-                      </div>
-                      <div className="h-3 rounded-full bg-background-muted/50 overflow-hidden">
-                        <motion.div
-                          className="h-full bg-gradient-to-r from-accent to-purple-500 rounded-full"
-                          initial={{ width: 0 }}
-                          whileInView={{ width: `${percentage}%` }}
-                          viewport={{ once: true }}
-                          transition={{ duration: 1, delay: 0.3 + index * 0.1, ease: "easeOut" }}
-                        />
-                      </div>
-                    </motion.div>
-                  );
-                })}
-              </div>
-            </motion.div>
-          </FadeIn>
-
-          <FadeIn delay={0.2}>
             <div className="mt-8 flex flex-wrap gap-2">
               {productionRepositories.map((repo) => (
                 <motion.div
