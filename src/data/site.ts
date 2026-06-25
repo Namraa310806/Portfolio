@@ -123,6 +123,7 @@ export const projects = [
     title: "ProfiLens",
     description: "Full-Stack Career Development Platform with gamified learning, MCQ + coding exams, AI-powered resume generation, and a coin-based reward store. Built with Django, DRF, PostgreSQL, and WeasyPrint for PDF generation.",
     stack: ["Django", "DRF", "PostgreSQL", "Python", "Bootstrap", "WeasyPrint", "JWT", "Celery", "Redis"],
+    outcome: "Built async resume/PDF generation with RBAC-backed learning workflows.",
     github: "https://github.com/Namraa310806/ProfiLens",
     liveDemo: null,
     challenges: [
@@ -136,6 +137,7 @@ export const projects = [
     title: "Personal Cloud Assistant",
     description: "Fully serverless AWS application for secure note and file management. Uses Lambda + API Gateway for REST APIs, S3 pre-signed URLs for file I/O, DynamoDB for storage, Cognito for auth, and CloudWatch for monitoring.",
     stack: ["AWS", "Lambda", "API Gateway", "DynamoDB", "S3", "Cognito", "Amplify", "React", "CloudWatch", "IAM"],
+    outcome: "Shipped secure serverless notes and file storage with Cognito and S3 pre-signed URLs.",
     github: "https://github.com/Namraa310806/AWSPeronsalCloudAssistant",
     liveDemo: "https://main.d1xrjjt0e3swym.amplifyapp.com/",
     challenges: [
@@ -149,6 +151,7 @@ export const projects = [
     title: "TeamSense",
     description: "AI-Powered HR Intelligence Platform built for a hackathon. Features DRF APIs, async ingestion pipelines via Celery + Redis, PostgreSQL models, React dashboard, and Dockerized deployment.",
     stack: ["Django", "DRF", "PostgreSQL", "Redis", "Celery", "Docker", "React", "Nginx", "JWT"],
+    outcome: "Designed async HR intelligence pipelines with Celery, Redis, and Dockerized services.",
     github: "https://github.com/Namraa310806/TeamSense",
     liveDemo: null,
     challenges: [
@@ -162,6 +165,7 @@ export const projects = [
     title: "Animal Classification",
     description: "Deep learning project classifying images into 15 animal categories using MobileNetV2 transfer learning. Features data augmentation, early stopping, and a Streamlit web app for predictions.",
     stack: ["TensorFlow", "MobileNetV2", "Python", "Streamlit", "scikit-learn", "NumPy", "Pandas"],
+    outcome: "Trained and deployed transfer-learning inference for 15-class image classification.",
     github: "https://github.com/Namraa310806/AnimalClassification",
     liveDemo: null,
     challenges: [
@@ -175,6 +179,7 @@ export const projects = [
     title: "Color Classifier",
     description: "ML web app that analyzes and visualizes dominant color distribution in images. Uses Random Forest classifier on custom-labeled color dataset with OpenCV for feature extraction and Streamlit for the UI.",
     stack: ["Python", "scikit-learn", "OpenCV", "NumPy", "Streamlit", "Pandas", "Matplotlib"],
+    outcome: "Delivered real-time dominant-color prediction with OpenCV feature extraction.",
     github: "https://github.com/Namraa310806/ColorClassifierML",
     liveDemo: "https://namraapatel-colorclassifier.streamlit.app/",
     challenges: [
@@ -188,6 +193,7 @@ export const projects = [
     title: "GestureMediaPlayer",
     description: "Computer vision application that controls media playback using hand gestures. Uses MediaPipe for real-time hand tracking and gesture recognition with OpenCV for video processing.",
     stack: ["Python", "MediaPipe", "OpenCV", "NumPy", "CV2", "PyAutoGUI", "Threading"],
+    outcome: "Implemented low-latency hand-gesture controls for desktop media playback.",
     github: "https://github.com/Namraa310806/GestureMediaPlayer",
     liveDemo: null,
     challenges: [
@@ -201,6 +207,7 @@ export const projects = [
     title: "n8n Workflow",
     description: "Custom n8n workflow automation for data processing and integration. Features automated triggers, API integrations, and conditional logic for complex business processes.",
     stack: ["n8n", "JavaScript", "Node.js", "REST APIs", "Webhooks"],
+    outcome: "Automated API-triggered workflows with conditional routing and retry-aware handling.",
     github: "https://github.com/Namraa310806/n8n-workflows",
     liveDemo: null,
     challenges: [
@@ -214,6 +221,7 @@ export const projects = [
     title: "Automated Book Workflow",
     description: "End-to-end automation system for book processing and management. Integrates multiple APIs for metadata extraction, content processing, and automated publishing workflows.",
     stack: ["Python", "n8n", "REST APIs", "Docker", "PostgreSQL"],
+    outcome: "Orchestrated multi-service book processing with resilient workflow state management.",
     github: "https://github.com/Namraa310806/AutomatedBookWorkflow",
     liveDemo: null,
     challenges: [

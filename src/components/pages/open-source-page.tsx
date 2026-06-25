@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Search, TrendingUp, Filter, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight, ExternalLink, Search, ShieldCheck, TrendingUp } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardDescription, CardTitle } from "@/components/ui/card";
@@ -11,8 +11,8 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
 import contributions from "@/data/contributions.json";
 import contributionsMeta from "@/data/contributions-meta.json";
-import { siteConfig } from "@/data/site";
 import type { Contribution, ContributionCategory } from "@/types";
+import { getContributionSummary } from "@/lib/contribution-summaries";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
@@ -27,6 +27,17 @@ const filterCategories: ContributionCategory[] = [
 
 const allContributions = contributions as Contribution[];
 const productionRepositories = contributionsMeta.productionRepos;
+const topContributionIds = [
+  "pr-Eventra-8655",
+  "pr-Eventra-9156",
+  "pr-LegalEase-350",
+  "pr-AegisGraph-Sentinel-2.0-1054",
+  "pr-pdf-qa-bot-69",
+  "pr-LegalEase-402",
+];
+const topContributions = topContributionIds
+  .map((id) => allContributions.find((pr) => pr.id === id))
+  .filter((pr): pr is Contribution => Boolean(pr));
 
 export function OpenSourcePage() {
   const [filter, setFilter] = useState<ContributionCategory | "All">("All");
@@ -35,13 +46,16 @@ export function OpenSourcePage() {
 
   const filtered = useMemo(() => {
     return allContributions.filter((pr) => {
+      const q = search.toLowerCase();
       const matchesCategory = filter === "All" || pr.category === filter;
       const matchesRepo = repoFilter === "All" || pr.repository === repoFilter;
-      const q = search.toLowerCase();
       const matchesSearch =
         !q ||
         pr.title.toLowerCase().includes(q) ||
-        pr.repository.toLowerCase().includes(q);
+        pr.repository.toLowerCase().includes(q) ||
+        pr.category.toLowerCase().includes(q) ||
+        getContributionSummary(pr).toLowerCase().includes(q);
+
       return matchesCategory && matchesRepo && matchesSearch;
     });
   }, [filter, repoFilter, search]);
@@ -55,15 +69,16 @@ export function OpenSourcePage() {
             <div className="mb-8">
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 text-sm text-foreground-muted hover:text-foreground transition-colors"
+                className="inline-flex items-center gap-2 text-sm text-foreground-muted transition-colors hover:text-foreground"
               >
-                ← Back to Home
+                <ArrowLeft className="h-4 w-4" />
+                Back to Home
               </Link>
             </div>
             <SectionHeader
               eyebrow="Open Source Impact"
               title="All Contributions"
-              subtitle={`${contributionsMeta.totalPRs}+ merged pull requests across ${contributionsMeta.totalRepositories} production repositories — security, concurrency, AI, cloud, and backend systems.`}
+              subtitle={`${contributionsMeta.totalPRs}+ merged pull requests across ${contributionsMeta.totalRepositories} production repositories - security, concurrency, AI, cloud, and backend systems.`}
             />
           </FadeIn>
 
@@ -121,9 +136,74 @@ export function OpenSourcePage() {
 
           <FadeIn delay={0.25}>
             <div className="mt-10">
+              <div className="mb-5 flex items-end justify-between gap-4">
+                <div>
+                  <p className="mb-2 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-muted px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent-foreground">
+                    <ShieldCheck className="h-3.5 w-3.5" />
+                    Highest Impact
+                  </p>
+                  <h3 className="text-2xl font-bold tracking-tight text-foreground">
+                    Top Contributions
+                  </h3>
+                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-foreground-muted">
+                    Curated by production risk, technical difficulty, and recruiter signal.
+                  </p>
+                </div>
+              </div>
+
+              <div className="grid gap-4 lg:grid-cols-2">
+                {topContributions.map((pr, index) => (
+                  <motion.a
+                    key={pr.id}
+                    href={pr.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
+                    initial={{ opacity: 0, y: 18 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: index * 0.05, duration: 0.35 }}
+                  >
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="relative z-10">
+                      <div className="mb-4 flex items-center justify-between gap-3">
+                        <div className="flex items-center gap-3">
+                          <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-accent/25 bg-accent-muted text-sm font-black text-accent-foreground">
+                            {index + 1}
+                          </span>
+                          <div>
+                            <p className="text-sm font-bold text-foreground">
+                              {pr.repository}
+                            </p>
+                            <p className="text-xs font-medium text-foreground-muted">
+                              PR #{pr.number}
+                            </p>
+                          </div>
+                        </div>
+                        <Badge variant="accent" className="font-semibold">
+                          {pr.category}
+                        </Badge>
+                      </div>
+                      <h4 className="text-base font-bold leading-snug text-foreground transition-colors group-hover:text-accent">
+                        {pr.title}
+                      </h4>
+                      <p className="mt-3 text-sm font-medium leading-relaxed text-foreground">
+                        {getContributionSummary(pr)}
+                      </p>
+                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-accent">
+                        View important PR
+                        <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                      </span>
+                    </div>
+                  </motion.a>
+                ))}
+              </div>
+            </div>
+
+            <div className="mt-10">
               <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
                 <motion.h3
-                  className="text-xl font-bold text-foreground flex items-center gap-2"
+                  className="flex items-center gap-2 text-xl font-bold text-foreground"
                   initial={{ opacity: 0, x: -10 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.3 }}
@@ -134,30 +214,18 @@ export function OpenSourcePage() {
                 <div className="relative w-full sm:max-w-xs">
                   <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground-muted" />
                   <Input
+                    type="search"
                     placeholder="Search PRs..."
                     value={search}
-                    onChange={(e) => setSearch(e.target.value)}
-                    className="pl-10 border-2 focus:border-accent/50"
+                    onChange={(event) => setSearch(event.target.value)}
+                    className="pl-10"
                     aria-label="Search contributions"
                   />
                 </div>
               </div>
 
               <div className="mt-4 flex flex-wrap gap-2">
-                <motion.button
-                  onClick={() => setFilter("All")}
-                  className={cn(
-                    "rounded-full border px-4 py-1.5 text-xs font-bold transition-all",
-                    filter === "All"
-                      ? "border-accent bg-accent text-white shadow-lg shadow-accent/25"
-                      : "border-border bg-card text-foreground-muted hover:border-accent/30 hover:shadow-md",
-                  )}
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  All
-                </motion.button>
-                {filterCategories.map((cat) => (
+                {(["All", ...filterCategories] as const).map((cat) => (
                   <motion.button
                     key={cat}
                     onClick={() => setFilter(cat)}
@@ -182,6 +250,7 @@ export function OpenSourcePage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.02, type: "spring", stiffness: 300 }}
+                    whileHover={{ y: -4 }}
                   >
                     <a
                       href={pr.url}
@@ -189,25 +258,34 @@ export function OpenSourcePage() {
                       rel="noopener noreferrer"
                       className="block h-full"
                     >
-                      <Card className="h-full transition-all hover:border-accent/40 hover:shadow-lg hover:-translate-y-1 group">
-                        <div className="mb-3 flex items-center justify-between gap-2">
-                          <Badge
-                            variant={
-                              pr.status === "Merged" ? "accent" : "outline"
-                            }
-                            className="font-semibold"
-                          >
-                            {pr.status}
-                          </Badge>
-                          <Badge variant="outline" className="font-semibold">{pr.category}</Badge>
+                      <Card className="group relative h-full min-h-[230px] overflow-hidden border-border/70 transition-all hover:border-accent/40 hover:shadow-lg">
+                        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                        <div className="relative z-10">
+                          <div className="mb-3 flex items-center justify-between gap-2">
+                            <Badge
+                              variant={pr.status === "Merged" ? "accent" : "outline"}
+                              className="font-semibold"
+                            >
+                              {pr.status}
+                            </Badge>
+                            <Badge variant="outline" className="font-semibold">
+                              {pr.category}
+                            </Badge>
+                          </div>
+                          <CardTitle className="text-base font-bold leading-snug transition-colors group-hover:text-accent">
+                            {pr.title}
+                          </CardTitle>
+                          <p className="mt-3 text-sm font-medium leading-relaxed text-foreground">
+                            {getContributionSummary(pr)}
+                          </p>
+                          <CardDescription className="mt-3 text-sm font-medium">
+                            {pr.repository} - #{pr.number}
+                          </CardDescription>
+                          <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-accent">
+                            View PR
+                            <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
+                          </span>
                         </div>
-                        <CardTitle className="text-base leading-snug font-bold group-hover:text-accent transition-colors">
-                          {pr.title}
-                        </CardTitle>
-                        <CardDescription className="mt-2 flex items-center gap-1 text-sm font-medium">
-                          {pr.repository} · #{pr.number}
-                          <ExternalLink className="h-3 w-3" />
-                        </CardDescription>
                       </Card>
                     </a>
                   </motion.div>

@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Inter, Geist_Mono } from "next/font/google";
 import { Footer } from "@/components/layout/footer";
 import { Header } from "@/components/layout/header";
-import { CommandPalette } from "@/components/layout/command-palette";
 import { ScrollProgress } from "@/components/layout/scroll-progress";
 import { ThemeProvider } from "@/providers/theme-provider";
 import { siteConfig } from "@/data/site";
@@ -62,7 +61,6 @@ export default function RootLayout({
           <Header />
           <main>{children}</main>
           <Footer />
-          <CommandPalette />
         </ThemeProvider>
       </body>
     </html>

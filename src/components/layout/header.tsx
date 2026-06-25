@@ -5,7 +5,6 @@ import { useRouter, usePathname } from "next/navigation";
 import { Menu, X, Download } from "lucide-react";
 import { navLinks, siteConfig } from "@/data/site";
 import { cn, withBasePath } from "@/lib/utils";
-import { CommandPaletteTrigger } from "./command-palette";
 import { useScrollSpy } from "./scroll-progress";
 import { ThemeToggle } from "./theme-toggle";
 
@@ -76,7 +75,6 @@ export function Header() {
         </nav>
 
         <div className="flex items-center gap-2.5">
-          <CommandPaletteTrigger />
           <ThemeToggle />
           <button
             className="rounded-lg p-2 text-foreground-muted hover:bg-background-muted hover:text-foreground md:hidden"

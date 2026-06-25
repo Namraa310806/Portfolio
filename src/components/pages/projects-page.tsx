@@ -1,12 +1,14 @@
 "use client";
 
+import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, ArrowRight } from "lucide-react";
+import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, Search } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
+import { Input } from "@/components/ui/input";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
 import { projects } from "@/data/site";
-import { getTechColor } from "@/lib/tech-colors";
+import { getTechColor, techColors } from "@/lib/tech-colors";
 import Link from "next/link";
 
 const iconMap = {
@@ -21,6 +23,28 @@ const iconMap = {
 };
 
 export function ProjectsPage() {
+  const [search, setSearch] = useState("");
+
+  const filteredProjects = useMemo(() => {
+    const query = search.trim().toLowerCase();
+    if (!query) return projects;
+
+    return projects.filter((project) => {
+      const searchable = [
+        project.title,
+        project.description,
+        project.outcome,
+        ...project.stack,
+        ...project.stack.map((tech) => techColors[tech] ?? "other"),
+        ...project.challenges,
+      ]
+        .join(" ")
+        .toLowerCase();
+
+      return searchable.includes(query);
+    });
+  }, [search]);
+
   return (
     <div className="min-h-screen">
       <Header />
@@ -42,42 +66,63 @@ export function ProjectsPage() {
             />
           </FadeIn>
 
+          <FadeIn delay={0.05}>
+            <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-sm font-medium text-foreground-muted">
+                Showing {filteredProjects.length} of {projects.length} projects
+              </p>
+              <div className="relative w-full sm:max-w-sm">
+                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground-muted" />
+                <Input
+                  type="search"
+                  placeholder="Search projects, tech, category..."
+                  value={search}
+                  onChange={(event) => setSearch(event.target.value)}
+                  className="pl-10"
+                  aria-label="Search projects"
+                />
+              </div>
+            </div>
+          </FadeIn>
+
           <div className="mt-12 grid gap-6 lg:grid-cols-2 xl:grid-cols-3">
-            {projects.map((project, index) => {
+            {filteredProjects.map((project, index) => {
               const Icon = iconMap[project.title as keyof typeof iconMap] || Code2;
               return (
                 <FadeIn key={project.title} delay={index * 0.1}>
                   <motion.div
-                    className="group relative rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-6 hover:border-accent/50 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.15)] transition-all duration-300"
+                    className="group relative h-full overflow-hidden rounded-2xl border border-border/70 bg-card p-6 shadow-sm transition-all duration-300 hover:border-accent/45 hover:shadow-lg"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.5, delay: index * 0.1 }}
-                    whileHover={{ y: -8, scale: 1.02 }}
+                    whileHover={{ y: -6 }}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl" />
-                    <div className="relative z-10">
+                    <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                    <div className="relative z-10 flex h-full flex-col">
                       <div className="flex items-start justify-between gap-4 mb-4">
-                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-accent/20 to-accent/5 border border-accent/20 group-hover:from-accent/30 group-hover:to-accent/10 group-hover:border-accent/40 transition-all duration-300">
-                          <Icon className="h-7 w-7 text-accent" />
+                        <div className="flex h-14 w-14 items-center justify-center rounded-2xl bg-accent-muted border border-accent/20 text-accent-foreground group-hover:scale-105 transition-all duration-300">
+                          <Icon className="h-7 w-7" />
                         </div>
                         <div className="flex gap-2">
                           <a
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/50 bg-background/50 hover:border-accent/50 hover:bg-accent/10 transition-all duration-300"
+                            className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background/80 text-foreground-muted hover:border-accent/50 hover:bg-accent/10 hover:text-accent transition-all duration-300"
+                            aria-label={`${project.title} GitHub repository`}
                           >
-                            <Code2 className="h-5 w-5 text-foreground-muted group-hover:text-accent transition-colors" />
+                            <Code2 className="h-5 w-5" />
                           </a>
                           {project.liveDemo && (
                             <a
                               href={project.liveDemo}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/50 bg-background/50 hover:border-accent/50 hover:bg-accent/10 transition-all duration-300"
+                              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background/80 text-foreground-muted hover:border-accent/50 hover:bg-accent/10 hover:text-accent transition-all duration-300"
+                              aria-label={`${project.title} live demo`}
                             >
-                              <ExternalLink className="h-5 w-5 text-foreground-muted group-hover:text-accent transition-colors" />
+                              <ExternalLink className="h-5 w-5" />
                             </a>
                           )}
                         </div>
@@ -89,6 +134,10 @@ export function ProjectsPage() {
 
                       <p className="mt-3 text-sm leading-relaxed text-foreground-muted">
                         {project.description}
+                      </p>
+
+                      <p className="mt-4 rounded-xl border border-accent/20 bg-accent-muted/50 px-3 py-2 text-sm font-semibold leading-relaxed text-accent-foreground">
+                        {project.outcome}
                       </p>
 
                       <div className="mt-4">
@@ -109,13 +158,12 @@ export function ProjectsPage() {
                         </ul>
                       </div>
 
-                      <div className="mt-5 flex flex-wrap gap-2">
+                      <div className="mt-auto flex flex-wrap gap-2 pt-5">
                         {project.stack.map((tech) => {
-                          const colors = getTechColor(tech);
                           return (
                             <span
                               key={tech}
-                              className={`rounded-lg border ${colors.border} ${colors.bg} ${colors.text} px-3 py-1.5 text-xs font-semibold transition-all duration-300 hover:opacity-80`}
+                              className={getTechColor(tech)}
                             >
                               {tech}
                             </span>
@@ -128,6 +176,16 @@ export function ProjectsPage() {
               );
             })}
           </div>
+
+          {filteredProjects.length === 0 && (
+            <motion.p
+              className="py-12 text-center text-sm text-foreground-muted"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+            >
+              No projects match your search.
+            </motion.p>
+          )}
         </div>
       </section>
     </div>

@@ -20,9 +20,17 @@ export const techColors: Record<string, TechEcosystem> = {
   REST: "backend",
   GraphQL: "backend",
   Node: "backend",
+  "Node.js": "backend",
   Express: "backend",
+  "Spring Boot": "backend",
   JWT: "backend",
   JavaScript: "backend",
+  Java: "backend",
+  "C++": "backend",
+  Go: "backend",
+  Rust: "backend",
+  gRPC: "backend",
+  "REST APIs": "backend",
   
   // Cloud Ecosystem - Amber tones
   AWS: "cloud",
@@ -31,6 +39,9 @@ export const techColors: Record<string, TechEcosystem> = {
   CloudWatch: "cloud",
   Cognito: "cloud",
   Docker: "cloud",
+  Kubernetes: "cloud",
+  Vercel: "cloud",
+  Firebase: "cloud",
   Linux: "cloud",
   EC2: "cloud",
   S3: "cloud",
@@ -46,6 +57,8 @@ export const techColors: Record<string, TechEcosystem> = {
   DynamoDB: "data",
   Elasticsearch: "data",
   MySQL: "data",
+  SQLite: "data",
+  Prisma: "data",
   
   // AI Ecosystem - Orange tones
   TensorFlow: "ai",
@@ -56,19 +69,26 @@ export const techColors: Record<string, TechEcosystem> = {
   PyTorch: "ai",
   LangChain: "ai",
   "Hugging Face": "ai",
+  HuggingFace: "ai",
+  Ollama: "ai",
   "MobileNetV2": "ai",
   MediaPipe: "ai",
   
   // Frontend Ecosystem - Blue tones
   React: "frontend",
   "Next.js": "frontend",
+  NextJS: "frontend",
+  Svelte: "frontend",
+  Vue: "frontend",
   TypeScript: "frontend",
   Tailwind: "frontend",
+  "Tailwind CSS": "frontend",
   Bootstrap: "frontend",
   Streamlit: "frontend",
   
   // DevOps Ecosystem - Purple tones
   Git: "devops",
+  GitHub: "devops",
   "GitHub Actions": "devops",
   "CI/CD": "devops",
   "Docker Compose": "devops",
@@ -85,42 +105,14 @@ export const techColors: Record<string, TechEcosystem> = {
   Threading: "backend",
 };
 
-export const ecosystemColors: Record<TechEcosystem, { bg: string; text: string; border: string }> = {
-  backend: {
-    bg: "bg-emerald-100 dark:bg-emerald-500/20",
-    text: "text-gray-900 dark:text-emerald-200",
-    border: "border-emerald-300 dark:border-emerald-500/30",
-  },
-  cloud: {
-    bg: "bg-amber-100 dark:bg-amber-500/20",
-    text: "text-gray-900 dark:text-amber-200",
-    border: "border-amber-300 dark:border-amber-500/30",
-  },
-  data: {
-    bg: "bg-red-100 dark:bg-red-500/20",
-    text: "text-gray-900 dark:text-red-200",
-    border: "border-red-300 dark:border-red-500/30",
-  },
-  ai: {
-    bg: "bg-orange-100 dark:bg-orange-500/20",
-    text: "text-gray-900 dark:text-orange-200",
-    border: "border-orange-300 dark:border-orange-500/30",
-  },
-  frontend: {
-    bg: "bg-blue-100 dark:bg-blue-500/20",
-    text: "text-gray-900 dark:text-blue-200",
-    border: "border-blue-300 dark:border-blue-500/30",
-  },
-  devops: {
-    bg: "bg-purple-100 dark:bg-purple-500/20",
-    text: "text-gray-900 dark:text-purple-200",
-    border: "border-purple-300 dark:border-purple-500/30",
-  },
-  other: {
-    bg: "bg-gray-100 dark:bg-gray-500/20",
-    text: "text-gray-900 dark:text-gray-200",
-    border: "border-gray-300 dark:border-gray-500/30",
-  },
+export const ecosystemColors: Record<TechEcosystem, string> = {
+  backend: "tech-badge tech-badge-backend",
+  cloud: "tech-badge tech-badge-cloud",
+  data: "tech-badge tech-badge-data",
+  ai: "tech-badge tech-badge-ai",
+  frontend: "tech-badge tech-badge-frontend",
+  devops: "tech-badge tech-badge-devops",
+  other: "tech-badge tech-badge-other",
 };
 
 export function getTechColor(tech: string) {
