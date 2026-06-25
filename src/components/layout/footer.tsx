@@ -1,8 +1,9 @@
 "use client";
 
 import { siteConfig } from "@/data/site";
+import { withBasePath } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
-import { Mail, Phone, FileText, ArrowUp, Link as LinkIcon } from "lucide-react";
+import { Mail, Phone, FileText, ArrowUp } from "lucide-react";
 import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
@@ -39,9 +40,11 @@ export function Footer() {
                 <FaLinkedin className="h-5 w-5 text-foreground-muted hover:text-accent" />
               </a>
               <a
-                href={siteConfig.resumePath}
+                href={withBasePath(siteConfig.resumePath)}
+                download
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Download resume"
                 className="flex h-10 w-10 items-center justify-center rounded-xl border border-border/50 bg-background/50 hover:border-accent/50 hover:bg-accent/10 transition-all duration-300"
               >
                 <FileText className="h-5 w-5 text-foreground-muted hover:text-accent" />
@@ -86,9 +89,15 @@ export function Footer() {
               <Link href="#achievements" className="block text-sm text-foreground-muted hover:text-foreground transition-colors">
                 Achievements
               </Link>
-              <Link href="/resume" className="block text-sm text-foreground-muted hover:text-foreground transition-colors">
+              <a
+                href={withBasePath(siteConfig.resumePath)}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-sm text-foreground-muted hover:text-foreground transition-colors"
+              >
                 Resume
-              </Link>
+              </a>
             </div>
           </div>
 
