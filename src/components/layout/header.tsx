@@ -19,6 +19,16 @@ export function Header() {
 
   const scrollTo = (href: string) => {
     setMobileOpen(false);
+
+    if (href === "/") {
+      if (isHomePage) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        window.history.replaceState(null, "", "/");
+      } else {
+        router.push("/");
+      }
+      return;
+    }
     
     if (isHomePage) {
       // On home page, scroll to section and update URL
