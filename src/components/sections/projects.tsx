@@ -63,13 +63,12 @@ export function Projects() {
                 return (
                   <article
                     key={`${project.title}-${index}`}
-                    className="group relative flex h-[430px] w-[280px] shrink-0 flex-col overflow-hidden rounded-2xl border border-border/70 bg-card p-5 shadow-md transition-all duration-500 hover:-translate-y-2 hover:border-accent/40 hover:shadow-lg sm:w-[340px] lg:h-[460px] lg:w-[390px]"
+                    className="group relative flex h-[470px] w-[280px] shrink-0 flex-col overflow-hidden rounded-2xl border border-border bg-card p-5 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:border-foreground/20 hover:shadow-md sm:w-[340px] lg:h-[510px] lg:w-[390px]"
                     aria-hidden={isDuplicate}
                   >
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                     <div className="relative z-10 flex h-full flex-col">
                       <div className="mb-5 flex items-start justify-between gap-4">
-                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-accent/25 bg-accent-muted text-accent-foreground transition-transform duration-300 group-hover:scale-105">
+                        <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-border bg-background-muted text-foreground transition-transform duration-300 group-hover:scale-105">
                           <Icon className="h-7 w-7" />
                         </div>
                         <div className="flex gap-2">
@@ -77,7 +76,7 @@ export function Projects() {
                             href={project.github}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background/80 text-foreground-muted transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent"
+                            className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background text-foreground-muted transition-all hover:border-foreground/20 hover:bg-background-muted hover:text-foreground"
                             aria-label={`${project.title} GitHub repository`}
                           >
                             <Code2 className="h-5 w-5" />
@@ -87,7 +86,7 @@ export function Projects() {
                               href={project.liveDemo}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background/80 text-foreground-muted transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent"
+                              className="flex h-10 w-10 items-center justify-center rounded-xl border border-border bg-background text-foreground-muted transition-all hover:border-foreground/20 hover:bg-background-muted hover:text-foreground"
                               aria-label={`${project.title} live demo`}
                             >
                               <ExternalLink className="h-5 w-5" />
@@ -96,19 +95,19 @@ export function Projects() {
                         </div>
                       </div>
 
-                      <h3 className="text-xl font-bold text-foreground transition-colors group-hover:text-accent">
+                      <h3 className="text-xl font-bold text-foreground">
                         {project.title}
                       </h3>
                       <p className="mt-3 line-clamp-3 text-sm leading-relaxed text-foreground-muted">
                         {project.description}
                       </p>
 
-                      <p className="mt-4 line-clamp-2 rounded-xl border border-accent/20 bg-accent-muted/50 px-3 py-2 text-sm font-semibold leading-relaxed text-accent-foreground">
+                      <p className="mt-4 rounded-xl border border-border bg-background-muted px-3 py-2 text-sm font-semibold leading-relaxed text-foreground">
                         {project.outcome}
                       </p>
 
                       <div className="mt-5">
-                        <p className="mb-3 flex items-center gap-2 text-xs font-bold text-accent">
+                        <p className="mb-3 flex items-center gap-2 text-xs font-bold text-foreground">
                           <Layout className="h-3.5 w-3.5" />
                           Key Engineering Challenges
                         </p>
@@ -118,7 +117,7 @@ export function Projects() {
                               key={challenge}
                               className="flex items-center gap-2 text-xs text-foreground-muted"
                             >
-                              <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-accent" />
+                              <CheckCircle2 className="h-3.5 w-3.5 shrink-0 text-foreground-muted" />
                               <span className="line-clamp-1">{challenge}</span>
                             </li>
                           ))}

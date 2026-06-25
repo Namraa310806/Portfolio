@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { GraduationCap, Award } from "lucide-react";
-import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { education } from "@/data/site";
 

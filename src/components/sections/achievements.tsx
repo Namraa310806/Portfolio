@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Trophy, Target, Award, Medal, Star, Zap, Code2 } from "lucide-react";
+import { Trophy, Target, Award, Medal, Star, Zap } from "lucide-react";
 import { AnimatedCounter } from "@/components/animations/animated-counter";
-import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { siteConfig } from "@/data/site";
 

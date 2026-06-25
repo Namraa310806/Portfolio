@@ -4,7 +4,6 @@ import { ArrowDown, Download, Code2, Link, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/visuals/aurora-background";
 import { GradientMesh } from "@/components/visuals/gradient-mesh";
-import { FadeIn } from "@/components/animations/fade-in";
 import { Button } from "@/components/ui/button";
 import { buttonVariants } from "@/components/ui/button-variants";
 import { cn, withBasePath } from "@/lib/utils";

@@ -1,11 +1,8 @@
 "use client";
 
-import { Code2, Link, Mail, Send, Download } from "lucide-react";
+import { Code2, Link, Mail, Download } from "lucide-react";
 import { motion } from "framer-motion";
-import { FadeIn } from "@/components/animations/fade-in";
-import { buttonVariants } from "@/components/ui/button-variants";
 import { SectionHeader } from "@/components/ui/section-header";
-import { cn } from "@/lib/utils";
 import { siteConfig } from "@/data/site";
 import { withBasePath } from "@/lib/utils";
 

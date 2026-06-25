@@ -1,10 +1,10 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { motion, AnimatePresence, useSpring, useMotionValue } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { 
-  Layers, Cloud, Zap, Brain, Eye, Cpu as AI,
+  Layers, Cloud, Zap, Brain, Cpu as AI,
   Database, LucideIcon, Code
 } from "lucide-react";
 import {
@@ -394,7 +394,6 @@ export function EngineeringEcosystem() {
   const [selectedTech, setSelectedTech] = useState<Technology | null>(null);
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null);
   const [nodePositions, setNodePositions] = useState<Record<string, NodePosition>>({});
-  const [containerSize, setContainerSize] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -402,8 +401,6 @@ export function EngineeringEcosystem() {
     const container = containerRef.current;
     const width = Math.min(container.clientWidth, 1200);
     const height = 600;
-
-    setContainerSize({ width, height });
 
     // Generate random positions for all nodes
     const positions: Record<string, NodePosition> = {};
