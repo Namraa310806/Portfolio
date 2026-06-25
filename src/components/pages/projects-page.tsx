@@ -91,7 +91,7 @@ export function ProjectsPage() {
               return (
                 <FadeIn key={project.title} delay={index * 0.1}>
                   <motion.div
-                    className="group relative h-full overflow-hidden rounded-2xl border border-border bg-card p-6 shadow-sm transition-all duration-300 hover:border-foreground/20 hover:shadow-md"
+                    className="group relative h-full min-w-0 overflow-hidden rounded-2xl border border-border bg-card p-4 shadow-sm transition-all duration-300 hover:border-foreground/20 hover:shadow-md sm:p-6"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -157,12 +157,12 @@ export function ProjectsPage() {
                         </ul>
                       </div>
 
-                      <div className="mt-auto flex flex-wrap gap-2 pt-5">
+                      <div className="mt-auto flex min-w-0 flex-wrap gap-1.5 pt-4 sm:gap-2 sm:pt-5">
                         {project.stack.map((tech) => {
                           return (
                             <span
                               key={tech}
-                              className={getTechColor(tech)}
+                              className={`${getTechColor(tech)} max-w-full`}
                             >
                               {tech}
                             </span>
