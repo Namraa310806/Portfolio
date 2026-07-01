@@ -10,6 +10,7 @@ import { SectionHeader } from "@/components/ui/section-header";
 import contributionsMeta from "@/data/contributions-meta.json";
 import { openSourceSummary, selectedContributions, siteConfig } from "@/data/site";
 import { cn, withBasePath } from "@/lib/utils";
+import { useTheme } from "next-themes";
 import dynamic from "next/dynamic";
 
 const GitHubCalendar = dynamic(
@@ -24,6 +25,9 @@ const productionRepositories = contributionsMeta.productionRepos;
 const featuredContributions = selectedContributions.slice(0, 3);
 
 export function OpenSourceDashboard() {
+  const { resolvedTheme } = useTheme();
+  const isDark = resolvedTheme === "dark";
+
   return (
     <section id="opensource" className="section-alt section-padding">
       <div className="section-container">
@@ -116,24 +120,17 @@ export function OpenSourceDashboard() {
               username={siteConfig.github.replace("https://github.com/", "")}
               blockSize={14}
               blockMargin={4}
-              colorScheme="light"
+              colorScheme={isDark ? "dark" : "light"}
               style={{ width: "100%", maxWidth: "900px" }}
-              theme={{
-                light: [
-                  "#e2e8f0",
-                  "#dcfce7",
-                  "#86efac",
-                  "#22c55e",
-                  "#15803d",
-                ],
-                dark: [
-                  "#161b22",
-                  "#0e4429",
-                  "#006d32",
-                  "#26a641",
-                  "#39d353",
-                ],
-              }}
+              theme={
+                isDark
+                  ? {
+                      dark: ["#0f172a", "#0e4429", "#006d32", "#26a641", "#39d353"],
+                    }
+                  : {
+                      light: ["#f1f5f9", "#bbf7d0", "#4ade80", "#16a34a", "#166534"],
+                    }
+              }
             />
           </div>
         </motion.div>
