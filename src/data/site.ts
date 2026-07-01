@@ -13,7 +13,7 @@ export const siteConfig = {
   title: "Namraa Patel — Backend & Systems Engineer",
   description:
     `Production-grade backend systems, ${TOTAL_PRS}+ merged open-source PRs, and AI infrastructure. Distributed systems, security, and cloud engineering.`,
-  url: "https://namraa310806.github.io/Portfolio",
+  url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://namraa310806.github.io",
   github: "https://github.com/Namraa310806",
   linkedin: "https://www.linkedin.com/in/namraa-patel/",
   email: "patelnamraa310806@gmail.com",

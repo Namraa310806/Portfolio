@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Namraa Patel Portfolio
 
-## Getting Started
+A personal portfolio built with Next.js and deployed as a static site on GitHub Pages.
 
-First, run the development server:
+This is not a starter app. It is the public home for my work, open-source contributions, projects, resume, and contact details.
+
+## Live Site
+
+- https://namraa310806.github.io/Portfolio
+
+## What's Inside
+
+- Hero section with a short intro and call to action
+- Open source dashboard with merged contribution highlights
+- Projects showcase with featured builds and detail pages
+- Engineering ecosystem / skills visualization
+- Education, achievements, and contact sections
+- Resume page and direct PDF download links
+
+## Tech Stack
+
+- Next.js 16
+- React 19
+- TypeScript
+- Tailwind CSS v4
+- Framer Motion
+- GitHub Pages static export
+
+## Deployment
+
+The site is configured for GitHub Pages static hosting.
+
+- Production build output is exported to `out/`
+- GitHub Pages base-path handling is derived from the repository name during deployment
+- Static assets such as the resume PDF use the configured base path
+
+If you deploy this repository under a different GitHub Pages repo name, the build will follow that repo name automatically.
+
+## Production Build
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm run build:gh-pages
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+This runs the static export build used for GitHub Pages.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Project Structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- `src/app` - Next.js app router pages and global styles
+- `src/components` - layout, sections, pages, and UI components
+- `src/data` - portfolio content and site configuration
+- `src/lib` - shared helpers such as base-path utilities
+- `public` - static assets, including the resume PDF
+- `.github/workflows` - GitHub Pages deployment workflow
 
-## Learn More
+## Customization
 
-To learn more about Next.js, take a look at the following resources:
+The main content you are likely to edit lives in:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- `src/data/site.ts` for profile, links, projects, and achievements
+- `src/components/sections/*` for homepage sections
+- `src/components/pages/*` for routed detail pages
+- `src/app/globals.css` for the portfolio's visual language
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Notes
 
-## Deploy on Vercel
+- The site is optimized for static hosting.
+- Internal links and assets should use the base-path helpers so GitHub Pages routing stays correct.
+- Fonts are self-contained so the export does not depend on external font downloads.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## License
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+No license has been declared yet. Add one if you want to make reuse terms explicit.
