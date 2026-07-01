@@ -9,7 +9,7 @@ import { Card, CardDescription, CardTitle } from "@/components/ui/card";
 import { SectionHeader } from "@/components/ui/section-header";
 import contributionsMeta from "@/data/contributions-meta.json";
 import { openSourceSummary, selectedContributions, siteConfig } from "@/data/site";
-import { cn } from "@/lib/utils";
+import { cn, withBasePath } from "@/lib/utils";
 import dynamic from "next/dynamic";
 
 const GitHubCalendar = dynamic(
@@ -116,9 +116,16 @@ export function OpenSourceDashboard() {
               username={siteConfig.github.replace("https://github.com/", "")}
               blockSize={14}
               blockMargin={4}
-              colorScheme="dark"
+              colorScheme="light"
               style={{ width: "100%", maxWidth: "900px" }}
               theme={{
+                light: [
+                  "#e2e8f0",
+                  "#dcfce7",
+                  "#86efac",
+                  "#22c55e",
+                  "#15803d",
+                ],
                 dark: [
                   "#161b22",
                   "#0e4429",
@@ -249,7 +256,7 @@ export function OpenSourceDashboard() {
             transition={{ duration: 0.8, delay: 0.6, ease: "easeOut" }}
           >
             <a
-              href="/opensource"
+              href={withBasePath("/opensource")}
               className="inline-flex items-center gap-2 rounded-xl border-2 border-border bg-card px-6 py-3 text-sm font-bold text-foreground-muted transition-all hover:border-accent/40 hover:bg-accent/5 hover:text-foreground hover:shadow-lg"
             >
               View All {openSourceSummary.mergedPRs} Contributions
