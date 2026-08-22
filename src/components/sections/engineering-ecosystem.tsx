@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
 import { 
   Layers, Cloud, Zap, Brain, Cpu as AI,
-  Database, LucideIcon, Code
+  Database, LucideIcon, Code, ToggleLeft, ToggleRight
 } from "lucide-react";
 import {
   SiDjango,
@@ -394,6 +394,7 @@ export function EngineeringEcosystem() {
   const [selectedTech, setSelectedTech] = useState<Technology | null>(null);
   const [mousePosition, setMousePosition] = useState<{ x: number; y: number } | null>(null);
   const [nodePositions, setNodePositions] = useState<Record<string, NodePosition>>({});
+  const [repulsionEnabled, setRepulsionEnabled] = useState(true);
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -458,7 +459,7 @@ export function EngineeringEcosystem() {
           let cursorX = 0;
           let cursorY = 0;
 
-          if (mousePosition) {
+          if (repulsionEnabled && mousePosition) {
             const dx = node.currentX - mousePosition.x;
             const dy = node.currentY - mousePosition.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
@@ -518,6 +519,19 @@ export function EngineeringEcosystem() {
             title="Technology Constellation"
             subtitle="A living visualization of connected technologies floating in space."
           />
+          <div className="mt-4 flex items-center gap-3">
+            <button
+              onClick={() => setRepulsionEnabled(!repulsionEnabled)}
+              className="flex items-center gap-2 text-sm font-semibold text-foreground-muted hover:text-foreground transition-colors"
+            >
+              {repulsionEnabled ? (
+                <ToggleRight className="h-5 w-5 text-accent" />
+              ) : (
+                <ToggleLeft className="h-5 w-5 text-foreground-muted" />
+              )}
+              <span>Bubble Repulsion</span>
+            </button>
+          </div>
         </motion.div>
 
         <div className="mt-10 flex justify-center">

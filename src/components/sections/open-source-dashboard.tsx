@@ -40,7 +40,7 @@ export function OpenSourceDashboard() {
           <SectionHeader
             eyebrow="Open Source Impact"
             title="Production Contributions"
-            subtitle={`${contributionsMeta.totalPRs}+ merged pull requests across ${contributionsMeta.totalRepositories} production repositories — security, concurrency, AI, cloud, and backend systems.`}
+            subtitle={`${contributionsMeta.totalPRs}+ merged pull requests across ${contributionsMeta.totalRepositories}+ production repositories — security, concurrency, AI, cloud, and backend systems.`}
           />
         </motion.div>
 
@@ -75,6 +75,7 @@ export function OpenSourceDashboard() {
               <div className="text-5xl font-bold text-foreground">
                 <AnimatedCounter
                   value={openSourceSummary.repositories}
+                  suffix="+"
                 />
               </div>
               <p className="mt-3 text-base font-semibold text-foreground-muted">Production Repositories</p>
@@ -172,7 +173,7 @@ export function OpenSourceDashboard() {
                       />
                     </div>
                     <span className="w-12 text-sm font-bold text-accent text-right">
-                      {repo.prCount}+
+                      {repo.prCount}
                     </span>
                   </div>
                 </motion.div>
@@ -256,7 +257,7 @@ export function OpenSourceDashboard() {
               href={withBasePath("/opensource")}
               className="inline-flex items-center gap-2 rounded-xl border-2 border-border bg-card px-6 py-3 text-sm font-bold text-foreground-muted transition-all hover:border-accent/40 hover:bg-accent/5 hover:text-foreground hover:shadow-lg"
             >
-              View All {openSourceSummary.mergedPRs} Contributions
+              View All Contributions
               <ArrowRight className="h-4 w-4" />
             </a>
           </motion.div>

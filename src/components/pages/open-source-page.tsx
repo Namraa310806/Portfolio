@@ -313,8 +313,8 @@ export function OpenSourcePage() {
                   href="/"
                   className="inline-flex items-center gap-2 rounded-xl border-2 border-border bg-card px-6 py-3 text-sm font-bold text-foreground-muted transition-all hover:border-accent/40 hover:bg-accent/5 hover:text-foreground hover:shadow-lg"
                 >
-                  Back to Home
                   <ArrowLeft className="h-4 w-4" />
+                  Back to Home
                 </Link>
               </motion.div>
             </div>
