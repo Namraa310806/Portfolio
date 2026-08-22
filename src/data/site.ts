@@ -21,7 +21,8 @@ export const siteConfig = {
   email: "patelnamraa310806@gmail.com",
   phone: "+918780388389",
   resumePath: "/Namraa_Patel.pdf",
-  leetcode: "https://leetcode.com/u/patelnamraa/",
+  leetcode: "https://leetcode.com/u/patelnamraa08/",
+  codeforces: "https://codeforces.com/profile/np254",
 };
 
 
@@ -29,9 +30,9 @@ export const achievementStats: AchievementStat[] = [
   { value: TOTAL_PRS, suffix: "+", label: "Merged PRs" },
   { value: 47, suffix: "", label: "GSSoC Rank" },
   { value: 500, suffix: "+", label: "Problems Solved" },
-  { value: 2013, suffix: "", label: "LeetCode" },
+  { value: 2183, suffix: "", label: "LeetCode" },
   { value: 9.46, suffix: "", label: "CGPA", decimals: 2 },
-  { value: 4, suffix: "★", label: "CodeChef" },
+  { value: 1683, suffix: "", label: "Codeforces" },
 ];
 
 export const openSourceSummary = {
@@ -50,6 +51,16 @@ export const selectedContributions: SelectedContribution[] = [
     category: "Security",
     url: "https://github.com/SandeepVashishtha/Eventra/pull/8655",
     prNumber: 8655,
+  },
+  {
+    title: "Celery Deadlock Fix",
+    repository: "Celery",
+    description:
+      "Fixed Redis result consumer deadlock in celery/celery - a major Python distributed task queue used by thousands of companies. Resolved redundant unsubscribe causing re-entrant lock deadlock.",
+    outcome: "Production-grade fix for widely-deployed infrastructure.",
+    category: "Concurrency",
+    url: "https://github.com/celery/celery/pull/10497",
+    prNumber: 10497,
   },
   {
     title: "Concurrency Synchronization",
@@ -90,16 +101,6 @@ export const selectedContributions: SelectedContribution[] = [
     category: "Security",
     url: "https://github.com/SandeepVashishtha/Eventra/pull/8687",
     prNumber: 8687,
-  },
-  {
-    title: "AI Clause Analysis",
-    repository: "LegalEase",
-    description:
-      "Hardened clause analysis JSON parsing and recovery for improved AI reliability.",
-    outcome: "More robust AI document processing pipeline.",
-    category: "AI",
-    url: "https://github.com/AnuranjanJain/LegalEase/pull/402",
-    prNumber: 402,
   },
 ];
 

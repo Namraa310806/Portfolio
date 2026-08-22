@@ -172,7 +172,7 @@ export function OpenSourceDashboard() {
                       />
                     </div>
                     <span className="w-12 text-sm font-bold text-accent text-right">
-                      {repo.prCount}
+                      {repo.prCount}+
                     </span>
                   </div>
                 </motion.div>

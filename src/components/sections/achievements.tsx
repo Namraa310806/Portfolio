@@ -7,9 +7,9 @@ import { SectionHeader } from "@/components/ui/section-header";
 import { siteConfig } from "@/data/site";
 
 const achievements = [
-  { icon: Trophy, value: 2013, label: "LeetCode Rating", color: "from-purple-500/20 to-purple-500/5", borderColor: "border-purple-500/30" },
+  { icon: Trophy, value: 2183, label: "LeetCode Rating", color: "from-purple-500/20 to-purple-500/5", borderColor: "border-purple-500/30", link: siteConfig.leetcode },
   { icon: Target, value: 500, label: "Problems Solved", suffix: "+", color: "from-blue-500/20 to-blue-500/5", borderColor: "border-blue-500/30" },
-  { icon: Star, value: 4, label: "CodeChef Rating", suffix: "★", color: "from-yellow-500/20 to-yellow-500/5", borderColor: "border-yellow-500/30" },
+  { icon: Star, value: 1683, label: "Codeforces Rating", color: "from-yellow-500/20 to-yellow-500/5", borderColor: "border-yellow-500/30", link: siteConfig.codeforces },
   { icon: Award, value: 47, label: "GSSoC Rank", color: "from-green-500/20 to-green-500/5", borderColor: "border-green-500/30" },
   { icon: Zap, value: 2500, label: "Amazon ML Challenge", suffix: " Top", color: "from-orange-500/20 to-orange-500/5", borderColor: "border-orange-500/30" },
   { icon: Medal, value: 2, label: "OCI Certifications", color: "from-red-500/20 to-red-500/5", borderColor: "border-red-500/30" },
@@ -36,17 +36,8 @@ export function Achievements() {
           <div className="grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
             {achievements.map((achievement, index) => {
               const Icon = achievement.icon;
-              
-              return (
-                <motion.div
-                  key={index}
-                  className="group relative rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-8 hover:border-accent/50 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.15)] transition-all duration-300"
-                  initial={{ opacity: 0, y: 40 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true, margin: "-100px" }}
-                  transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
-                  whileHover={{ scale: 1.02, y: -4 }}
-                >
+              const cardContent = (
+                <>
                   <div className={`absolute inset-0 bg-gradient-to-br ${achievement.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-2xl`} />
                   <div className="relative z-10 flex flex-col items-center text-center">
                     <motion.div 
@@ -68,6 +59,39 @@ export function Achievements() {
                       </p>
                     </div>
                   </div>
+                </>
+              );
+
+              if (achievement.link) {
+                return (
+                  <motion.a
+                    key={index}
+                    href={achievement.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="group relative rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-8 hover:border-accent/50 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.15)] transition-all duration-300 block"
+                    initial={{ opacity: 0, y: 40 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true, margin: "-100px" }}
+                    transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                    whileHover={{ scale: 1.02, y: -4 }}
+                  >
+                    {cardContent}
+                  </motion.a>
+                );
+              }
+
+              return (
+                <motion.div
+                  key={index}
+                  className="group relative rounded-2xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl p-8 hover:border-accent/50 hover:shadow-[0_0_40px_-10px_rgba(124,58,237,0.15)] transition-all duration-300"
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true, margin: "-100px" }}
+                  transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
+                  whileHover={{ scale: 1.02, y: -4 }}
+                >
+                  {cardContent}
                 </motion.div>
               );
             })}
@@ -89,7 +113,15 @@ export function Achievements() {
               >
                 LeetCode profile
               </a>
-              {" "}· Codeforces 1364 · CodeChef 4★
+              {" "}·{" "}
+              <a
+                href={siteConfig.codeforces}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-bold text-accent hover:underline transition-colors"
+              >
+                Codeforces profile
+              </a>
             </p>
           </motion.div>
         </div>

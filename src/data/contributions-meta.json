@@ -6,25 +6,26 @@
       "name": "LegalEase",
       "displayName": "LegalEase",
       "repositoryUrl": "https://github.com/AnuranjanJain/LegalEase",
-      "prCount": 36
-    },
-    {
-      "name": "pdf-qa-bot",
-      "displayName": "pdf-qa-bot",
-      "repositoryUrl": "https://github.com/FireFistisDead/pdf-qa-bot",
-      "prCount": 23
+      "prCount": 48
     },
     {
       "name": "AegisGraph-Sentinel-2.0",
       "displayName": "AegisGraph",
       "repositoryUrl": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0",
-      "prCount": 22
+      "prCount": 26
     },
     {
       "name": "Eventra",
       "displayName": "Eventra",
       "repositoryUrl": "https://github.com/SandeepVashishtha/Eventra",
       "prCount": 18
+    },
+    {
+      "name": "celery",
+      "displayName": "Celery",
+      "repositoryUrl": "https://github.com/celery/celery",
+      "prCount": 3,
+      "isMajorOSS": true
     },
     {
       "name": "openfoodfacts-explorer",
