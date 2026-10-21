@@ -31,7 +31,7 @@ export const achievementStats: AchievementStat[] = [
   { value: 47, suffix: "", label: "GSSoC Rank" },
   { value: 500, suffix: "+", label: "Problems Solved" },
   { value: 2183, suffix: "", label: "LeetCode" },
-  { value: 9.46, suffix: "", label: "CGPA", decimals: 2 },
+  { value: 9.61, suffix: "", label: "CGPA", decimals: 2 },
   { value: 1683, suffix: "", label: "Codeforces" },
 ];
 
@@ -108,7 +108,7 @@ export const education: Education[] = [
   {
     institution: "Pandit Deendayal Energy University",
     degree: "B.Tech Computer Science and Business System (CSBS)",
-    cgpa: 9.46,
+    cgpa: 9.61,
     period: "2025–2028",
   },
   {
