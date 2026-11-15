@@ -1,2207 +1,2232 @@
 [
   {
-    "number": 1,
-    "repository": {
-      "name": "ContribIQ",
-      "nameWithOwner": "Namraa310806/ContribIQ"
-    },
-    "title": "Add PR evidence UI, real comment/revert signals, and fix commit-searc…",
-    "url": "https://github.com/Namraa310806/ContribIQ/pull/1"
-  },
-  {
     "number": 22244,
+    "title": "Fixed #37442 -- Fixed JSONL deserialization of Unicode line separators.",
+    "url": "https://github.com/django/django/pull/22244",
+    "mergedAt": "2026-11-13T16:46:15Z",
     "repository": {
       "name": "django",
       "nameWithOwner": "django/django"
-    },
-    "title": "Fixed #37442 -- Fixed JSONL deserialization of Unicode line separators.",
-    "url": "https://github.com/django/django/pull/22244"
+    }
   },
   {
     "number": 10998,
+    "title": "Fix#10997 - redis chord claim cleanup ownership",
+    "url": "https://github.com/celery/celery/pull/10998",
+    "mergedAt": "2026-11-04T13:43:47Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix#10997 - redis chord claim cleanup ownership",
-    "url": "https://github.com/celery/celery/pull/10998"
+    }
   },
   {
     "number": 9796,
+    "title": "Python: Fix Bedrock parallel tool result handling.",
+    "url": "https://github.com/microsoft/agent-framework/pull/9796",
+    "mergedAt": "2026-11-02T09:31:35Z",
     "repository": {
       "name": "agent-framework",
       "nameWithOwner": "microsoft/agent-framework"
-    },
-    "title": "Python: Fix Bedrock parallel tool result handling.",
-    "url": "https://github.com/microsoft/agent-framework/pull/9796"
+    }
   },
   {
     "number": 22177,
+    "title": "Fixed #37436 -- Avoided overwriting when FETCH_PEERS fetches deferred fields.",
+    "url": "https://github.com/django/django/pull/22177",
+    "mergedAt": "2026-11-02T16:12:29Z",
     "repository": {
       "name": "django",
       "nameWithOwner": "django/django"
-    },
-    "title": "Fixed #37436 -- Avoided overwriting when FETCH_PEERS fetches deferred fields.",
-    "url": "https://github.com/django/django/pull/22177"
+    }
   },
   {
     "number": 10884,
+    "title": "Fix stamped header revocation",
+    "url": "https://github.com/celery/celery/pull/10884",
+    "mergedAt": "2026-10-26T14:10:58Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix stamped header revocation",
-    "url": "https://github.com/celery/celery/pull/10884"
+    }
   },
   {
     "number": 9469,
+    "title": "Python: Fix stateless shell tools inheriting host stdin",
+    "url": "https://github.com/microsoft/agent-framework/pull/9469",
+    "mergedAt": "2026-10-22T12:17:59Z",
     "repository": {
       "name": "agent-framework",
       "nameWithOwner": "microsoft/agent-framework"
-    },
-    "title": "Python: Fix stateless shell tools inheriting host stdin",
-    "url": "https://github.com/microsoft/agent-framework/pull/9469"
+    }
   },
   {
     "number": 10876,
+    "title": "Fix task execution after ETA conversion failure",
+    "url": "https://github.com/celery/celery/pull/10876",
+    "mergedAt": "2026-10-17T13:17:04Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix task execution after ETA conversion failure",
-    "url": "https://github.com/celery/celery/pull/10876"
+    }
   },
   {
     "number": 10866,
+    "title": "Fix/database backend cleanup timezone",
+    "url": "https://github.com/celery/celery/pull/10866",
+    "mergedAt": "2026-10-15T13:16:12Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix/database backend cleanup timezone",
-    "url": "https://github.com/celery/celery/pull/10866"
+    }
   },
   {
     "number": 10836,
+    "title": "fix(backends): avoid get_state for plain chain failures",
+    "url": "https://github.com/celery/celery/pull/10836",
+    "mergedAt": "2026-10-13T17:00:06Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "fix(backends): avoid get_state for plain chain failures",
-    "url": "https://github.com/celery/celery/pull/10836"
+    }
   },
   {
     "number": 10822,
+    "title": "fix: redact Azure credentials in diagnostic output",
+    "url": "https://github.com/celery/celery/pull/10822",
+    "mergedAt": "2026-10-13T17:32:33Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "fix: redact Azure credentials in diagnostic output",
-    "url": "https://github.com/celery/celery/pull/10822"
+    }
   },
   {
     "number": 8819,
+    "title": "Python: Fix/7859 discard pending state",
+    "url": "https://github.com/microsoft/agent-framework/pull/8819",
+    "mergedAt": "2026-10-12T09:40:51Z",
     "repository": {
       "name": "agent-framework",
       "nameWithOwner": "microsoft/agent-framework"
-    },
-    "title": "Python: Fix/7859 discard pending state",
-    "url": "https://github.com/microsoft/agent-framework/pull/8819"
-  },
-  {
-    "number": 5,
-    "repository": {
-      "name": "AmazonMLChallenge",
-      "nameWithOwner": "Namraa310806/AmazonMLChallenge"
-    },
-    "title": "refactoring to ML",
-    "url": "https://github.com/Namraa310806/AmazonMLChallenge/pull/5"
-  },
-  {
-    "number": 4,
-    "repository": {
-      "name": "AmazonMLChallenge",
-      "nameWithOwner": "Namraa310806/AmazonMLChallenge"
-    },
-    "title": "remving output files",
-    "url": "https://github.com/Namraa310806/AmazonMLChallenge/pull/4"
-  },
-  {
-    "number": 3,
-    "repository": {
-      "name": "AmazonMLChallenge",
-      "nameWithOwner": "Namraa310806/AmazonMLChallenge"
-    },
-    "title": "feat: add baseline 0 exact matching pipeline",
-    "url": "https://github.com/Namraa310806/AmazonMLChallenge/pull/3"
-  },
-  {
-    "number": 2,
-    "repository": {
-      "name": "AmazonMLChallenge",
-      "nameWithOwner": "Namraa310806/AmazonMLChallenge"
-    },
-    "title": "feat: add leakage-safe validation framework",
-    "url": "https://github.com/Namraa310806/AmazonMLChallenge/pull/2"
-  },
-  {
-    "number": 1,
-    "repository": {
-      "name": "AmazonMLChallenge",
-      "nameWithOwner": "Namraa310806/AmazonMLChallenge"
-    },
-    "title": "feat: complete Phase 1 data autopsy",
-    "url": "https://github.com/Namraa310806/AmazonMLChallenge/pull/1"
+    }
   },
   {
     "number": 10701,
+    "title": "fix(backend): handle missing ArangoDB documents on delete",
+    "url": "https://github.com/celery/celery/pull/10701",
+    "mergedAt": "2026-09-27T15:29:28Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "fix(backend): handle missing ArangoDB documents on delete",
-    "url": "https://github.com/celery/celery/pull/10701"
-  },
-  {
-    "number": 1,
-    "repository": {
-      "name": "Team-8",
-      "nameWithOwner": "cfgmumbai26/Team-8"
-    },
-    "title": "Namraa/readme.md",
-    "url": "https://github.com/cfgmumbai26/Team-8/pull/1"
+    }
   },
   {
     "number": 7944,
+    "title": "Python: fix: preserve synthetic compaction summaries",
+    "url": "https://github.com/microsoft/agent-framework/pull/7944",
+    "mergedAt": "2026-09-15T02:55:10Z",
     "repository": {
       "name": "agent-framework",
       "nameWithOwner": "microsoft/agent-framework"
-    },
-    "title": "Python: fix: preserve synthetic compaction summaries",
-    "url": "https://github.com/microsoft/agent-framework/pull/7944"
+    }
   },
   {
     "number": 1851,
+    "title": "fix: preserve missing country data in countries map",
+    "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1851",
+    "mergedAt": "2026-09-18T15:42:29Z",
     "repository": {
       "name": "openfoodfacts-explorer",
       "nameWithOwner": "openfoodfacts/openfoodfacts-explorer"
-    },
-    "title": "fix: preserve missing country data in countries map",
-    "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1851"
+    }
   },
   {
     "number": 7901,
+    "title": "Python: Fix input mutation in SerializationMixin.from_dict",
+    "url": "https://github.com/microsoft/agent-framework/pull/7901",
+    "mergedAt": "2026-08-27T12:49:58Z",
     "repository": {
       "name": "agent-framework",
       "nameWithOwner": "microsoft/agent-framework"
-    },
-    "title": "Python: Fix input mutation in SerializationMixin.from_dict",
-    "url": "https://github.com/microsoft/agent-framework/pull/7901"
+    }
   },
   {
     "number": 10520,
+    "title": "Fix pre-commit formatting error in test_time",
+    "url": "https://github.com/celery/celery/pull/10520",
+    "mergedAt": "2026-08-26T16:52:44Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix pre-commit formatting error in test_time",
-    "url": "https://github.com/celery/celery/pull/10520"
+    }
   },
   {
     "number": 10513,
+    "title": "fix: handle invalid worker environment values",
+    "url": "https://github.com/celery/celery/pull/10513",
+    "mergedAt": "2026-08-26T15:30:33Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "fix: handle invalid worker environment values",
-    "url": "https://github.com/celery/celery/pull/10513"
+    }
   },
   {
     "number": 10510,
+    "title": "Fix certificate expiration during verification",
+    "url": "https://github.com/celery/celery/pull/10510",
+    "mergedAt": "2026-08-26T15:31:50Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix certificate expiration during verification",
-    "url": "https://github.com/celery/celery/pull/10510"
+    }
   },
   {
     "number": 10497,
+    "title": "Fix Redis result consumer redundant unsubscribe",
+    "url": "https://github.com/celery/celery/pull/10497",
+    "mergedAt": "2026-08-20T15:03:58Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix Redis result consumer redundant unsubscribe",
-    "url": "https://github.com/celery/celery/pull/10497"
+    }
   },
   {
     "number": 10493,
+    "title": "Fix ineffective traceback clearing in timeout handling",
+    "url": "https://github.com/celery/celery/pull/10493",
+    "mergedAt": "2026-08-18T14:22:18Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix ineffective traceback clearing in timeout handling",
-    "url": "https://github.com/celery/celery/pull/10493"
+    }
   },
   {
     "number": 1766,
+    "title": "fix(search): add brand autocomplete via classic taxonomy fallback (cl…",
+    "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1766",
+    "mergedAt": "2026-10-14T13:47:50Z",
     "repository": {
       "name": "openfoodfacts-explorer",
       "nameWithOwner": "openfoodfacts/openfoodfacts-explorer"
-    },
-    "title": "fix(search): add brand autocomplete via classic taxonomy fallback (cl…",
-    "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1766"
+    }
   },
   {
     "number": 10461,
+    "title": "Fix shared retry_kwargs mutation in autoretry",
+    "url": "https://github.com/celery/celery/pull/10461",
+    "mergedAt": "2026-08-16T13:40:36Z",
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    },
-    "title": "Fix shared retry_kwargs mutation in autoretry",
-    "url": "https://github.com/celery/celery/pull/10461"
+    }
   },
   {
     "number": 626,
+    "title": "fix: enforce fail-closed refresh token rotation",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/626",
+    "mergedAt": "2026-08-10T17:13:58Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: enforce fail-closed refresh token rotation",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/626"
+    }
   },
   {
     "number": 624,
+    "title": "fix: distinguish legacy plaintext from encryption failures",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/624",
+    "mergedAt": "2026-08-08T10:28:08Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: distinguish legacy plaintext from encryption failures",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/624"
+    }
   },
   {
     "number": 622,
+    "title": "fix: centralize token refresh coordination",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/622",
+    "mergedAt": "2026-08-05T10:20:12Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: centralize token refresh coordination",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/622"
+    }
   },
   {
     "number": 2268,
+    "title": "fix: verify Clerk webhook signatures using Svix",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2268",
+    "mergedAt": "2026-08-09T05:12:08Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: verify Clerk webhook signatures using Svix",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2268"
+    }
   },
   {
     "number": 620,
+    "title": "refactor(datetime): migrate to timezone-aware UTC timestamps",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/620",
+    "mergedAt": "2026-08-04T15:27:21Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "refactor(datetime): migrate to timezone-aware UTC timestamps",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/620"
+    }
   },
   {
     "number": 2262,
+    "title": "fix: remove dependency on private Node.js timer internals",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2262",
+    "mergedAt": "2026-08-09T05:11:48Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: remove dependency on private Node.js timer internals",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2262"
+    }
   },
   {
     "number": 618,
+    "title": "feat(storage): add automatic cleanup for expired upload tasks",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/618",
+    "mergedAt": "2026-08-04T15:14:10Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "feat(storage): add automatic cleanup for expired upload tasks",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/618"
+    }
   },
   {
     "number": 2071,
+    "title": "fix(rate-limit): add timeout protection to bucket mutex",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2071",
+    "mergedAt": "2026-08-04T04:42:03Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix(rate-limit): add timeout protection to bucket mutex",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2071"
+    }
   },
   {
     "number": 616,
+    "title": "fix(cors): require explicit localhost CORS configuration",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/616",
+    "mergedAt": "2026-08-03T18:17:06Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(cors): require explicit localhost CORS configuration",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/616"
+    }
   },
   {
     "number": 2069,
+    "title": "fix: add Redis client lifecycle management and graceful shutdown",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2069",
+    "mergedAt": "2026-08-04T04:39:21Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: add Redis client lifecycle management and graceful shutdown",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2069"
+    }
   },
   {
     "number": 614,
+    "title": "fix(security): enforce rate limiting in test mode",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/614",
+    "mergedAt": "2026-08-03T18:16:15Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(security): enforce rate limiting in test mode",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/614"
+    }
   },
   {
     "number": 2067,
+    "title": "fix(cache): automatically clean up stale pending requests",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2067",
+    "mergedAt": "2026-08-04T04:39:03Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix(cache): automatically clean up stale pending requests",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/2067"
+    }
   },
   {
     "number": 612,
+    "title": "refactor: remove hardcoded test email from auth verification",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/612",
+    "mergedAt": "2026-08-03T18:15:06Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "refactor: remove hardcoded test email from auth verification",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/612"
+    }
   },
   {
     "number": 1860,
+    "title": "fix: preserve job application referential integrity",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1860",
+    "mergedAt": "2026-08-02T05:25:55Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: preserve job application referential integrity",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1860"
+    }
   },
   {
     "number": 1858,
+    "title": "Fix/voice coach xss rendering",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1858",
+    "mergedAt": "2026-08-02T05:25:08Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "Fix/voice coach xss rendering",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1858"
+    }
   },
   {
     "number": 588,
+    "title": "fix: enforce Redis-backed upload queue in production",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/588",
+    "mergedAt": "2026-07-30T19:02:35Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: enforce Redis-backed upload queue in production",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/588"
+    }
   },
   {
     "number": 1461,
+    "title": "fix: ensure valid user ID is used for interview activity logging",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1461",
+    "mergedAt": "2026-07-29T04:37:40Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: ensure valid user ID is used for interview activity logging",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1461"
+    }
   },
   {
     "number": 1459,
+    "title": "fix: allow anonymous access to public stats endpoint",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1459",
+    "mergedAt": "2026-07-29T06:17:59Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: allow anonymous access to public stats endpoint",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1459"
+    }
   },
   {
     "number": 1427,
+    "title": "fix: use canonical interview status for reminder cron",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1427",
+    "mergedAt": "2026-07-28T03:28:44Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: use canonical interview status for reminder cron",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1427"
+    }
   },
   {
     "number": 1425,
+    "title": "fix: resolve roadmap milestone authorization using internal user id",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1425",
+    "mergedAt": "2026-07-28T03:25:05Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: resolve roadmap milestone authorization using internal user id",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1425"
+    }
   },
   {
     "number": 1423,
+    "title": "fix: repair corrupted interview server actions",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1423",
+    "mergedAt": "2026-07-28T03:24:50Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix: repair corrupted interview server actions",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1423"
+    }
   },
   {
     "number": 1388,
+    "title": "refactor: replace timer-based mutex polling with queued waiters",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1388",
+    "mergedAt": "2026-07-26T08:42:18Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "refactor: replace timer-based mutex polling with queued waiters",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1388"
+    }
   },
   {
     "number": 1386,
+    "title": "feat: add configurable rate limiter failure policies",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1386",
+    "mergedAt": "2026-07-26T08:03:39Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "feat: add configurable rate limiter failure policies",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1386"
+    }
   },
   {
     "number": 1375,
+    "title": "feat: expand PII sanitization coverage",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1375",
+    "mergedAt": "2026-07-26T03:18:15Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "feat: expand PII sanitization coverage",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1375"
+    }
   },
   {
     "number": 2324,
+    "title": "fix(auth): replace placeholder authentication in phase 173",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2324",
+    "mergedAt": "2026-07-28T08:23:12Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix(auth): replace placeholder authentication in phase 173",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2324"
+    }
   },
   {
     "number": 2322,
+    "title": "fix(auth): remove fragile filesystem config import",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2322",
+    "mergedAt": "2026-07-28T08:22:06Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix(auth): remove fragile filesystem config import",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2322"
+    }
   },
   {
     "number": 2320,
+    "title": "feat(security): enforce authentication and RBAC for user management",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2320",
+    "mergedAt": "2026-07-28T08:21:22Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "feat(security): enforce authentication and RBAC for user management",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2320"
+    }
   },
   {
     "number": 576,
+    "title": "fix(rag): prevent repeated initialization failures",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/576",
+    "mergedAt": "2026-07-26T18:33:22Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(rag): prevent repeated initialization failures",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/576"
+    }
   },
   {
     "number": 574,
+    "title": "fix(rate-limit): require Redis for production deployments",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/574",
+    "mergedAt": "2026-07-26T18:38:15Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(rate-limit): require Redis for production deployments",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/574"
+    }
   },
   {
     "number": 572,
+    "title": "feat(auth): implement refresh token authentication flow",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/572",
+    "mergedAt": "2026-07-26T18:39:20Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "feat(auth): implement refresh token authentication flow",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/572"
+    }
   },
   {
     "number": 570,
+    "title": "refactor(upload): replace BackgroundTasks with durable job queue",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/570",
+    "mergedAt": "2026-07-23T19:19:30Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "refactor(upload): replace BackgroundTasks with durable job queue",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/570"
+    }
   },
   {
     "number": 568,
+    "title": "feat(auth): add secure authentication session rehydration",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/568",
+    "mergedAt": "2026-07-23T19:16:56Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "feat(auth): add secure authentication session rehydration",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/568"
+    }
   },
   {
     "number": 565,
+    "title": "fix(security): replace localStorage auth tokens with in-memory storage",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/565",
+    "mergedAt": "2026-07-21T17:37:31Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(security): replace localStorage auth tokens with in-memory storage",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/565"
+    }
   },
   {
     "number": 2284,
+    "title": "feat(security): implement request-scoped tenant isolation",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2284",
+    "mergedAt": "2026-07-23T12:17:45Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "feat(security): implement request-scoped tenant isolation",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2284"
+    }
   },
   {
     "number": 2282,
+    "title": "feat(auth): replace Streamlit demo login with backend JWT authentication",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2282",
+    "mergedAt": "2026-07-23T12:16:48Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "feat(auth): replace Streamlit demo login with backend JWT authentication",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2282"
+    }
   },
   {
     "number": 563,
+    "title": "fix(security): enforce rate limiting on extract-deadlines endpoint",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/563",
+    "mergedAt": "2026-07-21T17:36:38Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(security): enforce rate limiting on extract-deadlines endpoint",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/563"
+    }
   },
   {
     "number": 561,
+    "title": "fix(security): enforce dedicated encryption key in production",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/561",
+    "mergedAt": "2026-07-21T17:35:38Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(security): enforce dedicated encryption key in production",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/561"
+    }
   },
   {
     "number": 2280,
+    "title": "fix: improve HTGAT fallback implementation and add parity tests",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2280",
+    "mergedAt": "2026-07-21T12:59:21Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: improve HTGAT fallback implementation and add parity tests",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2280"
+    }
   },
   {
     "number": 2273,
+    "title": "refactor: improve query sanitizer maintainability and documentation",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2273",
+    "mergedAt": "2026-07-21T12:58:43Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "refactor: improve query sanitizer maintainability and documentation",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2273"
+    }
   },
   {
     "number": 2261,
+    "title": "fix: make centrality baseline evaluation atomic",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2261",
+    "mergedAt": "2026-07-21T07:52:17Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: make centrality baseline evaluation atomic",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2261"
+    }
   },
   {
     "number": 2251,
+    "title": "fix(risk): replace silent exception handling with structured failure …",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2251",
+    "mergedAt": "2026-07-20T15:59:32Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix(risk): replace silent exception handling with structured failure …",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/2251"
+    }
   },
   {
     "number": 1939,
+    "title": "fix(auth): remove hardcoded credentials and use secure runtime authen…",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1939",
+    "mergedAt": "2026-07-16T08:25:05Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix(auth): remove hardcoded credentials and use secure runtime authen…",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1939"
+    }
   },
   {
     "number": 1928,
+    "title": "fix(runtime): add configurable runtime failure policies",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1928",
+    "mergedAt": "2026-07-14T16:03:27Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix(runtime): add configurable runtime failure policies",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1928"
+    }
   },
   {
     "number": 1926,
+    "title": "feat: add configurable Redis and Neo4j connection pooling",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1926",
+    "mergedAt": "2026-07-15T15:14:47Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "feat: add configurable Redis and Neo4j connection pooling",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1926"
+    }
   },
   {
     "number": 1924,
+    "title": "fix: preserve conflicting timestamp values during migration",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1924",
+    "mergedAt": "2026-07-14T16:01:59Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: preserve conflicting timestamp values during migration",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1924"
+    }
   },
   {
     "number": 1922,
+    "title": "fix: implement real encrypted database backups",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1922",
+    "mergedAt": "2026-07-14T16:01:11Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: implement real encrypted database backups",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1922"
+    }
   },
   {
     "number": 1920,
+    "title": "Implement distributed Redis-backed rate limiting",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1920",
+    "mergedAt": "2026-07-28T08:20:53Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Implement distributed Redis-backed rate limiting",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1920"
+    }
   },
   {
     "number": 537,
+    "title": "fix(auth): use centralized API_BASE_URL for logout requests",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/537",
+    "mergedAt": "2026-07-14T16:44:54Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): use centralized API_BASE_URL for logout requests",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/537"
+    }
   },
   {
     "number": 536,
+    "title": "fix(auth): prevent double counting of failed login attempts",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/536",
+    "mergedAt": "2026-07-14T16:41:06Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): prevent double counting of failed login attempts",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/536"
+    }
   },
   {
     "number": 535,
+    "title": "fix: replace in-memory upload task storage with shared backend",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/535",
+    "mergedAt": "2026-07-15T15:01:40Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: replace in-memory upload task storage with shared backend",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/535"
+    }
   },
   {
     "number": 1751,
+    "title": "fix(api): use runtime graph for production risk scoring",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1751",
+    "mergedAt": "2026-07-10T19:49:50Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix(api): use runtime graph for production risk scoring",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1751"
+    }
   },
   {
     "number": 10415,
+    "title": "fix(home): eliminate duplicate API requests on homepage",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10415",
+    "mergedAt": "2026-07-10T09:08:44Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(home): eliminate duplicate API requests on homepage",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10415"
+    }
   },
   {
     "number": 10413,
+    "title": "fix: remove duplicate API prefix from endpoint URLs",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10413",
+    "mergedAt": "2026-07-10T09:08:55Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: remove duplicate API prefix from endpoint URLs",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10413"
+    }
   },
   {
     "number": 1219,
+    "title": "Fix/centralize getenv usage",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1219",
+    "mergedAt": "2026-07-10T14:52:49Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "Fix/centralize getenv usage",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1219"
+    }
   },
   {
     "number": 1218,
+    "title": "Fix/improve redis result handling",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1218",
+    "mergedAt": "2026-07-10T14:52:30Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "Fix/improve redis result handling",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1218"
+    }
   },
   {
     "number": 1217,
+    "title": "Fix/atomic request deduplication",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1217",
+    "mergedAt": "2026-07-10T14:51:44Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "Fix/atomic request deduplication",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1217"
+    }
   },
   {
     "number": 1216,
+    "title": "Fix/validate inngest production config",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1216",
+    "mergedAt": "2026-07-10T14:50:55Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "Fix/validate inngest production config",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1216"
+    }
   },
   {
     "number": 1215,
+    "title": "Fix/secure prisma logging",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1215",
+    "mergedAt": "2026-07-10T14:51:18Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "Fix/secure prisma logging",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1215"
+    }
   },
   {
     "number": 1214,
+    "title": "fix(auth): harden development authentication bypass",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1214",
+    "mergedAt": "2026-07-11T16:50:35Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix(auth): harden development authentication bypass",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/1214"
+    }
   },
   {
     "number": 10111,
+    "title": "fix: use centralized API URL in waitlist service",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10111",
+    "mergedAt": "2026-07-03T02:54:31Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: use centralized API URL in waitlist service",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10111"
+    }
   },
   {
     "number": 491,
+    "title": "fix(rate-limit): improve Redis fallback handling for production deplo…",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/491",
+    "mergedAt": "2026-07-03T18:01:32Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(rate-limit): improve Redis fallback handling for production deplo…",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/491"
+    }
   },
   {
     "number": 10065,
+    "title": "refactor: remove legacy serverless backend from frontend repository",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10065",
+    "mergedAt": "2026-07-02T02:18:46Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "refactor: remove legacy serverless backend from frontend repository",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/10065"
+    }
   },
   {
     "number": 480,
+    "title": "fix(auth): remove duplicate verify route definition",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/480",
+    "mergedAt": "2026-07-05T11:48:05Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): remove duplicate verify route definition",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/480"
+    }
   },
   {
     "number": 479,
+    "title": "Refactor/remove duplicate auth implementation",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/479",
+    "mergedAt": "2026-07-01T18:33:57Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Refactor/remove duplicate auth implementation",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/479"
+    }
   },
   {
     "number": 961,
+    "title": "fix(rate-limit): eliminate race condition in fallback implementation",
+    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/961",
+    "mergedAt": "2026-06-30T05:41:18Z",
     "repository": {
       "name": "pathfinder-ai",
       "nameWithOwner": "harshdwivediiiii/pathfinder-ai"
-    },
-    "title": "fix(rate-limit): eliminate race condition in fallback implementation",
-    "url": "https://github.com/harshdwivediiiii/pathfinder-ai/pull/961"
+    }
   },
   {
     "number": 9847,
+    "title": "fix: prevent feedback dashboard crash on malformed localStorage data",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9847",
+    "mergedAt": "2026-06-30T04:33:32Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: prevent feedback dashboard crash on malformed localStorage data",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9847"
+    }
   },
   {
     "number": 9843,
+    "title": "Fix/filter input validation",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9843",
+    "mergedAt": "2026-06-30T04:32:20Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "Fix/filter input validation",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9843"
+    }
   },
   {
     "number": 9840,
+    "title": "Fix/session risk consistency",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9840",
+    "mergedAt": "2026-06-30T04:31:32Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "Fix/session risk consistency",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9840"
+    }
   },
   {
     "number": 9838,
+    "title": "Fix/persistent ticket storage",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9838",
+    "mergedAt": "2026-06-30T03:09:22Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "Fix/persistent ticket storage",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9838"
+    }
   },
   {
     "number": 9642,
+    "title": "fix: resolve missing JWT configuration import in ticket token module",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9642",
+    "mergedAt": "2026-06-25T05:17:27Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: resolve missing JWT configuration import in ticket token module",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9642"
+    }
   },
   {
     "number": 9489,
+    "title": "security: upgrade vulnerable undici dependency",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9489",
+    "mergedAt": "2026-06-23T08:54:34Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "security: upgrade vulnerable undici dependency",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9489"
+    }
   },
   {
     "number": 9487,
+    "title": "security: remove unsafe-inline from CSP directives",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9487",
+    "mergedAt": "2026-06-23T08:59:45Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "security: remove unsafe-inline from CSP directives",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9487"
+    }
   },
   {
     "number": 9485,
+    "title": "fix: preserve mutual exclusion in distributed lock manager",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9485",
+    "mergedAt": "2026-06-23T08:59:19Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: preserve mutual exclusion in distributed lock manager",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9485"
+    }
   },
   {
     "number": 9481,
+    "title": "fix: prevent mass re-authentication during KV outages",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9481",
+    "mergedAt": "2026-06-23T08:56:55Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: prevent mass re-authentication during KV outages",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9481"
+    }
   },
   {
     "number": 9479,
+    "title": "fix: add resilient rate limiter fallback strategy",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9479",
+    "mergedAt": "2026-06-23T08:56:36Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: add resilient rate limiter fallback strategy",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9479"
+    }
   },
   {
     "number": 9477,
+    "title": "Fix/validation api error handling",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9477",
+    "mergedAt": "2026-06-23T08:56:19Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "Fix/validation api error handling",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9477"
+    }
   },
   {
     "number": 9386,
+    "title": "refactor: centralize cookie handling and security attributes",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9386",
+    "mergedAt": "2026-06-22T02:50:09Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "refactor: centralize cookie handling and security attributes",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9386"
+    }
   },
   {
     "number": 9384,
+    "title": "refactor: centralize JWT_SECRET validation logic",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9384",
+    "mergedAt": "2026-06-22T02:49:42Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "refactor: centralize JWT_SECRET validation logic",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9384"
+    }
   },
   {
     "number": 9382,
+    "title": "fix: add structured logging for session risk KV failures",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9382",
+    "mergedAt": "2026-06-22T02:49:12Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: add structured logging for session risk KV failures",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9382"
+    }
   },
   {
     "number": 9380,
+    "title": "fix(security): enforce strict CSRF validation by default in production",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9380",
+    "mergedAt": "2026-06-22T02:48:29Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): enforce strict CSRF validation by default in production",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9380"
+    }
   },
   {
     "number": 9378,
+    "title": "fix(security): remove Math.random fallback for cryptographic key gene…",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9378",
+    "mergedAt": "2026-06-22T02:48:08Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): remove Math.random fallback for cryptographic key gene…",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9378"
+    }
   },
   {
     "number": 9376,
+    "title": "fix: unify distributed rate limiting configuration and storage",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9376",
+    "mergedAt": "2026-06-22T02:47:46Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: unify distributed rate limiting configuration and storage",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9376"
+    }
   },
   {
     "number": 1497,
+    "title": "fix(security): migrate sandbox execution to isolated-vm",
+    "url": "https://github.com/PankajSingh18/AlgoMate/pull/1497",
+    "mergedAt": "2026-06-25T06:16:42Z",
     "repository": {
       "name": "AlgoMate",
       "nameWithOwner": "PankajSingh18/AlgoMate"
-    },
-    "title": "fix(security): migrate sandbox execution to isolated-vm",
-    "url": "https://github.com/PankajSingh18/AlgoMate/pull/1497"
+    }
   },
   {
     "number": 444,
+    "title": "fix(config): add centralized environment validation",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/444",
+    "mergedAt": "2026-06-27T07:54:08Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(config): add centralized environment validation",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/444"
+    }
   },
   {
     "number": 443,
+    "title": "fix(cors): restrict localhost origins to non-production environments",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/443",
+    "mergedAt": "2026-06-27T07:58:10Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(cors): restrict localhost origins to non-production environments",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/443"
+    }
   },
   {
     "number": 442,
+    "title": "Fix/explicit auth mode separation",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/442",
+    "mergedAt": "2026-06-24T18:46:10Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/explicit auth mode separation",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/442"
+    }
   },
   {
     "number": 441,
+    "title": "fix(rate-limit): add distributed Redis-backed rate limiting",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/441",
+    "mergedAt": "2026-06-27T07:37:02Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(rate-limit): add distributed Redis-backed rate limiting",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/441"
+    }
   },
   {
     "number": 439,
+    "title": "fix(auth): enforce rate limiting on authentication endpoints",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/439",
+    "mergedAt": "2026-06-17T15:48:44Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): enforce rate limiting on authentication endpoints",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/439"
+    }
   },
   {
     "number": 9174,
+    "title": "fix(security): enforce fail-closed rate limiting in production",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9174",
+    "mergedAt": "2026-06-21T08:53:47Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): enforce fail-closed rate limiting in production",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9174"
+    }
   },
   {
     "number": 9156,
+    "title": "security: prevent authentication bypass when JWT_SECRET is missing",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9156",
+    "mergedAt": "2026-06-16T05:34:21Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "security: prevent authentication bypass when JWT_SECRET is missing",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/9156"
+    }
   },
   {
     "number": 8687,
+    "title": "fix: validate forwarded IP headers before use",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8687",
+    "mergedAt": "2026-06-14T06:11:10Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: validate forwarded IP headers before use",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8687"
+    }
   },
   {
     "number": 8659,
+    "title": "fix(security): restrict ErrorButton to development builds",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8659",
+    "mergedAt": "2026-06-14T03:55:31Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): restrict ErrorButton to development builds",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8659"
+    }
   },
   {
     "number": 8655,
+    "title": "fix(security): implement distributed rate limiting for auth endpoints",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8655",
+    "mergedAt": "2026-06-14T03:55:19Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): implement distributed rate limiting for auth endpoints",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8655"
+    }
   },
   {
     "number": 8653,
+    "title": "refactor: make country blocking configurable via environment variables",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8653",
+    "mergedAt": "2026-06-14T03:54:42Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "refactor: make country blocking configurable via environment variables",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8653"
+    }
   },
   {
     "number": 402,
+    "title": "fix(ai): harden clause analysis JSON parsing and recovery",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/402",
+    "mergedAt": "2026-06-13T13:48:49Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(ai): harden clause analysis JSON parsing and recovery",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/402"
+    }
   },
   {
     "number": 401,
+    "title": "fix(auth): enforce strict JWT and API key separation",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/401",
+    "mergedAt": "2026-06-13T17:39:37Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): enforce strict JWT and API key separation",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/401"
+    }
   },
   {
     "number": 400,
+    "title": "fix(auth): update AuthIdentity consumers for auth consistency",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/400",
+    "mergedAt": "2026-06-15T18:03:01Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): update AuthIdentity consumers for auth consistency",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/400"
+    }
   },
   {
     "number": 399,
+    "title": "fix(auth): align auth consumers with AuthIdentity",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/399",
+    "mergedAt": "2026-06-14T12:08:29Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): align auth consumers with AuthIdentity",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/399"
+    }
   },
   {
     "number": 398,
+    "title": "fix(auth): enforce strict JWT and API key separation",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/398",
+    "mergedAt": "2026-06-14T12:03:27Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): enforce strict JWT and API key separation",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/398"
+    }
   },
   {
     "number": 2619,
+    "title": "fix(config): validate production API base URL configuration",
+    "url": "https://github.com/ajay-dhangar/algo/pull/2619",
+    "mergedAt": "2026-06-13T06:09:26Z",
     "repository": {
       "name": "algo",
       "nameWithOwner": "ajay-dhangar/algo"
-    },
-    "title": "fix(config): validate production API base URL configuration",
-    "url": "https://github.com/ajay-dhangar/algo/pull/2619"
+    }
   },
   {
     "number": 8380,
+    "title": "Fix/remove jwt secret fallback",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8380",
+    "mergedAt": "2026-06-13T04:23:59Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "Fix/remove jwt secret fallback",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8380"
+    }
   },
   {
     "number": 8376,
+    "title": "fix(security): remove hardcoded backend URL from CSP",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8376",
+    "mergedAt": "2026-06-13T04:22:53Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): remove hardcoded backend URL from CSP",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8376"
+    }
   },
   {
     "number": 8374,
+    "title": "fix(security): replace in-memory rate limiter with distributed storage",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8374",
+    "mergedAt": "2026-06-14T06:16:37Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): replace in-memory rate limiter with distributed storage",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8374"
+    }
   },
   {
     "number": 8372,
+    "title": "fix(auth): enforce fail-closed persistent storage in production",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8372",
+    "mergedAt": "2026-06-13T04:21:50Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(auth): enforce fail-closed persistent storage in production",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8372"
+    }
   },
   {
     "number": 8370,
+    "title": "fix(security): replace wildcard CORS with allowlist validation",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8370",
+    "mergedAt": "2026-06-13T04:21:24Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): replace wildcard CORS with allowlist validation",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8370"
+    }
   },
   {
     "number": 8367,
+    "title": "Fix/secure storage key rotation runtime error",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8367",
+    "mergedAt": "2026-06-13T04:21:14Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "Fix/secure storage key rotation runtime error",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8367"
+    }
   },
   {
     "number": 373,
+    "title": "fix(auth): verify JWT tokens through backend validation endpoint",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/373",
+    "mergedAt": "2026-06-13T17:34:18Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): verify JWT tokens through backend validation endpoint",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/373"
+    }
   },
   {
     "number": 8165,
+    "title": "Fix/jwt secret fail closed security",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8165",
+    "mergedAt": "2026-06-11T03:24:45Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "Fix/jwt secret fail closed security",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8165"
+    }
   },
   {
     "number": 8152,
+    "title": "fix: add cryptographic lifecycle management for secure storage",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8152",
+    "mergedAt": "2026-06-11T16:35:43Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: add cryptographic lifecycle management for secure storage",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8152"
+    }
   },
   {
     "number": 8150,
+    "title": "fix(security): strengthen CSRF protection and enforcement",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8150",
+    "mergedAt": "2026-06-11T16:35:32Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix(security): strengthen CSRF protection and enforcement",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8150"
+    }
   },
   {
     "number": 8148,
+    "title": "refactor: make country blocking configurable via environment variables",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8148",
+    "mergedAt": "2026-06-11T16:34:57Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "refactor: make country blocking configurable via environment variables",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8148"
+    }
   },
   {
     "number": 8145,
+    "title": "refactor: centralize backend endpoint configuration",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8145",
+    "mergedAt": "2026-06-13T03:57:13Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "refactor: centralize backend endpoint configuration",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8145"
+    }
   },
   {
     "number": 8143,
+    "title": "docs: align React version references with package dependencies",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8143",
+    "mergedAt": "2026-06-11T16:34:33Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "docs: align React version references with package dependencies",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8143"
+    }
   },
   {
     "number": 8139,
+    "title": "fix: remove silent production backend fallback and enforce explicit b…",
+    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8139",
+    "mergedAt": "2026-06-11T16:34:22Z",
     "repository": {
       "name": "Eventra",
       "nameWithOwner": "SandeepVashishtha/Eventra"
-    },
-    "title": "fix: remove silent production backend fallback and enforce explicit b…",
-    "url": "https://github.com/SandeepVashishtha/Eventra/pull/8139"
+    }
   },
   {
     "number": 355,
+    "title": "fix: validate correlation IDs to prevent log pollution",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/355",
+    "mergedAt": "2026-06-11T07:23:49Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: validate correlation IDs to prevent log pollution",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/355"
+    }
   },
   {
     "number": 354,
+    "title": "Fix/chat history n plus one query",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/354",
+    "mergedAt": "2026-06-11T07:19:32Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/chat history n plus one query",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/354"
+    }
   },
   {
     "number": 353,
+    "title": "Fix/auth endpoint rate limiting",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/353",
+    "mergedAt": "2026-06-12T07:48:24Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/auth endpoint rate limiting",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/353"
+    }
   },
   {
     "number": 352,
+    "title": "review(auth): verify user enumeration protections in resend verificat…",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/352",
+    "mergedAt": "2026-06-11T07:08:15Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "review(auth): verify user enumeration protections in resend verificat…",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/352"
+    }
   },
   {
     "number": 351,
+    "title": "fix(auth): isolate resend verification test failures behind test mode",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/351",
+    "mergedAt": "2026-06-11T07:05:16Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): isolate resend verification test failures behind test mode",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/351"
+    }
   },
   {
     "number": 350,
+    "title": "refactor(auth): introduce unified identity model for JWT and API key …",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/350",
+    "mergedAt": "2026-06-11T07:01:50Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "refactor(auth): introduce unified identity model for JWT and API key …",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/350"
+    }
   },
   {
     "number": 349,
+    "title": "perf(upload): eliminate full file buffering during document processing",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/349",
+    "mergedAt": "2026-06-11T06:53:50Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "perf(upload): eliminate full file buffering during document processing",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/349"
+    }
   },
   {
     "number": 1058,
+    "title": "fix(runtime): improve lifecycle state consistency and validation",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1058",
+    "mergedAt": "2026-06-10T16:52:34Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix(runtime): improve lifecycle state consistency and validation",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1058"
+    }
   },
   {
     "number": 1055,
+    "title": "fix: replace silent exception handlers with structured logging",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1055",
+    "mergedAt": "2026-06-10T16:57:52Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: replace silent exception handlers with structured logging",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1055"
+    }
   },
   {
     "number": 1054,
+    "title": "fix: synchronize shared runtime state across async services",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1054",
+    "mergedAt": "2026-06-10T16:40:08Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: synchronize shared runtime state across async services",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1054"
+    }
   },
   {
     "number": 1053,
+    "title": "fix: improve secret key configuration validation",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1053",
+    "mergedAt": "2026-06-10T16:05:41Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: improve secret key configuration validation",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1053"
+    }
   },
   {
     "number": 1052,
+    "title": "fix: improve exception handling observability",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1052",
+    "mergedAt": "2026-06-10T16:02:07Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: improve exception handling observability",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/1052"
+    }
   },
   {
     "number": 268,
+    "title": "Refactor/centralize authentication",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/268",
+    "mergedAt": "2026-06-04T10:12:45Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Refactor/centralize authentication",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/268"
+    }
   },
   {
     "number": 776,
+    "title": "fix: restore environment configuration loading",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/776",
+    "mergedAt": "2026-06-04T06:22:37Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: restore environment configuration loading",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/776"
+    }
   },
   {
     "number": 768,
+    "title": "Fix/remove honeypot state disclosure",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/768",
+    "mergedAt": "2026-06-06T14:12:23Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Fix/remove honeypot state disclosure",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/768"
+    }
   },
   {
     "number": 711,
+    "title": "Fix/consolidate fallback fraud scoring",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/711",
+    "mergedAt": "2026-06-02T13:53:04Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Fix/consolidate fallback fraud scoring",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/711"
+    }
   },
   {
     "number": 1007,
+    "title": "Test/podcastdetail coverage",
+    "url": "https://github.com/SB2318/UltimateHealth/pull/1007",
+    "mergedAt": "2026-06-04T15:23:31Z",
     "repository": {
       "name": "UltimateHealth",
       "nameWithOwner": "SB2318/UltimateHealth"
-    },
-    "title": "Test/podcastdetail coverage",
-    "url": "https://github.com/SB2318/UltimateHealth/pull/1007"
+    }
   },
   {
     "number": 208,
+    "title": "fix(auth): fail fast when JWT secret is missing",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/208",
+    "mergedAt": "2026-05-31T13:16:38Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(auth): fail fast when JWT secret is missing",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/208"
+    }
   },
   {
     "number": 207,
+    "title": "fix(performance): stream uploads to disk and prevent memory exhaustion",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/207",
+    "mergedAt": "2026-06-04T10:10:41Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(performance): stream uploads to disk and prevent memory exhaustion",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/207"
+    }
   },
   {
     "number": 206,
+    "title": "fix(security): harden PDF and DOCX upload parsing",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/206",
+    "mergedAt": "2026-06-03T13:20:54Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(security): harden PDF and DOCX upload parsing",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/206"
+    }
   },
   {
     "number": 205,
+    "title": "fix(security): harden client IP resolution for rate limiting",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/205",
+    "mergedAt": "2026-06-01T07:45:35Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(security): harden client IP resolution for rate limiting",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/205"
+    }
   },
   {
     "number": 204,
+    "title": "Fix/rate limiter interface consistency",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/204",
+    "mergedAt": "2026-05-31T13:08:50Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/rate limiter interface consistency",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/204"
+    }
   },
   {
     "number": 203,
+    "title": "fix(security): harden development authentication fallback",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/203",
+    "mergedAt": "2026-05-31T13:06:31Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(security): harden development authentication fallback",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/203"
+    }
   },
   {
     "number": 549,
+    "title": "fix: enforce strict validation for blockchain seal requests",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/549",
+    "mergedAt": "2026-05-31T09:28:41Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: enforce strict validation for blockchain seal requests",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/549"
+    }
   },
   {
     "number": 547,
+    "title": "fix: default invalid fraud decisions to review",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/547",
+    "mergedAt": "2026-05-31T15:36:42Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: default invalid fraud decisions to review",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/547"
+    }
   },
   {
     "number": 545,
+    "title": "fix: make decision normalization fail safe with review fallback",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/545",
+    "mergedAt": "2026-05-31T09:23:55Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: make decision normalization fail safe with review fallback",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/545"
+    }
   },
   {
     "number": 544,
+    "title": "test: add runtime state initialization regression coverage",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/544",
+    "mergedAt": "2026-05-31T09:22:23Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "test: add runtime state initialization regression coverage",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/544"
+    }
   },
   {
     "number": 543,
+    "title": "fix: reject wildcard origins with credentialed CORS",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/543",
+    "mergedAt": "2026-06-01T17:29:15Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: reject wildcard origins with credentialed CORS",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/543"
+    }
   },
   {
     "number": 405,
+    "title": "fix: standardize SSE streaming across frontend and backend",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/405",
+    "mergedAt": "2026-06-06T18:19:52Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: standardize SSE streaming across frontend and backend",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/405"
+    }
   },
   {
     "number": 404,
+    "title": "security: move session secrets to HttpOnly cookies",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/404",
+    "mergedAt": "2026-06-13T08:19:10Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "security: move session secrets to HttpOnly cookies",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/404"
+    }
   },
   {
     "number": 403,
+    "title": "security: harden SSRF hostname validation",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/403",
+    "mergedAt": "2026-06-06T18:19:20Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "security: harden SSRF hostname validation",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/403"
+    }
   },
   {
     "number": 390,
+    "title": "fix: limit semantic chunk merge amplification",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/390",
+    "mergedAt": "2026-06-06T18:18:51Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: limit semantic chunk merge amplification",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/390"
+    }
   },
   {
     "number": 389,
+    "title": "fix: initialize docs before evidence gate in ask endpoint",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/389",
+    "mergedAt": "2026-06-02T16:39:33Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: initialize docs before evidence gate in ask endpoint",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/389"
+    }
   },
   {
     "number": 388,
+    "title": "security: remove unsafe FAISS deserialization",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/388",
+    "mergedAt": "2026-06-02T16:30:53Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "security: remove unsafe FAISS deserialization",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/388"
+    }
   },
   {
     "number": 387,
+    "title": "fix: prevent startup failure when INTERNAL_RAG_TOKEN is unset",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/387",
+    "mergedAt": "2026-06-02T16:29:37Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: prevent startup failure when INTERNAL_RAG_TOKEN is unset",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/387"
+    }
   },
   {
     "number": 413,
+    "title": "Fix/honeypot decision bypass",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/413",
+    "mergedAt": "2026-05-30T10:27:10Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Fix/honeypot decision bypass",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/413"
+    }
   },
   {
     "number": 408,
+    "title": "Fix/main py duplicate definition cleanup",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/408",
+    "mergedAt": "2026-05-29T16:38:51Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Fix/main py duplicate definition cleanup",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/408"
+    }
   },
   {
     "number": 349,
+    "title": "Fix/timestamp validation normalization",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/349",
+    "mergedAt": "2026-05-29T09:56:20Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Fix/timestamp validation normalization",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/349"
+    }
   },
   {
     "number": 348,
+    "title": "Fix/voice endpoint dos hardening",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/348",
+    "mergedAt": "2026-05-29T16:29:00Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Fix/voice endpoint dos hardening",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/348"
+    }
   },
   {
     "number": 347,
+    "title": "Fix/fallback graph risk scoring hardening",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/347",
+    "mergedAt": "2026-05-29T09:37:42Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "Fix/fallback graph risk scoring hardening",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/347"
+    }
   },
   {
     "number": 335,
+    "title": "security: remove hardcoded JWT secret usage",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/335",
+    "mergedAt": "2026-05-29T09:21:19Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "security: remove hardcoded JWT secret usage",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/335"
+    }
   },
   {
     "number": 337,
+    "title": "fix: restrict operational data exposure",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/337",
+    "mergedAt": "2026-05-28T17:36:23Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: restrict operational data exposure",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/337"
+    }
   },
   {
     "number": 152,
+    "title": "perf: improve upload memory efficiency using chunked reads",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/152",
+    "mergedAt": "2026-05-29T17:05:28Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "perf: improve upload memory efficiency using chunked reads",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/152"
+    }
   },
   {
     "number": 151,
+    "title": "security: reduce internal diagnostics exposed by /health endpoint",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/151",
+    "mergedAt": "2026-05-29T17:03:44Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "security: reduce internal diagnostics exposed by /health endpoint",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/151"
+    }
   },
   {
     "number": 150,
+    "title": "fix: resolve runtime-breaking defects in SimpleRateLimiter",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/150",
+    "mergedAt": "2026-05-30T12:03:02Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: resolve runtime-breaking defects in SimpleRateLimiter",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/150"
+    }
   },
   {
     "number": 149,
+    "title": "fix: prevent import-time crash when JWT_SECRET_KEY is missing",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/149",
+    "mergedAt": "2026-05-29T16:59:32Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: prevent import-time crash when JWT_SECRET_KEY is missing",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/149"
+    }
   },
   {
     "number": 281,
+    "title": "fix: decouple lateral movement detection",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/281",
+    "mergedAt": "2026-05-28T08:12:19Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: decouple lateral movement detection",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/281"
+    }
   },
   {
     "number": 280,
+    "title": "fix: harden legal export authentication",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/280",
+    "mergedAt": "2026-05-28T16:32:44Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: harden legal export authentication",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/280"
+    }
   },
   {
     "number": 319,
+    "title": "Feature/save bookmark responses",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/319",
+    "mergedAt": "2026-05-29T09:24:59Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Feature/save bookmark responses",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/319"
+    }
   },
   {
     "number": 248,
+    "title": "fix: standardize fraud decision enums",
+    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/248",
+    "mergedAt": "2026-05-27T09:17:52Z",
     "repository": {
       "name": "AegisGraph-Sentinel-2.0",
       "nameWithOwner": "Puneet04-tech/AegisGraph-Sentinel-2.0"
-    },
-    "title": "fix: standardize fraud decision enums",
-    "url": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0/pull/248"
+    }
   },
   {
     "number": 124,
+    "title": "fix: harden chat prompt against injection",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/124",
+    "mergedAt": "2026-05-26T21:12:23Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: harden chat prompt against injection",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/124"
+    }
   },
   {
     "number": 123,
+    "title": "fix: fail closed when API_KEYS is not configured",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/123",
+    "mergedAt": "2026-05-26T07:46:03Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix: fail closed when API_KEYS is not configured",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/123"
+    }
   },
   {
     "number": 122,
+    "title": "fix(backend): support multiple frontend CORS origins",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/122",
+    "mergedAt": "2026-05-26T07:44:06Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "fix(backend): support multiple frontend CORS origins",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/122"
+    }
   },
   {
     "number": 206,
+    "title": "fix: restore gateway streaming compatibility",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/206",
+    "mergedAt": "2026-05-28T16:54:21Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: restore gateway streaming compatibility",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/206"
+    }
   },
   {
     "number": 205,
+    "title": "security: make RAG authentication fail closed",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/205",
+    "mergedAt": "2026-05-29T09:27:05Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "security: make RAG authentication fail closed",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/205"
+    }
   },
   {
     "number": 204,
+    "title": "fix: add FastAPI streaming endpoint for ask route",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/204",
+    "mergedAt": "2026-05-28T09:07:27Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: add FastAPI streaming endpoint for ask route",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/204"
+    }
   },
   {
     "number": 182,
+    "title": "Add source citations with PDF page jump",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/182",
+    "mergedAt": "2026-05-24T16:29:01Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Add source citations with PDF page jump",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/182"
+    }
   },
   {
     "number": 175,
+    "title": "Fix/session integrity validation",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/175",
+    "mergedAt": "2026-05-24T16:28:17Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Fix/session integrity validation",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/175"
+    }
   },
   {
     "number": 108,
+    "title": "Fix/dev api key security",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/108",
+    "mergedAt": "2026-05-24T15:55:25Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/dev api key security",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/108"
+    }
   },
   {
     "number": 107,
+    "title": "Fix/summarize runtime failure",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/107",
+    "mergedAt": "2026-05-24T15:53:25Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/summarize runtime failure",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/107"
+    }
   },
   {
     "number": 173,
+    "title": "Fix/persistent session store",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/173",
+    "mergedAt": "2026-05-24T10:20:54Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Fix/persistent session store",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/173"
+    }
   },
   {
     "number": 162,
+    "title": "fix: harden trust ledger integrity with hash chaining",
+    "url": "https://github.com/Shruti070107/ReGenX/pull/162",
+    "mergedAt": "2026-05-24T20:48:42Z",
     "repository": {
       "name": "ReGenX",
       "nameWithOwner": "Shruti070107/ReGenX"
-    },
-    "title": "fix: harden trust ledger integrity with hash chaining",
-    "url": "https://github.com/Shruti070107/ReGenX/pull/162"
+    }
   },
   {
     "number": 140,
+    "title": "Fix/missing exported validation schemas",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/140",
+    "mergedAt": "2026-05-22T18:12:25Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Fix/missing exported validation schemas",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/140"
+    }
   },
   {
     "number": 45,
+    "title": "feat: security rate limiting certificate endpoints",
+    "url": "https://github.com/12fahed/CertiNova/pull/45",
+    "mergedAt": "2026-05-27T12:59:36Z",
     "repository": {
       "name": "CertiNova",
       "nameWithOwner": "12fahed/CertiNova"
-    },
-    "title": "feat: security rate limiting certificate endpoints",
-    "url": "https://github.com/12fahed/CertiNova/pull/45"
+    }
   },
   {
     "number": 99,
+    "title": "Fix/chat history localstorage crash",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/99",
+    "mergedAt": "2026-05-23T11:35:48Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/chat history localstorage crash",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/99"
+    }
   },
   {
     "number": 83,
+    "title": "Fix/frontend api key auth",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/83",
+    "mergedAt": "2026-05-21T07:44:57Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/frontend api key auth",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/83"
+    }
   },
   {
     "number": 79,
+    "title": "Fix/model loading race condition",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/79",
+    "mergedAt": "2026-05-22T17:51:28Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Fix/model loading race condition",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/79"
+    }
   },
   {
     "number": 779,
+    "title": "fix: podcastplayer tts sync",
+    "url": "https://github.com/SB2318/UltimateHealth/pull/779",
+    "mergedAt": "2026-05-21T09:40:01Z",
     "repository": {
       "name": "UltimateHealth",
       "nameWithOwner": "SB2318/UltimateHealth"
-    },
-    "title": "fix: podcastplayer tts sync",
-    "url": "https://github.com/SB2318/UltimateHealth/pull/779"
+    }
   },
   {
     "number": 69,
+    "title": "Fix/model inference concurrency",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/69",
+    "mergedAt": "2026-05-20T14:07:17Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Fix/model inference concurrency",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/69"
+    }
   },
   {
     "number": 64,
+    "title": "fix: support batchId lookup for QR product links",
+    "url": "https://github.com/aditiraj2006/KrishiSetu/pull/64",
+    "mergedAt": "2026-05-23T18:38:17Z",
     "repository": {
       "name": "KrishiSetu",
       "nameWithOwner": "aditiraj2006/KrishiSetu"
-    },
-    "title": "fix: support batchId lookup for QR product links",
-    "url": "https://github.com/aditiraj2006/KrishiSetu/pull/64"
+    }
   },
   {
     "number": 63,
+    "title": "fix: standardize API error handling across frontend and backend",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/63",
+    "mergedAt": "2026-05-20T06:49:04Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: standardize API error handling across frontend and backend",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/63"
+    }
   },
   {
     "number": 62,
+    "title": "Fix/pdf session selection",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/62",
+    "mergedAt": "2026-05-20T06:48:26Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Fix/pdf session selection",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/62"
+    }
   },
   {
     "number": 71,
+    "title": "Fix/summarize api key guard",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/71",
+    "mergedAt": "2026-05-20T16:52:15Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/summarize api key guard",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/71"
+    }
   },
   {
     "number": 68,
+    "title": "Fix/docx upload support",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/68",
+    "mergedAt": "2026-05-19T10:47:50Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/docx upload support",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/68"
+    }
   },
   {
     "number": 58,
+    "title": "Fix/chat endpoint error handling",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/58",
+    "mergedAt": "2026-05-18T15:00:33Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/chat endpoint error handling",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/58"
+    }
   },
   {
     "number": 53,
+    "title": "Fix/chatbot message id race condition",
+    "url": "https://github.com/AnuranjanJain/LegalEase/pull/53",
+    "mergedAt": "2026-05-18T11:04:54Z",
     "repository": {
       "name": "LegalEase",
       "nameWithOwner": "AnuranjanJain/LegalEase"
-    },
-    "title": "Fix/chatbot message id race condition",
-    "url": "https://github.com/AnuranjanJain/LegalEase/pull/53"
+    }
   },
   {
     "number": 45,
+    "title": "Feat/multi pdf session support",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/45",
+    "mergedAt": "2026-05-19T15:53:00Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Feat/multi pdf session support",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/45"
+    }
   },
   {
     "number": 33,
+    "title": "fix: improve RAG session lifecycle management",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/33",
+    "mergedAt": "2026-05-17T19:11:20Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "fix: improve RAG session lifecycle management",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/33"
+    }
   },
   {
     "number": 731,
+    "title": "Fix/cleanup socket connect listener in ArticleCard",
+    "url": "https://github.com/SB2318/UltimateHealth/pull/731",
+    "mergedAt": "2026-05-19T02:34:14Z",
     "repository": {
       "name": "UltimateHealth",
       "nameWithOwner": "SB2318/UltimateHealth"
-    },
-    "title": "Fix/cleanup socket connect listener in ArticleCard",
-    "url": "https://github.com/SB2318/UltimateHealth/pull/731"
+    }
   },
   {
     "number": 27,
+    "title": "Fix/upload cleanup finally refactor",
+    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/27",
+    "mergedAt": "2026-05-17T16:12:32Z",
     "repository": {
       "name": "pdf-qa-bot",
       "nameWithOwner": "FireFistisDead/pdf-qa-bot"
-    },
-    "title": "Fix/upload cleanup finally refactor",
-    "url": "https://github.com/FireFistisDead/pdf-qa-bot/pull/27"
+    }
   },
   {
     "number": 28,
+    "title": "fix: cloudinary template cleanup on event delete",
+    "url": "https://github.com/12fahed/CertiNova/pull/28",
+    "mergedAt": "2026-05-17T11:26:27Z",
     "repository": {
       "name": "CertiNova",
       "nameWithOwner": "12fahed/CertiNova"
-    },
-    "title": "fix: cloudinary template cleanup on event delete",
-    "url": "https://github.com/12fahed/CertiNova/pull/28"
+    }
   },
   {
     "number": 26,
+    "title": "Fix/out for delivery workflow",
+    "url": "https://github.com/aditiraj2006/KrishiSetu/pull/26",
+    "mergedAt": "2026-05-18T20:20:13Z",
     "repository": {
       "name": "KrishiSetu",
       "nameWithOwner": "aditiraj2006/KrishiSetu"
-    },
-    "title": "Fix/out for delivery workflow",
-    "url": "https://github.com/aditiraj2006/KrishiSetu/pull/26"
+    }
   },
   {
     "number": 17,
+    "title": "fix: align ML accident status with backend canonicalization",
+    "url": "https://github.com/Ann-Maria-Jaison/SANJEEVANI/pull/17",
+    "mergedAt": "2026-05-22T09:31:41Z",
     "repository": {
       "name": "SANJEEVANI",
       "nameWithOwner": "Ann-Maria-Jaison/SANJEEVANI"
-    },
-    "title": "fix: align ML accident status with backend canonicalization",
-    "url": "https://github.com/Ann-Maria-Jaison/SANJEEVANI/pull/17"
+    }
   },
   {
     "number": 709,
+    "title": "fix: AppContent lifecycle navigation",
+    "url": "https://github.com/SB2318/UltimateHealth/pull/709",
+    "mergedAt": "2026-05-16T12:31:49Z",
     "repository": {
       "name": "UltimateHealth",
       "nameWithOwner": "SB2318/UltimateHealth"
-    },
-    "title": "fix: AppContent lifecycle navigation",
-    "url": "https://github.com/SB2318/UltimateHealth/pull/709"
+    }
   },
   {
     "number": 14,
+    "title": "fix: remove duplicate status field from AccidentResponse",
+    "url": "https://github.com/Ann-Maria-Jaison/SANJEEVANI/pull/14",
+    "mergedAt": "2026-05-22T09:28:20Z",
     "repository": {
       "name": "SANJEEVANI",
       "nameWithOwner": "Ann-Maria-Jaison/SANJEEVANI"
-    },
-    "title": "fix: remove duplicate status field from AccidentResponse",
-    "url": "https://github.com/Ann-Maria-Jaison/SANJEEVANI/pull/14"
+    }
   },
   {
     "number": 9,
+    "title": "fix: remove hardcoded supabase config and use env variables",
+    "url": "https://github.com/Ann-Maria-Jaison/SANJEEVANI/pull/9",
+    "mergedAt": "2026-05-22T09:27:31Z",
     "repository": {
       "name": "SANJEEVANI",
       "nameWithOwner": "Ann-Maria-Jaison/SANJEEVANI"
-    },
-    "title": "fix: remove hardcoded supabase config and use env variables",
-    "url": "https://github.com/Ann-Maria-Jaison/SANJEEVANI/pull/9"
+    }
   },
   {
     "number": 1225,
+    "title": "fix(a11y): add role and tabindex to crop resize handles",
+    "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1225",
+    "mergedAt": "2026-04-09T12:43:05Z",
     "repository": {
       "name": "openfoodfacts-explorer",
       "nameWithOwner": "openfoodfacts/openfoodfacts-explorer"
-    },
-    "title": "fix(a11y): add role and tabindex to crop resize handles",
-    "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1225"
-  },
-  {
-    "number": 10,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Namraa",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/10"
-  },
-  {
-    "number": 9,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Fix: Apply missing migration for analytics profile_metrics column (re…",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/9"
-  },
-  {
-    "number": 8,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Stabilize meeting intelligence, ingestion flow, demo auth, and dashbo…",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/8"
-  },
-  {
-    "number": 7,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Fixing Ingeastion and merge Animesh branch",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/7"
-  },
-  {
-    "number": 6,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Upgrade Meeting and Role based access",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/6"
-  },
-  {
-    "number": 5,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Implementing Meeting Intelligence",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/5"
-  },
-  {
-    "number": 4,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "chore: add repo hygiene files and ignore local artifacts",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/4"
-  },
-  {
-    "number": 3,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Merge rutvi/login into namraa and resolve merge conflicts",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/3"
-  },
-  {
-    "number": 2,
-    "repository": {
-      "name": "TeamSense",
-      "nameWithOwner": "Namraa310806/TeamSense"
-    },
-    "title": "Migrate to PostgreSQL, add Docker Compose for full stack orchestration",
-    "url": "https://github.com/Namraa310806/TeamSense/pull/2"
-  },
-  {
-    "number": 4,
-    "repository": {
-      "name": "ODOO-Hackathon-Virtual-Round",
-      "nameWithOwner": "Animesh26526/ODOO-Hackathon-Virtual-Round"
-    },
-    "title": "docs: add top-level and frontend READMEs",
-    "url": "https://github.com/Animesh26526/ODOO-Hackathon-Virtual-Round/pull/4"
-  },
-  {
-    "number": 3,
-    "repository": {
-      "name": "ODOO-Hackathon-Virtual-Round",
-      "nameWithOwner": "Animesh26526/ODOO-Hackathon-Virtual-Round"
-    },
-    "title": "Add scheduling modal, Kanban demo cards, and status normalization",
-    "url": "https://github.com/Animesh26526/ODOO-Hackathon-Virtual-Round/pull/3"
-  },
-  {
-    "number": 2,
-    "repository": {
-      "name": "ODOO-Hackathon-Virtual-Round",
-      "nameWithOwner": "Animesh26526/ODOO-Hackathon-Virtual-Round"
-    },
-    "title": "frontend: Requests — equipment selector + safe fallbacks",
-    "url": "https://github.com/Animesh26526/ODOO-Hackathon-Virtual-Round/pull/2"
-  },
-  {
-    "number": 1,
-    "repository": {
-      "name": "ODOO-Hackathon-Virtual-Round",
-      "nameWithOwner": "Animesh26526/ODOO-Hackathon-Virtual-Round"
-    },
-    "title": "Refactor: Move app into backend/ and add DB reset & seed tooling",
-    "url": "https://github.com/Animesh26526/ODOO-Hackathon-Virtual-Round/pull/1"
-  },
-  {
-    "number": 3,
-    "repository": {
-      "name": "flask-react-assessment-Namraa310806",
-      "nameWithOwner": "bettrhq-assessments/flask-react-assessment-Namraa310806"
-    },
-    "title": "Task #1: Implement Comment CRUD API",
-    "url": "https://github.com/bettrhq-assessments/flask-react-assessment-Namraa310806/pull/3"
-  },
-  {
-    "number": 2,
-    "repository": {
-      "name": "flask-react-assessment-Namraa310806",
-      "nameWithOwner": "bettrhq-assessments/flask-react-assessment-Namraa310806"
-    },
-    "title": "Add comment CRUD API and tests",
-    "url": "https://github.com/bettrhq-assessments/flask-react-assessment-Namraa310806/pull/2"
+    }
   }
 ]

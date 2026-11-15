@@ -2,6 +2,7 @@ import { writeFileSync } from "fs";
 import { dirname, join } from "path";
 import { fileURLToPath } from "url";
 import { execSync } from "child_process";
+import { buildData, isExcluded } from "./pr-data.mjs";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -29,35 +30,6 @@ async function apiGet(path) {
   return JSON.parse(out);
 }
 
-function categorize(title) {
-  const t = title.toLowerCase();
-  if (
-    /security|auth|jwt|csrf|cors|ssrf|rate.?limit|honeypot|secret|api.?key|fail.?closed|cookie|deserial/.test(
-      t,
-    )
-  )
-    return "Security";
-  if (
-    /concurr|race|sync|async|lifecycle|runtime state|inference concurrency|model loading race/.test(
-      t,
-    )
-  )
-    return "Concurrency";
-  if (
-    /perf|performance|memory|n\+1|query|stream|chunked|upload|buffering/.test(t)
-  )
-    return "Performance";
-  if (/ai|rag|model|inference|llm|chunk|semantic|faiss|sse streaming/.test(t))
-    return "AI";
-  if (/aws|lambda|cloudinary|docker|cloud/.test(t)) return "Cloud";
-  return "Backend";
-}
-
-const DISPLAY_NAMES = {
-  "AegisGraph-Sentinel-2.0": "AegisGraph",
-  "openfoodfacts-explorer": "Open Food Facts",
-};
-
 async function fetchAllMergedPRs() {
   const perPage = 100;
   let page = 1;
@@ -76,57 +48,28 @@ async function fetchAllMergedPRs() {
 
 const items = await fetchAllMergedPRs();
 
-const contributions = items.map((item) => {
-  const match = item.repository_url.match(/repos\/([^/]+)\/([^/]+)/);
-  const owner = match?.[1] ?? "";
-  const name = match?.[2] ?? item.repository_url.split("/").pop() ?? "";
-  const nameWithOwner = `${owner}/${name}`;
+const raw = items
+  .map((item) => {
+    const match = item.repository_url.match(/repos\/([^/]+)\/([^/]+)/);
+    const owner = match?.[1] ?? "";
+    const name = match?.[2] ?? item.repository_url.split("/").pop() ?? "";
+    const nameWithOwner = `${owner}/${name}`;
 
-  return {
-    id: `pr-${name}-${item.number}`,
-    number: item.number,
-    title: item.title,
-    repository: name,
-    repositoryOwner: nameWithOwner,
-    repositoryUrl: `https://github.com/${nameWithOwner}`,
-    url: item.html_url,
-    status: "Merged",
-    category: categorize(item.title),
-  };
-});
+    return {
+      number: item.number,
+      title: item.title,
+      url: item.html_url,
+      mergedAt: item.closed_at ?? null,
+      repository: { name, nameWithOwner },
+    };
+  })
+  .filter((pr) => !isExcluded(pr.repository.nameWithOwner));
 
-const repoCounts = {};
-for (const pr of contributions) {
-  repoCounts[pr.repository] = (repoCounts[pr.repository] ?? 0) + 1;
-}
-
-const productionRepos = Object.entries(repoCounts)
-  .sort((a, b) => b[1] - a[1])
-  .map(([name, count]) => ({
-    name,
-    displayName: DISPLAY_NAMES[name] ?? name,
-    repositoryUrl: contributions.find((p) => p.repository === name).repositoryUrl,
-    prCount: count,
-  }));
-
-const meta = {
-  totalPRs: contributions.length,
-  totalRepositories: productionRepos.length,
-  productionRepos,
-};
+const { contributions, meta } = buildData(raw);
 
 writeFileSync(
   join(__dirname, "../src/data/merged-prs.json"),
-  JSON.stringify(
-    contributions.map((c) => ({
-      number: c.number,
-      repository: { name: c.repository, nameWithOwner: c.repositoryOwner },
-      title: c.title,
-      url: c.url,
-    })),
-    null,
-    2,
-  ),
+  JSON.stringify(raw, null, 2),
 );
 
 writeFileSync(
@@ -140,5 +83,5 @@ writeFileSync(
 );
 
 console.log(
-  `Generated ${contributions.length} PRs across ${productionRepos.length} repositories`,
+  `Generated ${contributions.length} PRs across ${meta.totalRepositories} repositories (${meta.flagshipRepos.length} flagship, ${meta.communityRepos.length} community)`,
 );

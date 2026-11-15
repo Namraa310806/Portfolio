@@ -1,6 +1,110 @@
 {
-  "totalPRs": 245,
-  "totalRepositories": 22,
+  "totalPRs": 223,
+  "totalRepositories": 16,
+  "flagshipRepos": [
+    {
+      "name": "celery",
+      "displayName": "Celery",
+      "repositoryUrl": "https://github.com/celery/celery",
+      "prCount": 13,
+      "org": "celery"
+    },
+    {
+      "name": "agent-framework",
+      "displayName": "Microsoft Agent Framework",
+      "repositoryUrl": "https://github.com/microsoft/agent-framework",
+      "prCount": 5,
+      "org": "microsoft"
+    },
+    {
+      "name": "openfoodfacts-explorer",
+      "displayName": "Open Food Facts",
+      "repositoryUrl": "https://github.com/openfoodfacts/openfoodfacts-explorer",
+      "prCount": 3,
+      "org": "off"
+    },
+    {
+      "name": "django",
+      "displayName": "Django",
+      "repositoryUrl": "https://github.com/django/django",
+      "prCount": 2,
+      "org": "django"
+    }
+  ],
+  "communityRepos": [
+    {
+      "name": "LegalEase",
+      "displayName": "LegalEase",
+      "repositoryUrl": "https://github.com/AnuranjanJain/LegalEase",
+      "prCount": 63
+    },
+    {
+      "name": "Eventra",
+      "displayName": "Eventra",
+      "repositoryUrl": "https://github.com/SandeepVashishtha/Eventra",
+      "prCount": 40
+    },
+    {
+      "name": "AegisGraph-Sentinel-2.0",
+      "displayName": "AegisGraph",
+      "repositoryUrl": "https://github.com/Puneet04-tech/AegisGraph-Sentinel-2.0",
+      "prCount": 38
+    },
+    {
+      "name": "pdf-qa-bot",
+      "displayName": "PDF QA Bot",
+      "repositoryUrl": "https://github.com/FireFistisDead/pdf-qa-bot",
+      "prCount": 23
+    },
+    {
+      "name": "pathfinder-ai",
+      "displayName": "Pathfinder AI",
+      "repositoryUrl": "https://github.com/harshdwivediiiii/pathfinder-ai",
+      "prCount": 22
+    },
+    {
+      "name": "UltimateHealth",
+      "displayName": "UltimateHealth",
+      "repositoryUrl": "https://github.com/SB2318/UltimateHealth",
+      "prCount": 4
+    },
+    {
+      "name": "SANJEEVANI",
+      "displayName": "SANJEEVANI",
+      "repositoryUrl": "https://github.com/Ann-Maria-Jaison/SANJEEVANI",
+      "prCount": 3
+    },
+    {
+      "name": "CertiNova",
+      "displayName": "CertiNova",
+      "repositoryUrl": "https://github.com/12fahed/CertiNova",
+      "prCount": 2
+    },
+    {
+      "name": "KrishiSetu",
+      "displayName": "KrishiSetu",
+      "repositoryUrl": "https://github.com/aditiraj2006/KrishiSetu",
+      "prCount": 2
+    },
+    {
+      "name": "AlgoMate",
+      "displayName": "AlgoMate",
+      "repositoryUrl": "https://github.com/PankajSingh18/AlgoMate",
+      "prCount": 1
+    },
+    {
+      "name": "algo",
+      "displayName": "algo",
+      "repositoryUrl": "https://github.com/ajay-dhangar/algo",
+      "prCount": 1
+    },
+    {
+      "name": "ReGenX",
+      "displayName": "ReGenX",
+      "repositoryUrl": "https://github.com/Shruti070107/ReGenX",
+      "prCount": 1
+    }
+  ],
   "productionRepos": [
     {
       "name": "LegalEase",
@@ -22,50 +126,32 @@
     },
     {
       "name": "pdf-qa-bot",
-      "displayName": "pdf-qa-bot",
+      "displayName": "PDF QA Bot",
       "repositoryUrl": "https://github.com/FireFistisDead/pdf-qa-bot",
       "prCount": 23
     },
     {
       "name": "pathfinder-ai",
-      "displayName": "pathfinder-ai",
+      "displayName": "Pathfinder AI",
       "repositoryUrl": "https://github.com/harshdwivediiiii/pathfinder-ai",
       "prCount": 22
     },
     {
       "name": "celery",
-      "displayName": "celery",
+      "displayName": "Celery",
       "repositoryUrl": "https://github.com/celery/celery",
       "prCount": 13
     },
     {
-      "name": "TeamSense",
-      "displayName": "TeamSense",
-      "repositoryUrl": "https://github.com/Namraa310806/TeamSense",
-      "prCount": 9
-    },
-    {
       "name": "agent-framework",
-      "displayName": "agent-framework",
+      "displayName": "Microsoft Agent Framework",
       "repositoryUrl": "https://github.com/microsoft/agent-framework",
-      "prCount": 5
-    },
-    {
-      "name": "AmazonMLChallenge",
-      "displayName": "AmazonMLChallenge",
-      "repositoryUrl": "https://github.com/Namraa310806/AmazonMLChallenge",
       "prCount": 5
     },
     {
       "name": "UltimateHealth",
       "displayName": "UltimateHealth",
       "repositoryUrl": "https://github.com/SB2318/UltimateHealth",
-      "prCount": 4
-    },
-    {
-      "name": "ODOO-Hackathon-Virtual-Round",
-      "displayName": "ODOO-Hackathon-Virtual-Round",
-      "repositoryUrl": "https://github.com/Animesh26526/ODOO-Hackathon-Virtual-Round",
       "prCount": 4
     },
     {
@@ -82,7 +168,7 @@
     },
     {
       "name": "django",
-      "displayName": "django",
+      "displayName": "Django",
       "repositoryUrl": "https://github.com/django/django",
       "prCount": 2
     },
@@ -97,24 +183,6 @@
       "displayName": "KrishiSetu",
       "repositoryUrl": "https://github.com/aditiraj2006/KrishiSetu",
       "prCount": 2
-    },
-    {
-      "name": "flask-react-assessment-Namraa310806",
-      "displayName": "flask-react-assessment-Namraa310806",
-      "repositoryUrl": "https://github.com/bettrhq-assessments/flask-react-assessment-Namraa310806",
-      "prCount": 2
-    },
-    {
-      "name": "ContribIQ",
-      "displayName": "ContribIQ",
-      "repositoryUrl": "https://github.com/Namraa310806/ContribIQ",
-      "prCount": 1
-    },
-    {
-      "name": "Team-8",
-      "displayName": "Team-8",
-      "repositoryUrl": "https://github.com/cfgmumbai26/Team-8",
-      "prCount": 1
     },
     {
       "name": "AlgoMate",
