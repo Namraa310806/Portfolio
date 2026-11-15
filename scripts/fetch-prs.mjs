@@ -5,6 +5,30 @@ import { execSync } from "child_process";
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+// In CI (GitHub Actions) GH_TOKEN/GITHUB_TOKEN is set and we call the REST API
+// directly. Locally we fall back to the authenticated `gh` CLI.
+const TOKEN = process.env.GH_TOKEN ?? process.env.GITHUB_TOKEN;
+
+async function apiGet(path) {
+  const endpoint = path.startsWith("/") ? path : `/${path}`;
+  if (TOKEN) {
+    const res = await fetch(`https://api.github.com${endpoint}`, {
+      headers: {
+        Authorization: `Bearer ${TOKEN}`,
+        Accept: "application/vnd.github+json",
+        "X-GitHub-Api-Version": "2022-11-28",
+        "User-Agent": "portfolio-fetch-prs",
+      },
+    });
+    if (!res.ok) {
+      throw new Error(`GitHub API ${res.status}: ${await res.text()}`);
+    }
+    return res.json();
+  }
+  const out = execSync(`gh api "${endpoint}"`, { encoding: "utf8" });
+  return JSON.parse(out);
+}
+
 function categorize(title) {
   const t = title.toLowerCase();
   if (
@@ -34,17 +58,14 @@ const DISPLAY_NAMES = {
   "openfoodfacts-explorer": "Open Food Facts",
 };
 
-function fetchAllMergedPRs() {
+async function fetchAllMergedPRs() {
   const perPage = 100;
   let page = 1;
   const items = [];
 
   while (true) {
-    const out = execSync(
-      `gh api "search/issues?q=author:Namraa310806+type:pr+is:merged&per_page=${perPage}&page=${page}"`,
-      { encoding: "utf8" },
-    );
-    const data = JSON.parse(out);
+    const path = `search/issues?q=author:Namraa310806+type:pr+is:merged&per_page=${perPage}&page=${page}`;
+    const data = await apiGet(path);
     items.push(...data.items);
     if (items.length >= data.total_count || data.items.length < perPage) break;
     page += 1;
@@ -53,7 +74,7 @@ function fetchAllMergedPRs() {
   return items;
 }
 
-const items = fetchAllMergedPRs();
+const items = await fetchAllMergedPRs();
 
 const contributions = items.map((item) => {
   const match = item.repository_url.match(/repos\/([^/]+)\/([^/]+)/);
