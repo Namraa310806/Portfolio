@@ -143,6 +143,58 @@ export const flagshipContributions: FlagshipContribution[] = [
     problem: "Search had no brand autocomplete (issue #1685).",
     fix: "Added brand autocomplete through the taxonomy suggester as a classic fallback, keeping categories and labels on search-a-licious.",
   },
+  {
+    id: "pr-django-22244",
+    org: "django",
+    repository: "django/django",
+    number: 22244,
+    url: "https://github.com/django/django/pull/22244",
+    title: "JSONL import broke on Unicode line separators",
+    kind: "Parsing bug",
+    category: "Backend",
+    problem:
+      "JSONL deserialization failed when a JSON string contained Unicode line separators (U+2028/U+2029), which Python's str.splitlines treats as line breaks even though they are valid inside JSON strings (Trac #37442).",
+    fix: "Switched deserialization to split on the JSONL record separator only, with regression tests for strings containing Unicode separators.",
+  },
+  {
+    id: "pr-agent-framework-9796",
+    org: "microsoft",
+    repository: "microsoft/agent-framework",
+    number: 9796,
+    url: "https://github.com/microsoft/agent-framework/pull/9796",
+    title: "Parallel tool results were silently dropped",
+    kind: "Lost results",
+    category: "AI",
+    problem:
+      "When an assistant issued parallel tool calls, their results could arrive as separate consecutive messages. Processing the first result cleared the pending tool-use IDs, so the Bedrock request went out with an incomplete set of results.",
+    fix: "Preserved pending tool-use IDs across consecutive tool messages, consumed only the matching ID per result, and merged consecutive results into one Bedrock user message, with regression tests for parallel and edge cases.",
+  },
+  {
+    id: "pr-openfoodfacts-explorer-1851",
+    org: "off",
+    repository: "openfoodfacts/openfoodfacts-explorer",
+    number: 1851,
+    url: "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1851",
+    title: "The map showed fake zeros for countries with no data",
+    kind: "Data conflation",
+    category: "Backend",
+    problem:
+      "CountriesMap.svelte treated countries missing from the facet response as having 0 products (?? 0), conflating absent data with an explicit zero — which skewed the choropleth legend and blocked the noData styling.",
+    fix: "Separated taxonomy membership from facet data: countryData now only contains countries present in facet.tags, explicit zeros are preserved, and missing countries fall back to the noData theme — covered by regression tests on the extracted buildCountryData helper.",
+  },
+  {
+    id: "pr-openfoodfacts-explorer-1225",
+    org: "off",
+    repository: "openfoodfacts/openfoodfacts-explorer",
+    number: 1225,
+    url: "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1225",
+    title: "Crop resize handles were invisible to keyboards and screen readers",
+    kind: "Accessibility",
+    category: "Backend",
+    problem:
+      "The image editor's crop resize handles were interactive elements with no role, tabindex, or keyboard support, triggering an a11y warning and leaving them unusable for assistive tech.",
+    fix: "Added role=\"button\", tabindex=\"0\", Enter/Space keyboard handling and kept the aria-label on the resize handles in PhotoEditDialog.svelte, clearing the build's accessibility warning.",
+  },
 ];
 
 /** Community open source: the featured picks outside the four flagship projects. */
