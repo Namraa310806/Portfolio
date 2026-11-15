@@ -3,9 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeader } from "@/components/ui/section-header";
-import { 
+import {
   Layers, Cloud, Zap, Brain, Cpu as AI,
-  Database, LucideIcon, Code, ToggleLeft, ToggleRight
+  Database, LucideIcon, Code, ToggleLeft, ToggleRight,
+  KeyRound, Shield, HardDrive, FileText
 } from "lucide-react";
 import {
   SiDjango,
@@ -25,7 +26,17 @@ import {
   SiElasticsearch,
   SiHuggingface,
   SiGithubactions,
-  SiNginx
+  SiNginx,
+  SiPython,
+  SiJavascript,
+  SiCplusplus,
+  SiCmake,
+  SiStreamlit,
+  SiScikitlearn,
+  SiNumpy,
+  SiPandas,
+  SiMediapipe,
+  SiN8N
 } from "react-icons/si";
 
 interface Technology {
@@ -70,6 +81,22 @@ const iconMap: Record<string, LucideIcon | React.ComponentType<{ className?: str
   "GitHub Actions": SiGithubactions,
   "CI/CD": Layers,
   Nginx: SiNginx,
+  Python: SiPython,
+  JavaScript: SiJavascript,
+  "C++": SiCplusplus,
+  CMake: SiCmake,
+  Streamlit: SiStreamlit,
+  "scikit-learn": SiScikitlearn,
+  NumPy: SiNumpy,
+  Pandas: SiPandas,
+  MediaPipe: SiMediapipe,
+  n8n: SiN8N,
+  DRF: Code,
+  JWT: KeyRound,
+  S3: HardDrive,
+  IAM: Shield,
+  Amplify: Zap,
+  WeasyPrint: FileText,
 };
 
 const technologies: Technology[] = [
@@ -79,8 +106,8 @@ const technologies: Technology[] = [
     category: "Backend",
     usage: ["REST APIs", "Authentication", "RBAC"],
     projects: ["ProfiLens", "TeamSense"],
-    contributions: ["Eventra"],
-    connections: ["PostgreSQL", "Redis", "Celery"],
+    contributions: ["django/django", "Eventra"],
+    connections: ["PostgreSQL", "Redis", "Celery", "DRF", "JWT", "Python"],
     color: "from-purple-500/20 to-purple-500/5",
     icon: iconMap.Django,
   },
@@ -88,9 +115,9 @@ const technologies: Technology[] = [
     name: "FastAPI",
     category: "Backend",
     usage: ["High-performance APIs", "Async Operations"],
-    projects: ["API Services"],
+    projects: [],
     contributions: [],
-    connections: ["Docker", "PostgreSQL"],
+    connections: ["Docker", "PostgreSQL", "Python"],
     color: "from-purple-500/20 to-purple-500/5",
     icon: iconMap.FastAPI,
   },
@@ -98,9 +125,9 @@ const technologies: Technology[] = [
     name: "Node.js",
     category: "Backend",
     usage: ["Server-side JavaScript", "Event-driven"],
-    projects: [],
+    projects: ["n8n Workflow"],
     contributions: ["n8n Workflows"],
-    connections: ["Docker", "Redis"],
+    connections: ["Docker", "Redis", "JavaScript"],
     color: "from-purple-500/20 to-purple-500/5",
     icon: iconMap["Node.js"],
   },
@@ -108,9 +135,9 @@ const technologies: Technology[] = [
     name: "Celery",
     category: "Backend",
     usage: ["Task Queues", "Background Jobs"],
-    projects: ["TeamSense"],
-    contributions: [],
-    connections: ["Django", "Redis", "PostgreSQL"],
+    projects: ["TeamSense", "ProfiLens"],
+    contributions: ["celery/celery"],
+    connections: ["Django", "Redis", "PostgreSQL", "Python"],
     color: "from-purple-500/20 to-purple-500/5",
     icon: iconMap.Celery,
   },
@@ -131,7 +158,7 @@ const technologies: Technology[] = [
     usage: ["Lambda", "DynamoDB", "API Gateway"],
     projects: ["Personal Cloud Assistant"],
     contributions: [],
-    connections: ["Docker", "Linux"],
+    connections: ["Lambda", "API Gateway", "DynamoDB", "S3", "Cognito", "CloudWatch", "IAM", "Amplify", "Docker", "Linux"],
     color: "from-blue-500/20 to-blue-500/5",
     icon: iconMap.AWS,
   },
@@ -200,7 +227,7 @@ const technologies: Technology[] = [
     name: "PostgreSQL",
     category: "Data",
     usage: ["Relational Database", "ACID Transactions"],
-    projects: ["ProfiLens", "TeamSense"],
+    projects: ["ProfiLens", "TeamSense", "Automated Book Workflow"],
     contributions: [],
     connections: ["Django", "Redis", "Celery"],
     color: "from-green-500/20 to-green-500/5",
@@ -210,8 +237,8 @@ const technologies: Technology[] = [
     name: "Redis",
     category: "Data",
     usage: ["Caching", "Rate Limiting", "Pub/Sub"],
-    projects: ["TeamSense"],
-    contributions: ["Eventra", "Distributed Rate Limiting"],
+    projects: ["TeamSense", "ProfiLens"],
+    contributions: ["Eventra", "Distributed Rate Limiting", "celery/celery"],
     connections: ["PostgreSQL", "Celery", "Django"],
     color: "from-green-500/20 to-green-500/5",
     icon: iconMap.Redis,
@@ -301,7 +328,7 @@ const technologies: Technology[] = [
     name: "OpenCV",
     category: "AI",
     usage: ["Computer Vision", "Image Processing"],
-    projects: ["Animal Classification", "GestureMediaPlayer"],
+    projects: ["Color Classifier", "GestureMediaPlayer"],
     contributions: [],
     connections: ["Python"],
     color: "from-orange-500/20 to-orange-500/5",
@@ -322,9 +349,9 @@ const technologies: Technology[] = [
     name: "React",
     category: "Frontend",
     usage: ["UI Components", "State Management"],
-    projects: ["Personal Cloud Assistant", "Portfolio"],
-    contributions: [],
-    connections: ["TypeScript", "Next.js"],
+    projects: ["Personal Cloud Assistant", "Portfolio", "TeamSense"],
+    contributions: ["openfoodfacts/openfoodfacts-explorer"],
+    connections: ["TypeScript", "Next.js", "JavaScript"],
     color: "from-cyan-500/20 to-cyan-500/5",
     icon: iconMap.React,
   },
@@ -379,6 +406,170 @@ const technologies: Technology[] = [
     color: "from-pink-500/20 to-pink-500/5",
     icon: iconMap.Nginx,
   },
+  // Languages & Frameworks
+  {
+    name: "Python",
+    category: "Backend",
+    usage: ["Backend APIs", "ML/AI", "Automation"],
+    projects: ["ProfiLens", "Animal Classification", "Color Classifier", "GestureMediaPlayer", "Automated Book Workflow"],
+    contributions: ["celery/celery", "django/django", "microsoft/agent-framework"],
+    connections: ["Django", "FastAPI", "Celery", "TensorFlow", "OpenCV", "scikit-learn", "n8n"],
+    color: "from-purple-500/20 to-purple-500/5",
+    icon: iconMap.Python,
+  },
+  {
+    name: "JavaScript",
+    category: "Frontend",
+    usage: ["Scripting", "Workflow Automation"],
+    projects: ["n8n Workflow", "Portfolio"],
+    contributions: [],
+    connections: ["Node.js", "React", "TypeScript", "n8n"],
+    color: "from-cyan-500/20 to-cyan-500/5",
+    icon: iconMap.JavaScript,
+  },
+  {
+    name: "C++",
+    category: "Backend",
+    usage: ["Systems Programming", "Low-latency Engines"],
+    projects: ["Matching Engine"],
+    contributions: [],
+    connections: ["CMake", "Docker", "Linux"],
+    color: "from-purple-500/20 to-purple-500/5",
+    icon: iconMap["C++"],
+  },
+  {
+    name: "DRF",
+    category: "Backend",
+    usage: ["REST APIs", "Serializers", "ViewSets"],
+    projects: ["TeamSense", "ProfiLens"],
+    contributions: [],
+    connections: ["Django", "PostgreSQL", "Celery", "JWT"],
+    color: "from-purple-500/20 to-purple-500/5",
+    icon: iconMap.DRF,
+  },
+  {
+    name: "JWT",
+    category: "Backend",
+    usage: ["Token Authentication", "API Security"],
+    projects: ["TeamSense", "ProfiLens", "Personal Cloud Assistant"],
+    contributions: ["LegalEase"],
+    connections: ["Django", "Cognito", "React"],
+    color: "from-purple-500/20 to-purple-500/5",
+    icon: iconMap.JWT,
+  },
+  {
+    name: "n8n",
+    category: "Backend",
+    usage: ["Workflow Automation", "API Integration"],
+    projects: ["n8n Workflow", "Automated Book Workflow"],
+    contributions: ["n8n Workflows"],
+    connections: ["Node.js", "JavaScript", "Python", "Docker"],
+    color: "from-purple-500/20 to-purple-500/5",
+    icon: iconMap.n8n,
+  },
+  {
+    name: "WeasyPrint",
+    category: "Backend",
+    usage: ["PDF Generation", "Document Rendering"],
+    projects: ["ProfiLens"],
+    contributions: [],
+    connections: ["Django", "PostgreSQL", "Celery"],
+    color: "from-purple-500/20 to-purple-500/5",
+    icon: iconMap.WeasyPrint,
+  },
+  // Cloud services
+  {
+    name: "S3",
+    category: "Cloud",
+    usage: ["Object Storage", "Presigned URLs"],
+    projects: ["Personal Cloud Assistant"],
+    contributions: [],
+    connections: ["AWS", "Lambda", "Cognito"],
+    color: "from-blue-500/20 to-blue-500/5",
+    icon: iconMap.S3,
+  },
+  {
+    name: "IAM",
+    category: "Cloud",
+    usage: ["Access Control", "Least-privilege Policies"],
+    projects: ["Personal Cloud Assistant"],
+    contributions: [],
+    connections: ["AWS", "Cognito", "Lambda"],
+    color: "from-blue-500/20 to-blue-500/5",
+    icon: iconMap.IAM,
+  },
+  {
+    name: "Amplify",
+    category: "Cloud",
+    usage: ["Frontend Hosting", "CI/CD"],
+    projects: ["Personal Cloud Assistant"],
+    contributions: [],
+    connections: ["AWS", "React", "Cognito"],
+    color: "from-blue-500/20 to-blue-500/5",
+    icon: iconMap.Amplify,
+  },
+  // AI / ML stack
+  {
+    name: "scikit-learn",
+    category: "AI",
+    usage: ["Classical ML", "Random Forest", "Feature Extraction"],
+    projects: ["Color Classifier", "Animal Classification"],
+    contributions: [],
+    connections: ["Python", "NumPy", "Streamlit", "OpenCV"],
+    color: "from-orange-500/20 to-orange-500/5",
+    icon: iconMap["scikit-learn"],
+  },
+  {
+    name: "NumPy",
+    category: "Data",
+    usage: ["Numerical Computing", "Array Operations"],
+    projects: ["Animal Classification", "Color Classifier", "GestureMediaPlayer"],
+    contributions: [],
+    connections: ["Python", "scikit-learn", "Pandas"],
+    color: "from-green-500/20 to-green-500/5",
+    icon: iconMap.NumPy,
+  },
+  {
+    name: "Pandas",
+    category: "Data",
+    usage: ["DataFrames", "Data Wrangling"],
+    projects: ["Animal Classification", "Color Classifier"],
+    contributions: [],
+    connections: ["Python", "NumPy", "scikit-learn"],
+    color: "from-green-500/20 to-green-500/5",
+    icon: iconMap.Pandas,
+  },
+  {
+    name: "Streamlit",
+    category: "Frontend",
+    usage: ["ML Web Apps", "Rapid Prototyping"],
+    projects: ["Animal Classification", "Color Classifier"],
+    contributions: [],
+    connections: ["Python", "TensorFlow", "scikit-learn"],
+    color: "from-cyan-500/20 to-cyan-500/5",
+    icon: iconMap.Streamlit,
+  },
+  {
+    name: "MediaPipe",
+    category: "AI",
+    usage: ["Hand Tracking", "Real-time CV"],
+    projects: ["GestureMediaPlayer"],
+    contributions: [],
+    connections: ["Python", "OpenCV"],
+    color: "from-orange-500/20 to-orange-500/5",
+    icon: iconMap.MediaPipe,
+  },
+  // DevOps tooling
+  {
+    name: "CMake",
+    category: "DevOps",
+    usage: ["Build System", "Cross-platform Compilation"],
+    projects: ["Matching Engine"],
+    contributions: [],
+    connections: ["C++"],
+    color: "from-pink-500/20 to-pink-500/5",
+    icon: iconMap.CMake,
+  },
 ];
 
 interface NodePosition {
@@ -401,7 +592,7 @@ export function EngineeringEcosystem() {
 
     const container = containerRef.current;
     const width = Math.min(container.clientWidth, 1200);
-    const height = 600;
+    const height = 720;
 
     // Generate random positions for all nodes
     const positions: Record<string, NodePosition> = {};
@@ -495,7 +686,7 @@ export function EngineeringEcosystem() {
     return () => {
       cancelAnimationFrame(animationFrameId);
     };
-  }, [mousePosition]);
+  }, [mousePosition, repulsionEnabled]);
 
   const handleNodeHover = (tech: Technology) => {
     setHoveredTech(tech);
@@ -538,7 +729,7 @@ export function EngineeringEcosystem() {
           <div
             ref={containerRef}
             className="relative rounded-3xl border border-border/50 bg-gradient-to-br from-background/80 to-background/40 backdrop-blur-xl overflow-hidden"
-            style={{ height: "600px", maxWidth: "1200px", width: "100%" }}
+            style={{ height: "720px", maxWidth: "1200px", width: "100%" }}
             onMouseMove={(e) => {
               const rect = containerRef.current?.getBoundingClientRect();
               if (rect) {
