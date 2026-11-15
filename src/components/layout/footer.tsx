@@ -1,5 +1,6 @@
 "use client";
 
+import { useSecrets } from "@/components/secrets/context";
 import { siteConfig } from "@/data/site";
 import { withBasePath } from "@/lib/utils";
 import { ThemeToggle } from "./theme-toggle";
@@ -8,6 +9,7 @@ import Link from "next/link";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export function Footer() {
+  const { openTerminal } = useSecrets();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -125,6 +127,18 @@ export function Footer() {
             </p>
             <p className="text-xs text-foreground-muted">
               Built with Next.js, TypeScript & Framer Motion
+              <span className="mx-2 opacity-40" aria-hidden>·</span>
+              psst, press{" "}
+              <kbd className="rounded border border-border bg-background-muted px-1.5 py-0.5 font-mono text-[11px]">`</kbd>{" "}
+              or{" "}
+              <button
+                type="button"
+                onClick={openTerminal}
+                aria-label="Open the hidden terminal"
+                className="rounded border border-border bg-background-muted px-1.5 py-0.5 font-mono text-[11px] transition-colors hover:border-accent/50 hover:text-accent"
+              >
+                &gt;_
+              </button>
             </p>
           </div>
         </div>

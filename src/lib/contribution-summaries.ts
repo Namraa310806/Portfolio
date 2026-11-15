@@ -1,6 +1,14 @@
 import type { Contribution } from "@/types";
 
 const summaryById: Record<string, string> = {
+  "pr-celery-10998": "Made Redis chord completion an atomic claim so concurrent workers cannot both publish the callback.",
+  "pr-django-22177": "Stopped FETCH_PEERS deferred fetches from overwriting loaded or locally modified values.",
+  "pr-agent-framework-8819": "Discarded pending workflow state after failed or cancelled runs so it cannot leak into later ones.",
+  "pr-celery-10493": "Broke a traceback reference cycle that kept memory alive after hard timeouts.",
+  "pr-celery-10497": "Guarded a redundant UNSUBSCRIBE that re-entered a non-reentrant PubSub lock.",
+  "pr-agent-framework-7944": "Kept synthetic compaction summaries alive across agent runs.",
+  "pr-celery-10510": "Added an expiry check so expired certificates cannot pass verification.",
+  "pr-openfoodfacts-explorer-1766": "Added brand autocomplete through the taxonomy suggester.",
   "pr-Eventra-8655": "Implemented Redis-backed distributed rate limiting to eliminate instance-hopping bypasses.",
   "pr-Eventra-9156": "Forced JWT configuration to fail closed instead of allowing missing-secret auth bypasses.",
   "pr-AegisGraph-Sentinel-2.0-1054": "Synchronized async runtime state to remove cross-service race conditions.",

@@ -1,23 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import {
-  ArrowRight,
-  Brain,
-  CheckCircle2,
-  Cloud,
-  Code2,
-  ExternalLink,
-  Layout,
-  Palette,
-  Zap,
-} from "lucide-react";
+import { ArrowRight, Brain, CheckCircle2, Cloud, Code2, ExternalLink, Layout, Palette, Zap, Cpu } from "lucide-react";
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/section-header";
 import { projects } from "@/data/site";
-import { getTechColor } from "@/lib/tech-colors";
+import { TechChip } from "@/components/ui/tech-chip";
 
 const iconMap = {
+  "Matching Engine": Cpu,
   ProfiLens: Code2,
   "Personal Cloud Assistant": Cloud,
   TeamSense: Brain,
@@ -28,7 +19,8 @@ const iconMap = {
   "Automated Book Workflow": Code2,
 };
 
-const featuredProjects = projects.slice(0, 5);
+// The matching engine has its own section above, so the carousel skips it.
+const featuredProjects = projects.filter((p) => p.title !== "Matching Engine").slice(0, 5);
 const carouselProjects = [...featuredProjects, ...featuredProjects];
 
 export function Projects() {
@@ -126,14 +118,7 @@ export function Projects() {
 
                       <div className="mt-auto flex min-w-0 flex-wrap gap-1.5 pt-4 sm:gap-2 sm:pt-5">
                         {project.stack.slice(0, 5).map((tech) => {
-                          return (
-                            <span
-                              key={tech}
-                              className={`${getTechColor(tech)} max-w-full`}
-                            >
-                              {tech}
-                            </span>
-                          );
+                          return <TechChip key={tech} tech={tech} />;
                         })}
                       </div>
                     </div>

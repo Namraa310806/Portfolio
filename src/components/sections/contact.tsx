@@ -8,7 +8,7 @@ import { withBasePath } from "@/lib/utils";
 
 export function Contact() {
   return (
-    <section id="contact" className="section-alt section-padding pb-20">
+    <section id="contact" className="section-padding pb-20">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 40 }}

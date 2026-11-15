@@ -1,66 +1,161 @@
 import type {
-  AchievementStat,
   Education,
+  ExperienceItem,
+  FlagshipContribution,
   SelectedContribution,
 } from "@/types";
-import contributionsMeta from "@/data/contributions-meta.json";
-
-const TOTAL_PRS = contributionsMeta.totalPRs;
-const TOTAL_REPOS = contributionsMeta.totalRepositories;
 
 export const siteConfig = {
   name: "Namraa Patel",
   title: "Namraa Patel — Backend & Systems Engineer",
   description:
-    `Production-grade backend systems, ${TOTAL_PRS}+ merged open-source PRs, and AI infrastructure. Distributed systems, security, and cloud engineering.`,
+    "Merged fixes in Celery, Django, Microsoft Agent Framework and Open Food Facts. Concurrency, distributed systems and a C++ matching engine, built by a third-year CS student.",
   url:
     process.env.NEXT_PUBLIC_SITE_URL ??
     "https://namraa310806.github.io/Portfolio",
   github: "https://github.com/Namraa310806",
   linkedin: "https://www.linkedin.com/in/namraa-patel/",
-  email: "patelnamraa310806@gmail.com",
+  email: "patelnamraa88@gmail.com",
   phone: "+918780388389",
   resumePath: "/Namraa_Patel.pdf",
   leetcode: "https://leetcode.com/u/patelnamraa08/",
-  codeforces: "https://codeforces.com/profile/np254",
+  codeforces: "https://codeforces.com/profile/hacker08",
+  location: "Ahmedabad, India",
 };
 
+/** Ratings, kept in one place so every section stays consistent. */
+export const ratings = {
+  leetcode: 2207,
+  codeforcesMax: 1738,
+  codeforcesCurrent: 1704,
+  cgpa: 9.61,
+};
 
-export const achievementStats: AchievementStat[] = [
-  { value: TOTAL_PRS, suffix: "+", label: "Merged PRs" },
-  { value: 47, suffix: "", label: "GSSoC Rank" },
-  { value: 500, suffix: "+", label: "Problems Solved" },
-  { value: 2183, suffix: "", label: "LeetCode" },
-  { value: 9.61, suffix: "", label: "CGPA", decimals: 2 },
-  { value: 1683, suffix: "", label: "Codeforces" },
+/**
+ * The upstream work worth reading in full. Every claim here is taken from the
+ * PR itself or from the resume; release tags are only listed when confirmed.
+ */
+export const flagshipContributions: FlagshipContribution[] = [
+  {
+    id: "pr-celery-10998",
+    org: "celery",
+    repository: "celery/celery",
+    number: 10998,
+    url: "https://github.com/celery/celery/pull/10998",
+    title: "Redis chord race: one callback, not two",
+    kind: "Race condition",
+    category: "Concurrency",
+    problem:
+      "Concurrent workers could both complete a Redis chord and both publish its callback, so the callback ran twice.",
+    fix: "Completion detection and dispatch became one atomic, Lua-scripted claim with unique claim tokens and ownership-validated cleanup, so a stale claim can never release a newer one. Added regression tests.",
+  },
+  {
+    id: "pr-django-22177",
+    org: "django",
+    repository: "django/django",
+    number: 22177,
+    url: "https://github.com/django/django/pull/22177",
+    title: "Django ORM: deferred fetch stopped overwriting data",
+    kind: "Overwritten state",
+    category: "Backend",
+    problem:
+      "With FETCH_PEERS, fetching a deferred field overwrote already-loaded or locally modified values on peer instances (Trac #37436).",
+    fix: "Kept the fix confined to DeferredAttribute, with regression tests and release notes. Maintainer review narrowed the patch to this smaller change before it merged.",
+  },
+  {
+    id: "pr-agent-framework-8819",
+    org: "microsoft",
+    repository: "microsoft/agent-framework",
+    number: 8819,
+    url: "https://github.com/microsoft/agent-framework/pull/8819",
+    title: "Workflows: a failed run no longer haunts the next one",
+    kind: "State leak",
+    category: "Backend",
+    problem:
+      "Writes staged during a failed or cancelled superstep leaked into later, successful runs.",
+    fix: "Workflows now discard pending state across the core, declarative and foundry-hosting packages, including concurrent edge runners. Added failure and cancellation regression tests.",
+    shipped: "Python 1.22.0",
+  },
+  {
+    id: "pr-celery-10493",
+    org: "celery",
+    repository: "celery/celery",
+    number: 10493,
+    url: "https://github.com/celery/celery/pull/10493",
+    title: "Hard-timeout memory leak behind a silent no-op",
+    kind: "Memory leak",
+    category: "Concurrency",
+    problem:
+      "traceback_clear(exc) silently failed on a live frame, so a traceback–frame reference cycle kept memory alive after hard timeouts.",
+    fix: "Broke the cycle with exc.__traceback__ = None and added regression and smoke tests.",
+    shipped: "Celery 5.7.0",
+  },
+  {
+    id: "pr-celery-10497",
+    org: "celery",
+    repository: "celery/celery",
+    number: 10497,
+    url: "https://github.com/celery/celery/pull/10497",
+    title: "Redis result backend deadlock",
+    kind: "Deadlock",
+    category: "Concurrency",
+    problem:
+      "A redundant UNSUBSCRIBE re-entered redis-py's non-reentrant PubSub lock and deadlocked the result consumer.",
+    fix: "Guarded the redundant call and added regression tests.",
+    shipped: "Celery 5.7.0",
+  },
+  {
+    id: "pr-agent-framework-7944",
+    org: "microsoft",
+    repository: "microsoft/agent-framework",
+    number: 7944,
+    url: "https://github.com/microsoft/agent-framework/pull/7944",
+    title: "Context compaction stopped losing its summaries",
+    kind: "Lost context",
+    category: "AI",
+    problem:
+      "Synthetic summaries produced by compaction strategies were silently discarded on the next agent run.",
+    fix: "Reworked reconciliation in before_run to retain them, so summarized history and tool results survive across runs.",
+    shipped: "Python 1.19.0",
+  },
+  {
+    id: "pr-celery-10510",
+    org: "celery",
+    repository: "celery/celery",
+    number: 10510,
+    url: "https://github.com/celery/celery/pull/10510",
+    title: "Expired certificates no longer pass verification",
+    kind: "Time-of-use gap",
+    category: "Security",
+    problem:
+      "A certificate that expired after it was loaded could still pass signature verification.",
+    fix: "Added an explicit expiry check before verification, with regression tests.",
+  },
+  {
+    id: "pr-openfoodfacts-explorer-1766",
+    org: "off",
+    repository: "openfoodfacts/openfoodfacts-explorer",
+    number: 1766,
+    url: "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1766",
+    title: "Brand autocomplete for Open Food Facts search",
+    kind: "Feature",
+    category: "Backend",
+    problem: "Search had no brand autocomplete (issue #1685).",
+    fix: "Added brand autocomplete through the taxonomy suggester as a classic fallback, keeping categories and labels on search-a-licious.",
+  },
 ];
 
-export const openSourceSummary = {
-  mergedPRs: TOTAL_PRS,
-  repositories: TOTAL_REPOS,
-  categories: ["Security", "Concurrency", "AI", "Cloud", "Backend"] as const,
-};
-
+/** Community open source: the featured picks outside the four flagship projects. */
 export const selectedContributions: SelectedContribution[] = [
   {
     title: "Distributed Rate Limiting",
     repository: "Eventra",
     description:
       "Implemented Redis-backed distributed rate limiting eliminating instance-hopping bypass attacks.",
-    outcome: "500+ concurrent requests supported.",
+    outcome: "Rate limits hold across multiple app instances.",
     category: "Security",
     url: "https://github.com/SandeepVashishtha/Eventra/pull/8655",
     prNumber: 8655,
-  },
-  {
-    title: "Celery Deadlock Fix",
-    repository: "Celery",
-    description:
-      "Fixed Redis result consumer deadlock in celery/celery - a major Python distributed task queue used by thousands of companies. Resolved redundant unsubscribe causing re-entrant lock deadlock.",
-    outcome: "Production-grade fix for widely-deployed infrastructure.",
-    category: "Concurrency",
-    url: "https://github.com/celery/celery/pull/10497",
-    prNumber: 10497,
   },
   {
     title: "Concurrency Synchronization",
@@ -104,10 +199,51 @@ export const selectedContributions: SelectedContribution[] = [
   },
 ];
 
+/** Every contribution that gets its own detail page (flagship first). */
+export const detailContributions: SelectedContribution[] = [
+  ...flagshipContributions.map((c) => ({
+    title: c.title,
+    repository: c.repository.split("/")[1],
+    description: c.problem,
+    outcome: c.shipped ? `${c.fix} Shipped in ${c.shipped}.` : c.fix,
+    category: c.category,
+    url: c.url,
+    prNumber: c.number,
+  })),
+  ...selectedContributions,
+];
+
+export const experience: ExperienceItem[] = [
+  {
+    role: "Open Source Contributor",
+    org: "Celery · Django · Microsoft Agent Framework · Open Food Facts",
+    place: "Remote",
+    period: "Apr 2026 – Present",
+    current: true,
+    bullets: [
+      "Root-cause analysis, fixes and regression tests for concurrency, memory and shared-state bugs in widely used projects.",
+      "Worked through maintainer review on every PR, including a Django patch that was narrowed to a smaller change.",
+    ],
+    tags: ["Python", "Redis", "Concurrency", "ORM internals", "Regression tests"],
+  },
+  {
+    role: "Django Backend Intern",
+    org: "Techaronic IT Solutions Pvt. Ltd.",
+    place: "Ahmedabad, India",
+    period: "Jun 2024 – Aug 2024",
+    bullets: [
+      "Cut average API response time by 25% under production load with database indexing and ORM query tuning.",
+      "Built authentication and authorization workflows with request validation and access control.",
+      "Deployed and maintained services on AWS EC2, including production debugging under live traffic.",
+    ],
+    tags: ["Django REST", "PostgreSQL", "AWS EC2", "Auth"],
+  },
+];
+
 export const education: Education[] = [
   {
     institution: "Pandit Deendayal Energy University",
-    degree: "B.Tech Computer Science and Business System (CSBS)",
+    degree: "B.Tech Computer Science and Business Systems (CSBS)",
     cgpa: 9.61,
     period: "2025–2028",
   },
@@ -119,42 +255,30 @@ export const education: Education[] = [
   },
 ];
 
-
-
 export const projects = [
   {
-    title: "ProfiLens",
-    description: "Full-Stack Career Development Platform with gamified learning, MCQ + coding exams, AI-powered resume generation, and a coin-based reward store. Built with Django, DRF, PostgreSQL, and WeasyPrint for PDF generation.",
-    stack: ["Django", "DRF", "PostgreSQL", "Python", "Bootstrap", "WeasyPrint", "JWT", "Celery", "Redis"],
-    outcome: "Built async resume/PDF generation with RBAC-backed learning workflows.",
-    github: "https://github.com/Namraa310806/ProfiLens",
+    title: "Matching Engine",
+    description:
+      "A price-time-priority limit order book and matching engine in C++20: limit and market orders, partial fills, cancels and multiple instruments. Profiled, benchmarked and race-checked with ThreadSanitizer.",
+    stack: ["C++20", "CMake", "GoogleTest", "Google Benchmark", "ThreadSanitizer", "ASan", "UBSan"],
+    outcome:
+      "Cancel-heavy throughput rose from 13.7K to 3.81M ops/s (278×) after swapping a map/deque book for a sorted vector with intrusive lists.",
+    github: "https://github.com/Namraa310806/Matching-Engine",
     liveDemo: null,
     challenges: [
-      "RBAC authorization system",
-      "Async PDF generation pipeline",
-      "PostgreSQL schema design & indexing",
-      "Service-oriented architecture",
-    ],
-  },
-  {
-    title: "Personal Cloud Assistant",
-    description: "Fully serverless AWS application for secure note and file management. Uses Lambda + API Gateway for REST APIs, S3 pre-signed URLs for file I/O, DynamoDB for storage, Cognito for auth, and CloudWatch for monitoring.",
-    stack: ["AWS", "Lambda", "API Gateway", "DynamoDB", "S3", "Cognito", "Amplify", "React", "CloudWatch", "IAM"],
-    outcome: "Shipped secure serverless notes and file storage with Cognito and S3 pre-signed URLs.",
-    github: "https://github.com/Namraa310806/AWSPeronsalCloudAssistant",
-    liveDemo: "https://main.d1xrjjt0e3swym.amplifyapp.com/",
-    challenges: [
-      "Serverless architecture design",
-      "S3 pre-signed URL security",
-      "DynamoDB data modeling",
-      "Cognito authentication flows",
+      "O(1) cancels with intrusive lists",
+      "Lock-free SPSC ingestion queue",
+      "Chunked freelist object pool",
+      "Benchmark integrity checks",
     ],
   },
   {
     title: "TeamSense",
-    description: "AI-Powered HR Intelligence Platform built for a hackathon. Features DRF APIs, async ingestion pipelines via Celery + Redis, PostgreSQL models, React dashboard, and Dockerized deployment.",
+    description:
+      "AI-powered HR analytics platform built for a hackathon. An async Celery and Redis pipeline moves compute-heavy feedback processing off the request cycle, backed by a multi-entity PostgreSQL schema and a Dockerized stack.",
     stack: ["Django", "DRF", "PostgreSQL", "Redis", "Celery", "Docker", "React", "Nginx", "JWT"],
-    outcome: "Designed async HR intelligence pipelines with Celery, Redis, and Dockerized services.",
+    outcome:
+      "Cut synchronous processing load by 60% by moving feedback processing into an async Celery–Redis pipeline.",
     github: "https://github.com/Namraa310806/TeamSense",
     liveDemo: null,
     challenges: [
@@ -165,8 +289,40 @@ export const projects = [
     ],
   },
   {
+    title: "Personal Cloud Assistant",
+    description:
+      "Fully serverless AWS application for secure note and file management. Lambda and API Gateway serve the REST APIs, S3 presigned URLs handle file I/O, DynamoDB stores data, Cognito secures access and CloudWatch tracks custom metrics.",
+    stack: ["AWS", "Lambda", "API Gateway", "DynamoDB", "S3", "Cognito", "Amplify", "React", "CloudWatch", "IAM"],
+    outcome:
+      "Shipped a secure serverless backend with Cognito JWT auth, least-privilege IAM and an admin-only monitoring dashboard.",
+    github: "https://github.com/Namraa310806/AWSPeronsalCloudAssistant",
+    liveDemo: "https://main.d1xrjjt0e3swym.amplifyapp.com/",
+    challenges: [
+      "Serverless architecture design",
+      "S3 presigned URL security",
+      "DynamoDB data modeling",
+      "Cognito authentication flows",
+    ],
+  },
+  {
+    title: "ProfiLens",
+    description:
+      "Full-stack career development platform with gamified learning, MCQ and coding exams, resume generation and a coin-based reward store. Built with Django, DRF, PostgreSQL and WeasyPrint for PDF generation.",
+    stack: ["Django", "DRF", "PostgreSQL", "Python", "Bootstrap", "WeasyPrint", "JWT", "Celery", "Redis"],
+    outcome: "Built async resume and PDF generation with RBAC-backed learning workflows.",
+    github: "https://github.com/Namraa310806/ProfiLens",
+    liveDemo: null,
+    challenges: [
+      "RBAC authorization system",
+      "Async PDF generation pipeline",
+      "PostgreSQL schema design & indexing",
+      "Service-oriented architecture",
+    ],
+  },
+  {
     title: "Animal Classification",
-    description: "Deep learning project classifying images into 15 animal categories using MobileNetV2 transfer learning. Features data augmentation, early stopping, and a Streamlit web app for predictions.",
+    description:
+      "Deep learning project classifying images into 15 animal categories using MobileNetV2 transfer learning. Features data augmentation, early stopping, and a Streamlit web app for predictions.",
     stack: ["TensorFlow", "MobileNetV2", "Python", "Streamlit", "scikit-learn", "NumPy", "Pandas"],
     outcome: "Trained and deployed transfer-learning inference for 15-class image classification.",
     github: "https://github.com/Namraa310806/AnimalClassification",
@@ -180,7 +336,8 @@ export const projects = [
   },
   {
     title: "Color Classifier",
-    description: "ML web app that analyzes and visualizes dominant color distribution in images. Uses Random Forest classifier on custom-labeled color dataset with OpenCV for feature extraction and Streamlit for the UI.",
+    description:
+      "ML web app that analyzes and visualizes dominant color distribution in images. Uses Random Forest classifier on custom-labeled color dataset with OpenCV for feature extraction and Streamlit for the UI.",
     stack: ["Python", "scikit-learn", "OpenCV", "NumPy", "Streamlit", "Pandas", "Matplotlib"],
     outcome: "Delivered real-time dominant-color prediction with OpenCV feature extraction.",
     github: "https://github.com/Namraa310806/ColorClassifierML",
@@ -194,7 +351,8 @@ export const projects = [
   },
   {
     title: "GestureMediaPlayer",
-    description: "Computer vision application that controls media playback using hand gestures. Uses MediaPipe for real-time hand tracking and gesture recognition with OpenCV for video processing.",
+    description:
+      "Computer vision application that controls media playback using hand gestures. Uses MediaPipe for real-time hand tracking and gesture recognition with OpenCV for video processing.",
     stack: ["Python", "MediaPipe", "OpenCV", "NumPy", "CV2", "PyAutoGUI", "Threading"],
     outcome: "Implemented low-latency hand-gesture controls for desktop media playback.",
     github: "https://github.com/Namraa310806/GestureMediaPlayer",
@@ -208,7 +366,8 @@ export const projects = [
   },
   {
     title: "n8n Workflow",
-    description: "Custom n8n workflow automation for data processing and integration. Features automated triggers, API integrations, and conditional logic for complex business processes.",
+    description:
+      "Custom n8n workflow automation for data processing and integration. Features automated triggers, API integrations, and conditional logic for complex business processes.",
     stack: ["n8n", "JavaScript", "Node.js", "REST APIs", "Webhooks"],
     outcome: "Automated API-triggered workflows with conditional routing and retry-aware handling.",
     github: "https://github.com/Namraa310806/n8n-workflows",
@@ -222,7 +381,8 @@ export const projects = [
   },
   {
     title: "Automated Book Workflow",
-    description: "End-to-end automation system for book processing and management. Integrates multiple APIs for metadata extraction, content processing, and automated publishing workflows.",
+    description:
+      "End-to-end automation system for book processing and management. Integrates multiple APIs for metadata extraction, content processing, and automated publishing workflows.",
     stack: ["Python", "n8n", "REST APIs", "Docker", "PostgreSQL"],
     outcome: "Orchestrated multi-service book processing with resilient workflow state management.",
     github: "https://github.com/Namraa310806/AutomatedBookWorkflow",
@@ -236,12 +396,12 @@ export const projects = [
   },
 ];
 
-
-
 export const navLinks = [
   { href: "#hero", label: "Home" },
-  { href: "#opensource", label: "Open Source" },
+  { href: "#opensource", label: "Upstream" },
+  { href: "#systems", label: "Systems" },
   { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
   { href: "#achievements", label: "Achievements" },
   { href: "#contact", label: "Contact" },
 ];

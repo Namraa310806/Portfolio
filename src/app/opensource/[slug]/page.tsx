@@ -1,30 +1,28 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ContributionDetailPage } from "@/components/pages/contribution-detail-page";
-import { selectedContributions } from "@/data/site";
+import { detailContributions } from "@/data/site";
+import { slugify } from "@/lib/utils";
 
 interface ContributionPageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
+const findContribution = (slug: string) =>
+  detailContributions.find((c) => slugify(c.title) === slug);
+
 export async function generateStaticParams() {
-  return selectedContributions.map((contribution) => ({
-    slug: contribution.title.toLowerCase().replace(/\s+/g, "-"),
+  return detailContributions.map((contribution) => ({
+    slug: slugify(contribution.title),
   }));
 }
 
 export async function generateMetadata({ params }: ContributionPageProps): Promise<Metadata> {
-  const slug = params.slug;
-  const contribution = selectedContributions.find(
-    (c) => c.title.toLowerCase().replace(/\s+/g, "-") === slug
-  );
+  const { slug } = await params;
+  const contribution = findContribution(slug);
 
   if (!contribution) {
-    return {
-      title: "Contribution Not Found",
-    };
+    return { title: "Contribution Not Found" };
   }
 
   return {
@@ -33,11 +31,9 @@ export async function generateMetadata({ params }: ContributionPageProps): Promi
   };
 }
 
-export default function ContributionPage({ params }: ContributionPageProps) {
-  const slug = params.slug;
-  const contribution = selectedContributions.find(
-    (c) => c.title.toLowerCase().replace(/\s+/g, "-") === slug
-  );
+export default async function ContributionPage({ params }: ContributionPageProps) {
+  const { slug } = await params;
+  const contribution = findContribution(slug);
 
   if (!contribution) {
     notFound();

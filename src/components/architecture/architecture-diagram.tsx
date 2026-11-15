@@ -12,6 +12,8 @@ import {
   Node,
   Edge,
   Connection,
+  Handle,
+  Position,
   addEdge,
 } from "reactflow";
 import "reactflow/dist/style.css";
@@ -21,10 +23,18 @@ interface ArchitectureDiagramProps {
   edges: Edge[];
 }
 
+const hiddenHandle = { opacity: 0, pointerEvents: "none" as const };
+
+// Without handles React Flow cannot draw edges. Top/bottom carry the main flow;
+// left/right exist for side connections (give an edge sourceHandle "l" and targetHandle "r").
 const nodeTypes = {
-  custom: ({ data }: { data: any }) => (
-    <div className="px-4 py-2 rounded-lg border border-accent/30 bg-background/80 backdrop-blur-sm shadow-lg">
+  custom: ({ data }: { data: { label: string } }) => (
+    <div className="rounded-lg border border-accent/30 bg-background/80 px-4 py-2 text-center shadow-lg backdrop-blur-sm">
+      <Handle type="target" position={Position.Top} id="t" style={hiddenHandle} />
+      <Handle type="target" position={Position.Right} id="r" style={hiddenHandle} />
       <div className="text-sm font-semibold text-foreground">{data.label}</div>
+      <Handle type="source" position={Position.Bottom} id="b" style={hiddenHandle} />
+      <Handle type="source" position={Position.Left} id="l" style={hiddenHandle} />
     </div>
   ),
 };

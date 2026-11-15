@@ -1,324 +1,292 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { motion } from "framer-motion";
-import { ArrowLeft, ArrowRight, ExternalLink, Search, ShieldCheck, TrendingUp } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Search, X } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardDescription, CardTitle } from "@/components/ui/card";
+import { Header } from "@/components/layout/header";
 import { Input } from "@/components/ui/input";
 import { SectionHeader } from "@/components/ui/section-header";
-import { Header } from "@/components/layout/header";
+import { OrgLogo, orgMeta } from "@/components/visuals/org-logos";
 import contributions from "@/data/contributions.json";
 import contributionsMeta from "@/data/contributions-meta.json";
+import { flagshipContributions } from "@/data/site";
 import type { Contribution, ContributionCategory } from "@/types";
-import { getContributionSummary } from "@/lib/contribution-summaries";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 
-const filterCategories: ContributionCategory[] = [
-  "Security",
-  "Backend",
-  "AI",
-  "Performance",
-  "Cloud",
-  "Concurrency",
+type Scope = "all" | "flagship" | "community";
+
+const PAGE_SIZE = 24;
+const categories: ContributionCategory[] = ["Security", "Backend", "AI", "Performance", "Cloud", "Concurrency"];
+const scopes: { key: Scope; label: string }[] = [
+  { key: "all", label: "Everything" },
+  { key: "flagship", label: "Big projects" },
+  { key: "community", label: "Community" },
 ];
 
-const allContributions = contributions as Contribution[];
-const productionRepositories = contributionsMeta.productionRepos;
-const topContributionIds = [
-  "pr-Eventra-8655",
-  "pr-Eventra-9156",
-  "pr-LegalEase-350",
-  "pr-AegisGraph-Sentinel-2.0-1054",
-  "pr-pdf-qa-bot-69",
-  "pr-LegalEase-402",
-];
-const topContributions = topContributionIds
-  .map((id) => allContributions.find((pr) => pr.id === id))
-  .filter((pr): pr is Contribution => Boolean(pr));
+const all = contributions as Contribution[];
+const flagshipRepos = contributionsMeta.flagshipRepos;
+const communityRepos = contributionsMeta.communityRepos;
+
+const featured = new Map(flagshipContributions.map((f) => [f.id, f]));
+
+/** Plain-English title for featured PRs; light tidying of prefixes for the rest. */
+function displayTitle(pr: Contribution) {
+  const f = featured.get(pr.id);
+  if (f) return f.title;
+  const t = pr.title
+    .replace(/^python:\s*/i, "")
+    .replace(/^fix#\d+\s*-\s*/i, "")
+    .replace(/^fixed\s+#\d+\s*--\s*/i, "")
+    .replace(/^(fix|feat|chore)(\([^)]*\))?[:!/]\s*/i, "")
+    .trim();
+  return t.charAt(0).toUpperCase() + t.slice(1);
+}
+
+function topicOf(pr: Contribution): ContributionCategory {
+  return featured.get(pr.id)?.category ?? pr.category;
+}
+
+function monthYear(iso?: string | null) {
+  if (!iso) return "";
+  return new Date(iso).toLocaleDateString("en", { month: "short", year: "numeric", timeZone: "UTC" });
+}
+
+/** Stable colour for a community repository's initial. */
+function repoHue(name: string) {
+  let h = 0;
+  for (const ch of name) h = (h * 31 + ch.charCodeAt(0)) % 360;
+  return h;
+}
+
+function ProjectMark({ pr }: { pr: Contribution }) {
+  if (pr.org) return <OrgLogo org={pr.org} className="h-8 w-8 text-foreground" />;
+  const hue = repoHue(pr.repository);
+  return (
+    <span
+      aria-hidden
+      className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg text-sm font-bold"
+      style={{
+        background: `hsl(${hue} 70% 55% / 0.16)`,
+        color: `hsl(${hue} 75% 62%)`,
+        border: `1px solid hsl(${hue} 70% 55% / 0.35)`,
+      }}
+    >
+      {pr.repository.charAt(0).toUpperCase()}
+    </span>
+  );
+}
 
 export function OpenSourcePage() {
-  const [filter, setFilter] = useState<ContributionCategory | "All">("All");
+  const [scope, setScope] = useState<Scope>("all");
+  const [repo, setRepo] = useState<string>("all");
+  const [category, setCategory] = useState<ContributionCategory | "all">("all");
   const [search, setSearch] = useState("");
-  const [repoFilter, setRepoFilter] = useState<string | "All">("All");
+  const [newestFirst, setNewestFirst] = useState(true);
+  const [limit, setLimit] = useState(PAGE_SIZE);
 
   const filtered = useMemo(() => {
-    return allContributions.filter((pr) => {
-      const q = search.toLowerCase();
-      const matchesCategory = filter === "All" || pr.category === filter;
-      const matchesRepo = repoFilter === "All" || pr.repository === repoFilter;
-      const matchesSearch =
-        !q ||
-        pr.title.toLowerCase().includes(q) ||
-        pr.repository.toLowerCase().includes(q) ||
-        pr.category.toLowerCase().includes(q) ||
-        getContributionSummary(pr).toLowerCase().includes(q);
-
-      return matchesCategory && matchesRepo && matchesSearch;
+    const q = search.trim().toLowerCase();
+    const list = all.filter((pr) => {
+      if (scope !== "all" && pr.tier !== scope) return false;
+      if (repo !== "all" && pr.repository !== repo) return false;
+      if (category !== "all" && topicOf(pr) !== category) return false;
+      if (q && !(pr.title.toLowerCase().includes(q) || pr.repository.toLowerCase().includes(q))) return false;
+      return true;
     });
-  }, [filter, repoFilter, search]);
+    return list.sort((a, b) => {
+      const diff = (a.mergedAt ?? "").localeCompare(b.mergedAt ?? "");
+      return newestFirst ? -diff : diff;
+    });
+  }, [scope, repo, category, search, newestFirst]);
+
+  const dirty = scope !== "all" || repo !== "all" || category !== "all" || search !== "";
+  const visible = filtered.slice(0, limit);
+
+  // Any filter change returns the list to its first page.
+  const change = <T,>(setter: (v: T) => void) => (value: T) => {
+    setter(value);
+    setLimit(PAGE_SIZE);
+  };
+  const setScopeFilter = (value: Scope) => {
+    setScope(value);
+    setRepo("all");
+    setLimit(PAGE_SIZE);
+  };
+
+  const repoOptions =
+    scope === "flagship" ? flagshipRepos : scope === "community" ? communityRepos : [...flagshipRepos, ...communityRepos];
 
   return (
     <div className="min-h-screen">
       <Header />
-      <section className="section-alt section-padding pt-24">
+      <section className="section-padding pt-24">
         <div className="section-container">
           <FadeIn>
-            <div className="mb-8">
-              <Link
-                href="/"
-                className="inline-flex items-center gap-2 text-sm text-foreground-muted transition-colors hover:text-foreground"
-              >
-                <ArrowLeft className="h-4 w-4" />
-                Back to Home
-              </Link>
-            </div>
+            <Link
+              href="/"
+              className="mb-8 inline-flex items-center gap-2 text-sm text-foreground-muted transition-colors hover:text-foreground"
+            >
+              <ArrowLeft className="h-4 w-4" />
+              Back to Home
+            </Link>
             <SectionHeader
-              eyebrow="Open Source Impact"
-              title="All Contributions"
-              subtitle={`${contributionsMeta.totalPRs}+ merged pull requests across ${contributionsMeta.totalRepositories} production repositories - security, concurrency, AI, cloud, and backend systems.`}
+              eyebrow="Open source"
+              title="All merged pull requests"
+              subtitle="Big upstream projects and community work in one place. Filter by project, topic or keyword."
             />
           </FadeIn>
 
           <FadeIn delay={0.05}>
-            <div className="mt-8 flex flex-wrap gap-2">
-              {productionRepositories.map((repo) => (
-                <motion.div
-                  key={repo.name}
-                  className="flex items-stretch"
-                  whileHover={{ scale: 1.02 }}
-                  transition={{ type: "spring", stiffness: 400, damping: 25 }}
-                >
-                  <button
-                    type="button"
-                    onClick={() =>
-                      setRepoFilter(repoFilter === repo.name ? "All" : repo.name)
-                    }
-                    className={cn(
-                      "inline-flex items-center gap-2 rounded-l-xl border border-r-0 px-4 py-2.5 text-sm font-medium transition-all",
-                      repoFilter === repo.name
-                        ? "border-accent/40 bg-accent text-white shadow-lg shadow-accent/25"
-                        : "border-border bg-card text-foreground hover:shadow-md",
-                    )}
-                  >
-                    {repo.displayName}
-                    <span
+            <div className="mt-8 space-y-4 rounded-2xl border border-border bg-card p-4 shadow-sm sm:p-5">
+              <div className="flex flex-wrap items-center gap-3">
+                <div role="group" aria-label="Scope" className="inline-flex rounded-xl border border-border bg-background-muted p-1">
+                  {scopes.map((s) => (
+                    <button
+                      key={s.key}
+                      type="button"
+                      onClick={() => setScopeFilter(s.key)}
+                      aria-pressed={scope === s.key}
                       className={cn(
-                        "rounded-full px-1.5 py-0.5 text-[10px] font-bold",
-                        repoFilter === repo.name
-                          ? "bg-white/25"
-                          : "bg-background-muted text-foreground-muted",
+                        "rounded-lg px-4 py-1.5 text-sm font-semibold transition-all",
+                        scope === s.key
+                          ? "bg-accent text-white shadow-md shadow-accent/25"
+                          : "text-foreground-muted hover:text-foreground",
                       )}
                     >
-                      {repo.prCount}
-                    </span>
+                      {s.label}
+                    </button>
+                  ))}
+                </div>
+
+                <select
+                  value={repo}
+                  onChange={(e) => change(setRepo)(e.target.value)}
+                  aria-label="Project"
+                  className="h-10 rounded-xl border border-border bg-card px-3 text-sm font-medium text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent/30"
+                >
+                  <option value="all">All projects</option>
+                  {repoOptions.map((r) => (
+                    <option key={r.name} value={r.name}>
+                      {r.displayName}
+                    </option>
+                  ))}
+                </select>
+
+                <button
+                  type="button"
+                  onClick={() => change(setNewestFirst)(!newestFirst)}
+                  className="h-10 rounded-xl border border-border bg-card px-3 text-sm font-medium text-foreground-muted transition-colors hover:text-foreground"
+                >
+                  {newestFirst ? "Newest first" : "Oldest first"}
+                </button>
+
+                {dirty && (
+                  <button
+                    type="button"
+                    onClick={() => {
+                      setScope("all");
+                      setRepo("all");
+                      setCategory("all");
+                      setSearch("");
+                      setLimit(PAGE_SIZE);
+                    }}
+                    className="inline-flex h-10 items-center gap-1.5 rounded-xl px-3 text-sm font-semibold text-accent transition-colors hover:text-accent-hover"
+                  >
+                    <X className="h-4 w-4" />
+                    Clear
                   </button>
-                  <a
-                    href={repo.repositoryUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label={`Open ${repo.displayName} on GitHub`}
+                )}
+              </div>
+
+              <div className="flex flex-wrap gap-2">
+                {(["all", ...categories] as const).map((c) => (
+                  <button
+                    key={c}
+                    type="button"
+                    onClick={() => change(setCategory)(c)}
+                    aria-pressed={category === c}
                     className={cn(
-                      "inline-flex items-center rounded-r-xl border px-2.5 transition-colors",
-                      repoFilter === repo.name
-                        ? "border-accent/40 bg-accent text-white"
-                        : "border-border bg-card text-foreground-muted hover:text-accent hover:shadow-md",
+                      "rounded-full border px-3.5 py-1 text-sm font-semibold transition-all",
+                      category === c
+                        ? "border-accent bg-accent text-white"
+                        : "border-border bg-background text-foreground-muted hover:border-accent/40 hover:text-foreground",
                     )}
                   >
-                    <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
-                </motion.div>
-              ))}
+                    {c === "all" ? "All topics" : c}
+                  </button>
+                ))}
+              </div>
+
+              <div className="relative">
+                <Search className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground-muted" />
+                <Input
+                  value={search}
+                  onChange={(e) => change(setSearch)(e.target.value)}
+                  placeholder="Search titles and projects"
+                  aria-label="Search pull requests"
+                  className="pl-11"
+                />
+              </div>
             </div>
           </FadeIn>
 
-          <FadeIn delay={0.25}>
-            <div className="mt-10">
-              <div className="mb-5 flex items-end justify-between gap-4">
-                <div>
-                  <p className="mb-2 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent-muted px-3 py-1 text-xs font-bold uppercase tracking-wide text-accent-foreground">
-                    <ShieldCheck className="h-3.5 w-3.5" />
-                    Highest Impact
-                  </p>
-                  <h3 className="text-2xl font-bold tracking-tight text-foreground">
-                    Top Contributions
-                  </h3>
-                  <p className="mt-2 max-w-2xl text-sm leading-relaxed text-foreground-muted">
-                    Curated by production risk, technical difficulty, and recruiter signal.
-                  </p>
-                </div>
-              </div>
-
-              <div className="grid gap-4 lg:grid-cols-2">
-                {topContributions.map((pr, index) => (
-                  <motion.a
-                    key={pr.id}
-                    href={pr.url}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group relative overflow-hidden rounded-2xl border border-border/70 bg-card p-5 shadow-sm transition-all hover:-translate-y-1 hover:border-accent/40 hover:shadow-lg"
-                    initial={{ opacity: 0, y: 18 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: index * 0.05, duration: 0.35 }}
-                  >
-                    <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                    <div className="relative z-10">
-                      <div className="mb-4 flex items-center justify-between gap-3">
-                        <div className="flex items-center gap-3">
-                          <span className="flex h-9 w-9 items-center justify-center rounded-xl border border-accent/25 bg-accent-muted text-sm font-black text-accent-foreground">
-                            {index + 1}
-                          </span>
-                          <div>
-                            <p className="text-sm font-bold text-foreground">
-                              {pr.repository}
-                            </p>
-                            <p className="text-xs font-medium text-foreground-muted">
-                              PR #{pr.number}
-                            </p>
-                          </div>
-                        </div>
-                        <Badge variant="accent" className="font-semibold">
-                          {pr.category}
-                        </Badge>
-                      </div>
-                      <h4 className="text-base font-bold leading-snug text-foreground transition-colors group-hover:text-accent">
-                        {pr.title}
-                      </h4>
-                      <p className="mt-3 text-sm font-medium leading-relaxed text-foreground">
-                        {getContributionSummary(pr)}
-                      </p>
-                      <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-accent">
-                        View important PR
-                        <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                      </span>
-                    </div>
-                  </motion.a>
-                ))}
-              </div>
-            </div>
-
-            <div className="mt-10">
-              <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-                <motion.h3
-                  className="flex items-center gap-2 text-xl font-bold text-foreground"
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: 0.3 }}
+          <ul className="mt-6 space-y-2.5">
+            {visible.map((pr) => (
+              <li key={pr.id}>
+                <a
+                  href={pr.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={cn(
+                    "group flex items-center gap-4 rounded-xl border bg-card px-4 py-3.5 transition-all hover:-translate-y-0.5 hover:border-accent/40 hover:shadow-md",
+                    pr.org ? "border-border" : "border-border/70",
+                  )}
+                  style={pr.org ? { borderLeft: `3px solid ${orgMeta[pr.org].color}` } : undefined}
                 >
-                  <TrendingUp className="h-5 w-5 text-accent" />
-                  All Contributions ({filtered.length})
-                </motion.h3>
-                <div className="relative w-full sm:max-w-xs">
-                  <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-foreground-muted" />
-                  <Input
-                    type="search"
-                    placeholder="Search PRs..."
-                    value={search}
-                    onChange={(event) => setSearch(event.target.value)}
-                    className="pl-10"
-                    aria-label="Search contributions"
-                  />
-                </div>
-              </div>
+                  <ProjectMark pr={pr} />
+                  <span className="min-w-0 flex-1">
+                    <span className="block truncate text-[15px] font-semibold text-foreground group-hover:text-accent">
+                      {displayTitle(pr)}
+                    </span>
+                    <span className="mt-0.5 flex flex-wrap items-center gap-x-2 text-xs text-foreground-muted">
+                      <span className="font-medium">{pr.org ? orgMeta[pr.org].name : pr.repository}</span>
+                      <span aria-hidden>·</span>
+                      <span>{topicOf(pr)}</span>
+                      {pr.mergedAt && (
+                        <>
+                          <span aria-hidden>·</span>
+                          <span>{monthYear(pr.mergedAt)}</span>
+                        </>
+                      )}
+                    </span>
+                  </span>
+                  <span className="flex shrink-0 items-center gap-1 font-mono text-xs text-foreground-muted group-hover:text-accent">
+                    #{pr.number}
+                    <ArrowUpRight className="h-3.5 w-3.5" />
+                  </span>
+                </a>
+              </li>
+            ))}
+          </ul>
 
-              <div className="mt-4 flex flex-wrap gap-2">
-                {(["All", ...filterCategories] as const).map((cat) => (
-                  <motion.button
-                    key={cat}
-                    onClick={() => setFilter(cat)}
-                    className={cn(
-                      "rounded-full border px-4 py-1.5 text-xs font-bold transition-all",
-                      filter === cat
-                        ? "border-accent bg-accent text-white shadow-lg shadow-accent/25"
-                        : "border-border bg-card text-foreground-muted hover:border-accent/30 hover:shadow-md",
-                    )}
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    {cat}
-                  </motion.button>
-                ))}
-              </div>
+          {filtered.length === 0 && (
+            <p className="mt-10 rounded-2xl border border-dashed border-border py-12 text-center text-foreground-muted">
+              Nothing matches those filters.
+            </p>
+          )}
 
-              <div className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {filtered.map((pr, index) => (
-                  <motion.div
-                    key={pr.id}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: index * 0.02, type: "spring", stiffness: 300 }}
-                    whileHover={{ y: -4 }}
-                  >
-                    <a
-                      href={pr.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="block h-full"
-                    >
-                      <Card className="group relative h-full min-h-[230px] overflow-hidden border-border/70 transition-all hover:border-accent/40 hover:shadow-lg">
-                        <div className="absolute inset-0 bg-gradient-to-br from-accent/10 via-transparent to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
-                        <div className="relative z-10">
-                          <div className="mb-3 flex items-center justify-between gap-2">
-                            <Badge
-                              variant={pr.status === "Merged" ? "accent" : "outline"}
-                              className="font-semibold"
-                            >
-                              {pr.status}
-                            </Badge>
-                            <Badge variant="outline" className="font-semibold">
-                              {pr.category}
-                            </Badge>
-                          </div>
-                          <CardTitle className="text-base font-bold leading-snug transition-colors group-hover:text-accent">
-                            {pr.title}
-                          </CardTitle>
-                          <p className="mt-3 text-sm font-medium leading-relaxed text-foreground">
-                            {getContributionSummary(pr)}
-                          </p>
-                          <CardDescription className="mt-3 text-sm font-medium">
-                            {pr.repository} - #{pr.number}
-                          </CardDescription>
-                          <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold text-accent">
-                            View PR
-                            <ExternalLink className="h-3.5 w-3.5 transition-transform group-hover:translate-x-0.5" />
-                          </span>
-                        </div>
-                      </Card>
-                    </a>
-                  </motion.div>
-                ))}
-              </div>
-
-              {filtered.length === 0 && (
-                <motion.p
-                  className="py-10 text-center text-sm text-foreground-muted"
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                >
-                  No contributions match your filters.
-                </motion.p>
-              )}
-
-              <motion.div
-                className="mt-8 text-center"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.4 }}
+          {filtered.length > visible.length && (
+            <div className="mt-8 flex justify-center">
+              <button
+                type="button"
+                onClick={() => setLimit((n) => n + PAGE_SIZE)}
+                className="rounded-xl border border-border bg-card px-6 py-3 text-sm font-semibold text-foreground transition-colors hover:border-accent/40 hover:bg-accent/5"
               >
-                <Link
-                  href="/"
-                  className="inline-flex items-center gap-2 rounded-xl border-2 border-border bg-card px-6 py-3 text-sm font-bold text-foreground-muted transition-all hover:border-accent/40 hover:bg-accent/5 hover:text-foreground hover:shadow-lg"
-                >
-                  <ArrowLeft className="h-4 w-4" />
-                  Back to Home
-                </Link>
-              </motion.div>
+                Show more
+              </button>
             </div>
-          </FadeIn>
+          )}
         </div>
       </section>
     </div>

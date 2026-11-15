@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, ArrowRight, ChevronRight, Home, GitPullRequest, Database, Shield, Zap } from "lucide-react";
+import { ExternalLink, ArrowRight, ChevronRight, Home, GitPullRequest, Database, Shield, Zap, type LucideIcon } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
@@ -20,7 +20,7 @@ interface ContributionDetailPageProps {
   };
 }
 
-const categoryIcons: Record<string, any> = {
+const categoryIcons: Record<string, LucideIcon> = {
   Security: Shield,
   Concurrency: Zap,
   AI: Database,

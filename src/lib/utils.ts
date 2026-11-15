@@ -15,3 +15,11 @@ export function withBasePath(path: string): string {
   if (!path.startsWith("/")) return `${base}/${path}`;
   return `${base}${path}`;
 }
+
+/** URL-safe slug: lowercase, letters and digits only, single hyphens. */
+export function slugify(value: string): string {
+  return value
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
+}

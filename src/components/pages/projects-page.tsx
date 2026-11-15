@@ -2,16 +2,18 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, Search } from "lucide-react";
+import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, Search, Cpu } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Input } from "@/components/ui/input";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
 import { projects } from "@/data/site";
-import { getTechColor, techColors } from "@/lib/tech-colors";
+import { techColors } from "@/lib/tech-colors";
+import { TechChip } from "@/components/ui/tech-chip";
 import Link from "next/link";
 
 const iconMap = {
+  "Matching Engine": Cpu,
   ProfiLens: Code2,
   "Personal Cloud Assistant": Cloud,
   TeamSense: Brain,
@@ -159,14 +161,7 @@ export function ProjectsPage() {
 
                       <div className="mt-auto flex min-w-0 flex-wrap gap-1.5 pt-4 sm:gap-2 sm:pt-5">
                         {project.stack.map((tech) => {
-                          return (
-                            <span
-                              key={tech}
-                              className={`${getTechColor(tech)} max-w-full`}
-                            >
-                              {tech}
-                            </span>
-                          );
+                          return <TechChip key={tech} tech={tech} />;
                         })}
                       </div>
                     </div>

@@ -5,9 +5,8 @@ import { Download, ExternalLink, ChevronRight, Home, FileText } from "lucide-rea
 import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
-import { Button } from "@/components/ui/button";
 import { siteConfig } from "@/data/site";
-import { cn, withBasePath } from "@/lib/utils";
+import { withBasePath } from "@/lib/utils";
 import Link from "next/link";
 
 export function ResumePage() {

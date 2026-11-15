@@ -44,7 +44,10 @@ export function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/80 bg-background/90 shadow-xs backdrop-blur-xl">
       <div className="section-container flex h-16 items-center justify-between">
         <button
-          onClick={() => scrollTo("/")}
+          onClick={() => {
+            window.dispatchEvent(new Event("secret:logo"));
+            scrollTo("/");
+          }}
           className="text-lg font-semibold tracking-tight text-foreground"
         >
           Namraa<span className="text-accent">.</span>

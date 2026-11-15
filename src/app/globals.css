@@ -408,3 +408,91 @@ body {
   border-color: rgba(148, 163, 184, 0.45);
   color: #f8fafc;
 }
+
+
+/* ---------- Portfolio refresh additions ---------- */
+.caret {
+  display: inline-block;
+  width: 0.55ch;
+  height: 1.05em;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: currentColor;
+  opacity: 0.85;
+  animation: caret-blink 1s steps(1) infinite;
+}
+
+@keyframes caret-blink {
+  0%, 49% { opacity: 0.85; }
+  50%, 100% { opacity: 0; }
+}
+
+.text-gradient-animated {
+  background-image: linear-gradient(100deg, var(--accent), #a855f7, #ec4899, #22d3ee, var(--accent));
+  background-size: 250% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gradient-text-pan 9s ease-in-out infinite;
+}
+
+@keyframes gradient-text-pan {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .caret,
+  .text-gradient-animated {
+    animation: none;
+  }
+}
+
+.gold-shimmer {
+  background-image: linear-gradient(100deg, #b45309 0%, #f59e0b 30%, #fde68a 50%, #f59e0b 70%, #b45309 100%);
+  background-size: 220% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: gold-sweep 5s ease-in-out infinite;
+}
+
+@keyframes gold-sweep {
+  0%, 100% { background-position: 100% 50%; }
+  50% { background-position: 0% 50%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gold-shimmer {
+    animation: none;
+  }
+}
+
+/* ---------- Marquee, dev mode ---------- */
+.marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+}
+
+.marquee-track {
+  animation: tech-marquee 55s linear infinite;
+}
+
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+@keyframes tech-marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track {
+    animation: none;
+  }
+}
+
+html.dev-mode *:not(canvas):not(svg *) {
+  outline: 1px solid color-mix(in srgb, #22d3ee 55%, transparent) !important;
+}

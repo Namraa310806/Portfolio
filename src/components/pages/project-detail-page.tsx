@@ -1,18 +1,20 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, ArrowRight, ChevronRight, Home } from "lucide-react";
+import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, ArrowRight, ChevronRight, Home, Cpu } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
-import { Badge } from "@/components/ui/badge";
+import { TechChip } from "@/components/ui/tech-chip";
 import { ArchitectureDiagram } from "@/components/architecture/architecture-diagram";
 import { profiLensNodes, profiLensEdges } from "@/components/architecture/profilens-architecture";
 import { cloudAssistantNodes, cloudAssistantEdges } from "@/components/architecture/cloud-assistant-architecture";
 import { teamSenseNodes, teamSenseEdges } from "@/components/architecture/teamsense-architecture";
+import { matchingEngineNodes, matchingEngineEdges } from "@/components/architecture/matching-engine-architecture";
 import Link from "next/link";
 
 const iconMap = {
+  "Matching Engine": Cpu,
   ProfiLens: Code2,
   "Personal Cloud Assistant": Cloud,
   TeamSense: Brain,
@@ -46,6 +48,8 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
         return { nodes: cloudAssistantNodes, edges: cloudAssistantEdges };
       case "TeamSense":
         return { nodes: teamSenseNodes, edges: teamSenseEdges };
+      case "Matching Engine":
+        return { nodes: matchingEngineNodes, edges: matchingEngineEdges };
       default:
         return null;
     }
@@ -139,9 +143,7 @@ export function ProjectDetailPage({ project }: ProjectDetailPageProps) {
                   </h3>
                   <div className="flex flex-wrap gap-2">
                     {project.stack.map((tech) => (
-                      <Badge key={tech} variant="outline" className="font-semibold">
-                        {tech}
-                      </Badge>
+                      <TechChip key={tech} tech={tech} size="md" />
                     ))}
                   </div>
                 </motion.div>

@@ -2,29 +2,24 @@ import { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { ProjectDetailPage } from "@/components/pages/project-detail-page";
 import { projects } from "@/data/site";
+import { slugify } from "@/lib/utils";
 
 interface ProjectPageProps {
-  params: {
-    slug: string;
-  };
+  params: Promise<{ slug: string }>;
 }
 
+const findProject = (slug: string) => projects.find((p) => slugify(p.title) === slug);
+
 export async function generateStaticParams() {
-  return projects.map((project) => ({
-    slug: project.title.toLowerCase().replace(/\s+/g, "-"),
-  }));
+  return projects.map((project) => ({ slug: slugify(project.title) }));
 }
 
 export async function generateMetadata({ params }: ProjectPageProps): Promise<Metadata> {
-  const slug = params.slug;
-  const project = projects.find(
-    (p) => p.title.toLowerCase().replace(/\s+/g, "-") === slug
-  );
+  const { slug } = await params;
+  const project = findProject(slug);
 
   if (!project) {
-    return {
-      title: "Project Not Found",
-    };
+    return { title: "Project Not Found" };
   }
 
   return {
@@ -33,11 +28,9 @@ export async function generateMetadata({ params }: ProjectPageProps): Promise<Me
   };
 }
 
-export default function ProjectPage({ params }: ProjectPageProps) {
-  const slug = params.slug;
-  const project = projects.find(
-    (p) => p.title.toLowerCase().replace(/\s+/g, "-") === slug
-  );
+export default async function ProjectPage({ params }: ProjectPageProps) {
+  const { slug } = await params;
+  const project = findProject(slug);
 
   if (!project) {
     notFound();
