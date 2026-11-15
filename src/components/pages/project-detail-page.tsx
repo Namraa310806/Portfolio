@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, ArrowRight, ChevronRight, Home, Cpu } from "lucide-react";
+import { ExternalLink, Code2, Cloud, Brain, BrainCircuit, Palette, Zap, CheckCircle2, Layout, ArrowRight, ChevronRight, Home, Cpu } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { SectionHeader } from "@/components/ui/section-header";
 import { Header } from "@/components/layout/header";
@@ -15,6 +15,7 @@ import Link from "next/link";
 
 const iconMap = {
   "Matching Engine": Cpu,
+  ContribIQ: BrainCircuit,
   ProfiLens: Code2,
   "Personal Cloud Assistant": Cloud,
   TeamSense: Brain,

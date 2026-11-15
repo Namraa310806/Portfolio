@@ -31,6 +31,13 @@ export const techColors: Record<string, TechEcosystem> = {
   Rust: "backend",
   gRPC: "backend",
   "REST APIs": "backend",
+  Motor: "backend",
+  Pydantic: "backend",
+  "GitHub OAuth": "backend",
+  LLM: "ai",
+  Vite: "frontend",
+  "shadcn/ui": "frontend",
+  Playwright: "devops",
   
   // Cloud Ecosystem - Amber tones
   AWS: "cloud",
@@ -184,6 +191,10 @@ const brandHex: Record<string, string> = {
   Matplotlib: "#11557c",
   "Hugging Face": "#ffd21e",
   "n8n": "#ea4b71",
+  Motor: "#47a248",
+  Pydantic: "#e52020",
+  Vite: "#646cff",
+  Playwright: "#45ba4b",
   "Node.js": "#68a063",
   WeasyPrint: "#a78bfa",
 };

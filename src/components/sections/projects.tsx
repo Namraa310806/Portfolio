@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Brain, CheckCircle2, Cloud, Code2, ExternalLink, Layout, Palette, Zap, Cpu } from "lucide-react";
+import { ArrowRight, Brain, BrainCircuit, CheckCircle2, Cloud, Code2, ExternalLink, Layout, Palette, Zap, Cpu } from "lucide-react";
 import Link from "next/link";
 import { SectionHeader } from "@/components/ui/section-header";
 import { projects } from "@/data/site";
@@ -9,6 +9,7 @@ import { TechChip } from "@/components/ui/tech-chip";
 
 const iconMap = {
   "Matching Engine": Cpu,
+  ContribIQ: BrainCircuit,
   ProfiLens: Code2,
   "Personal Cloud Assistant": Cloud,
   TeamSense: Brain,

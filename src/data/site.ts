@@ -325,6 +325,22 @@ export const projects = [
     ],
   },
   {
+    title: "ContribIQ",
+    description:
+      "Engineering intelligence platform that turns GitHub history into verifiable evidence of real work — PR-centric contribution analysis, an auditable repo-eligibility engine, deterministic six-dimension scoring, and evidence-backed resume bullets and STAR answers.",
+    stack: ["FastAPI", "MongoDB", "Motor", "Pydantic", "React", "TypeScript", "Vite", "Tailwind CSS", "Playwright", "GitHub OAuth", "LLM"],
+    outcome:
+      "Built a snapshot-safe evidence pipeline where every resume claim must link to the PRs that prove it — claims without evidence are dropped.",
+    github: "https://github.com/Namraa310806/ContribIQ",
+    liveDemo: null,
+    challenges: [
+      "Partitioned GitHub Search past the 1,000-result ceiling",
+      "Repo eligibility engine with org-role verdicts",
+      "Snapshot-safe per-collection evidence persistence",
+      "Deterministic scoring with evidence confidence",
+    ],
+  },
+  {
     title: "TeamSense",
     description:
       "AI-powered HR analytics platform built for a hackathon. An async Celery and Redis pipeline moves compute-heavy feedback processing off the request cycle, backed by a multi-entity PostgreSQL schema and a Dockerized stack.",

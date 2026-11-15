@@ -2,7 +2,7 @@
 
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, Search, Cpu } from "lucide-react";
+import { ExternalLink, Code2, Cloud, Brain, Palette, Zap, CheckCircle2, Layout, Search, Cpu, BrainCircuit } from "lucide-react";
 import { FadeIn } from "@/components/animations/fade-in";
 import { Input } from "@/components/ui/input";
 import { SectionHeader } from "@/components/ui/section-header";
@@ -14,6 +14,7 @@ import Link from "next/link";
 
 const iconMap = {
   "Matching Engine": Cpu,
+  ContribIQ: BrainCircuit,
   ProfiLens: Code2,
   "Personal Cloud Assistant": Cloud,
   TeamSense: Brain,
