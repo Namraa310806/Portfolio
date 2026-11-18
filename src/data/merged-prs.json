@@ -20,16 +20,6 @@
     }
   },
   {
-    "number": 9796,
-    "title": "Python: Fix Bedrock parallel tool result handling.",
-    "url": "https://github.com/microsoft/agent-framework/pull/9796",
-    "mergedAt": "2026-11-02T09:31:35Z",
-    "repository": {
-      "name": "agent-framework",
-      "nameWithOwner": "microsoft/agent-framework"
-    }
-  },
-  {
     "number": 22177,
     "title": "Fixed #37436 -- Avoided overwriting when FETCH_PEERS fetches deferred fields.",
     "url": "https://github.com/django/django/pull/22177",
@@ -47,16 +37,6 @@
     "repository": {
       "name": "celery",
       "nameWithOwner": "celery/celery"
-    }
-  },
-  {
-    "number": 9469,
-    "title": "Python: Fix stateless shell tools inheriting host stdin",
-    "url": "https://github.com/microsoft/agent-framework/pull/9469",
-    "mergedAt": "2026-10-22T12:17:59Z",
-    "repository": {
-      "name": "agent-framework",
-      "nameWithOwner": "microsoft/agent-framework"
     }
   },
   {
@@ -100,16 +80,6 @@
     }
   },
   {
-    "number": 8819,
-    "title": "Python: Fix/7859 discard pending state",
-    "url": "https://github.com/microsoft/agent-framework/pull/8819",
-    "mergedAt": "2026-10-12T09:40:51Z",
-    "repository": {
-      "name": "agent-framework",
-      "nameWithOwner": "microsoft/agent-framework"
-    }
-  },
-  {
     "number": 10701,
     "title": "fix(backend): handle missing ArangoDB documents on delete",
     "url": "https://github.com/celery/celery/pull/10701",
@@ -120,16 +90,6 @@
     }
   },
   {
-    "number": 7944,
-    "title": "Python: fix: preserve synthetic compaction summaries",
-    "url": "https://github.com/microsoft/agent-framework/pull/7944",
-    "mergedAt": "2026-09-15T02:55:10Z",
-    "repository": {
-      "name": "agent-framework",
-      "nameWithOwner": "microsoft/agent-framework"
-    }
-  },
-  {
     "number": 1851,
     "title": "fix: preserve missing country data in countries map",
     "url": "https://github.com/openfoodfacts/openfoodfacts-explorer/pull/1851",
@@ -137,16 +97,6 @@
     "repository": {
       "name": "openfoodfacts-explorer",
       "nameWithOwner": "openfoodfacts/openfoodfacts-explorer"
-    }
-  },
-  {
-    "number": 7901,
-    "title": "Python: Fix input mutation in SerializationMixin.from_dict",
-    "url": "https://github.com/microsoft/agent-framework/pull/7901",
-    "mergedAt": "2026-08-27T12:49:58Z",
-    "repository": {
-      "name": "agent-framework",
-      "nameWithOwner": "microsoft/agent-framework"
     }
   },
   {

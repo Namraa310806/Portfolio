@@ -28,20 +28,6 @@
     "mergedAt": "2026-11-04T13:43:47Z"
   },
   {
-    "id": "pr-agent-framework-9796",
-    "number": 9796,
-    "title": "Python: Fix Bedrock parallel tool result handling.",
-    "repository": "agent-framework",
-    "repositoryOwner": "microsoft/agent-framework",
-    "repositoryUrl": "https://github.com/microsoft/agent-framework",
-    "url": "https://github.com/microsoft/agent-framework/pull/9796",
-    "status": "Merged",
-    "category": "Backend",
-    "tier": "flagship",
-    "org": "microsoft",
-    "mergedAt": "2026-11-02T09:31:35Z"
-  },
-  {
     "id": "pr-django-22177",
     "number": 22177,
     "title": "Fixed #37436 -- Avoided overwriting when FETCH_PEERS fetches deferred fields.",
@@ -68,20 +54,6 @@
     "tier": "flagship",
     "org": "celery",
     "mergedAt": "2026-10-26T14:10:58Z"
-  },
-  {
-    "id": "pr-agent-framework-9469",
-    "number": 9469,
-    "title": "Python: Fix stateless shell tools inheriting host stdin",
-    "repository": "agent-framework",
-    "repositoryOwner": "microsoft/agent-framework",
-    "repositoryUrl": "https://github.com/microsoft/agent-framework",
-    "url": "https://github.com/microsoft/agent-framework/pull/9469",
-    "status": "Merged",
-    "category": "Backend",
-    "tier": "flagship",
-    "org": "microsoft",
-    "mergedAt": "2026-10-22T12:17:59Z"
   },
   {
     "id": "pr-celery-10876",
@@ -140,20 +112,6 @@
     "mergedAt": "2026-10-13T17:32:33Z"
   },
   {
-    "id": "pr-agent-framework-8819",
-    "number": 8819,
-    "title": "Python: Fix/7859 discard pending state",
-    "repository": "agent-framework",
-    "repositoryOwner": "microsoft/agent-framework",
-    "repositoryUrl": "https://github.com/microsoft/agent-framework",
-    "url": "https://github.com/microsoft/agent-framework/pull/8819",
-    "status": "Merged",
-    "category": "Backend",
-    "tier": "flagship",
-    "org": "microsoft",
-    "mergedAt": "2026-10-12T09:40:51Z"
-  },
-  {
     "id": "pr-celery-10701",
     "number": 10701,
     "title": "fix(backend): handle missing ArangoDB documents on delete",
@@ -168,20 +126,6 @@
     "mergedAt": "2026-09-27T15:29:28Z"
   },
   {
-    "id": "pr-agent-framework-7944",
-    "number": 7944,
-    "title": "Python: fix: preserve synthetic compaction summaries",
-    "repository": "agent-framework",
-    "repositoryOwner": "microsoft/agent-framework",
-    "repositoryUrl": "https://github.com/microsoft/agent-framework",
-    "url": "https://github.com/microsoft/agent-framework/pull/7944",
-    "status": "Merged",
-    "category": "Backend",
-    "tier": "flagship",
-    "org": "microsoft",
-    "mergedAt": "2026-09-15T02:55:10Z"
-  },
-  {
     "id": "pr-openfoodfacts-explorer-1851",
     "number": 1851,
     "title": "fix: preserve missing country data in countries map",
@@ -194,20 +138,6 @@
     "tier": "flagship",
     "org": "off",
     "mergedAt": "2026-09-18T15:42:29Z"
-  },
-  {
-    "id": "pr-agent-framework-7901",
-    "number": 7901,
-    "title": "Python: Fix input mutation in SerializationMixin.from_dict",
-    "repository": "agent-framework",
-    "repositoryOwner": "microsoft/agent-framework",
-    "repositoryUrl": "https://github.com/microsoft/agent-framework",
-    "url": "https://github.com/microsoft/agent-framework/pull/7901",
-    "status": "Merged",
-    "category": "Backend",
-    "tier": "flagship",
-    "org": "microsoft",
-    "mergedAt": "2026-08-27T12:49:58Z"
   },
   {
     "id": "pr-celery-10520",

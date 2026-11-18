@@ -1,6 +1,6 @@
 {
-  "totalPRs": 223,
-  "totalRepositories": 16,
+  "totalPRs": 218,
+  "totalRepositories": 15,
   "flagshipRepos": [
     {
       "name": "celery",
@@ -8,13 +8,6 @@
       "repositoryUrl": "https://github.com/celery/celery",
       "prCount": 13,
       "org": "celery"
-    },
-    {
-      "name": "agent-framework",
-      "displayName": "Microsoft Agent Framework",
-      "repositoryUrl": "https://github.com/microsoft/agent-framework",
-      "prCount": 5,
-      "org": "microsoft"
     },
     {
       "name": "openfoodfacts-explorer",
@@ -141,12 +134,6 @@
       "displayName": "Celery",
       "repositoryUrl": "https://github.com/celery/celery",
       "prCount": 13
-    },
-    {
-      "name": "agent-framework",
-      "displayName": "Microsoft Agent Framework",
-      "repositoryUrl": "https://github.com/microsoft/agent-framework",
-      "prCount": 5
     },
     {
       "name": "UltimateHealth",
